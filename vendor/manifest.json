@@ -1,0 +1,69 @@
+{
+  "kcan": {
+    "version": "1.4.2",
+    "release_date": "2026-07-21",
+    "upstream_url": "https://gitee.com/ChengDu-KunHong/KH-UCANFD_Linux_SDK/releases/download/latest/KH-UCANFD_Linux_SDK.zip",
+    "upstream_archive_sha256": "0859afc67dc63f232d64a8815a4c2a7bcf7129298c48748a70174647a4a6508c",
+    "included": "Driver directory plus original licenses/readme/release notes; no firmware updater/images",
+    "source_modified": false
+  },
+  "pyAgxArm": {
+    "upstream": "https://github.com/agilexrobotics/pyAgxArm",
+    "revision": "1ae40ad",
+    "archive_sha256": "ea8a38af9e6e44255a53c351c4cf788592a21abe694e0f2ce683f2b9be177711",
+    "version_note": "Distribution version 1.0.0 is not sufficient to identify this source snapshot",
+    "source_modified": false
+  },
+  "python_wheels": {
+    "target": "Linux x86_64 / CPython 3.12",
+    "source": "https://pypi.org/",
+    "versions_file": "requirements-nero.txt"
+  },
+  "files": [
+    {
+      "path": "vendor/kcan-driver-1.4.2.tar.gz",
+      "sha256": "eebb0f6a46e50a4299623c5771b1088dea1edc7e16e7620fc40310e8e35bda37",
+      "bytes": 213803
+    },
+    {
+      "path": "vendor/pyAgxArm-1ae40ad.tar.gz",
+      "sha256": "ea8a38af9e6e44255a53c351c4cf788592a21abe694e0f2ce683f2b9be177711",
+      "bytes": 345724
+    },
+    {
+      "path": "vendor/python-sources/python_can-4.6.1.tar.gz",
+      "sha256": "290fea135d04b8504ebff33889cc6d301e2181a54099116609f940825ffe5005",
+      "bytes": 1206049
+    },
+    {
+      "path": "vendor/python-wheels/packaging-25.0-py3-none-any.whl",
+      "sha256": "29572ef2b1f17581046b3a2227d5c611fb25ec70ca1ba8554b24b0e69331a484",
+      "bytes": 66469
+    },
+    {
+      "path": "vendor/python-wheels/python_can-4.6.1-py3-none-any.whl",
+      "sha256": "17f95255868a95108dcfcb90565a684dad32d5a3ebb35afd14f739e18c84ff6c",
+      "bytes": 276996
+    },
+    {
+      "path": "vendor/python-wheels/setuptools-80.10.2-py3-none-any.whl",
+      "sha256": "95b30ddfb717250edb492926c92b5221f7ef3fbcc2b07579bcd4a27da21d0173",
+      "bytes": 1064234
+    },
+    {
+      "path": "vendor/python-wheels/typing_extensions-4.15.0-py3-none-any.whl",
+      "sha256": "f0fa19c6845758ab08074a0cfa8b7aecb71c999ca73d62883bc25cc018c4e548",
+      "bytes": 44614
+    },
+    {
+      "path": "vendor/python-wheels/wheel-0.48.0-py3-none-any.whl",
+      "sha256": "3217dcc807155e45db462d7ef2431f5ddda0d7273b700d05a67b271ceb1287ab",
+      "bytes": 33320
+    },
+    {
+      "path": "vendor/python-wheels/wrapt-1.17.3-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl",
+      "sha256": "042ec3bb8f319c147b1301f2393bc19dba6e176b7da446853406d041c36c7828",
+      "bytes": 88036
+    }
+  ]
+}

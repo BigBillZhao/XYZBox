@@ -1,0 +1,67 @@
+{
+  "date": "2026-10-16",
+  "timezone": "Asia/Shanghai",
+  "environment": {
+    "os": "Ubuntu 24.04.4 LTS x86_64",
+    "kernel": "7.0.0-38-generic",
+    "python": "3.12"
+  },
+  "checks": {
+    "archive_and_wheel_checksums": "passed",
+    "clean_venv_install_from_bundled_wheels_and_sdk": "passed",
+    "pip_check": "passed",
+    "sdk_nero_1_12_profile": "v112",
+    "driver_source_archive_build": "passed, kcan.ko built; not installed or loaded by this validation",
+    "shell_syntax": "passed",
+    "unit_tests": {
+      "passed": 13,
+      "failed": 0,
+      "type": "mock/offline, no physical CAN"
+    },
+    "driver_installer_end_to_end": "not run against the live system; existing working installation preserved",
+    "new_example_live_positive_read": "not verified: user confirmed the arms were powered off and explicitly waived further physical validation",
+    "new_example_live_no_feedback_behavior": {
+      "passed": true,
+      "expected_exit_code": 1,
+      "can0_tx_delta": 0,
+      "can1_tx_delta": 0,
+      "can0_rx_delta": 0,
+      "can1_rx_delta": 0,
+      "can_error_counters_after_cleanup": {
+        "can0": {
+          "tx": 0,
+          "rx": 0
+        },
+        "can1": {
+          "tx": 0,
+          "rx": 0
+        }
+      }
+    },
+    "new_example_physical_motion": "not executed"
+  },
+  "historical_field_evidence": {
+    "date": "2026-10-16",
+    "path": "Original LeRobot MIT+gravity home, not this new move_j example",
+    "adapter": "395e:0020 KCAN-USB X4 via M.2 USB",
+    "driver": "kcan 1.4.2",
+    "firmware": "1.12 on both Nero arms",
+    "maximum_settled_joint_error_deg": {
+      "left": 0.2284677078493894,
+      "right": 0.17
+    },
+    "enabled_joints": 14,
+    "can_errors": 0
+  },
+  "validated_file_sha256": {
+    "scripts/install_kcan.sh": "fc62e2a849595ab9c38502a78aabd4268e89ffc625dd881f0b50fff639da3d17",
+    "scripts/setup_nero_env.sh": "73a6ddc575817068cc72b8ccb283a6edb83d2da1dbe5e2b57abda5f9ae7f6070",
+    "tools/can_up.py": "83553ebfa62468a1c4a098d054862de86ff58f24e2ca6f23aa2fd9212d492efd",
+    "tools/can_probe.py": "8ee8e735986e4da513d637b495e8128585df56dbffe58694491c9f231cf648d5",
+    "examples/nero_joint_control.py": "b15189ccbe230fdb01f643479956448b2959a80fcad2f464df2686a9201567e5",
+    "tests/test_can_tools.py": "948d460bd43a7c0c115d54de09f36dd9b462dd5511adbb091e4c1c6d053e4b37",
+    "tests/test_nero_example.py": "089fef19c0ba83224f3ad3d0812d2a2d5873129740c6cf08e68cde0134c09220",
+    "vendor/SHA256SUMS": "1e8afaa6657684c0cfd4c1652055552dde9419706106506b01be5e8fd1a19b83"
+  },
+  "user_confirmed_hardware_power_off": true
+}

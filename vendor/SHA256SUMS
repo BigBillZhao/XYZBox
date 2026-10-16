@@ -1,0 +1,9 @@
+eebb0f6a46e50a4299623c5771b1088dea1edc7e16e7620fc40310e8e35bda37  vendor/kcan-driver-1.4.2.tar.gz
+ea8a38af9e6e44255a53c351c4cf788592a21abe694e0f2ce683f2b9be177711  vendor/pyAgxArm-1ae40ad.tar.gz
+290fea135d04b8504ebff33889cc6d301e2181a54099116609f940825ffe5005  vendor/python-sources/python_can-4.6.1.tar.gz
+29572ef2b1f17581046b3a2227d5c611fb25ec70ca1ba8554b24b0e69331a484  vendor/python-wheels/packaging-25.0-py3-none-any.whl
+17f95255868a95108dcfcb90565a684dad32d5a3ebb35afd14f739e18c84ff6c  vendor/python-wheels/python_can-4.6.1-py3-none-any.whl
+95b30ddfb717250edb492926c92b5221f7ef3fbcc2b07579bcd4a27da21d0173  vendor/python-wheels/setuptools-80.10.2-py3-none-any.whl
+f0fa19c6845758ab08074a0cfa8b7aecb71c999ca73d62883bc25cc018c4e548  vendor/python-wheels/typing_extensions-4.15.0-py3-none-any.whl
+3217dcc807155e45db462d7ef2431f5ddda0d7273b700d05a67b271ceb1287ab  vendor/python-wheels/wheel-0.48.0-py3-none-any.whl
+042ec3bb8f319c147b1301f2393bc19dba6e176b7da446853406d041c36c7828  vendor/python-wheels/wrapt-1.17.3-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl

@@ -1,0 +1,65 @@
+# 硬件、接线与识别
+
+## 两种现场设备不要混淆
+
+| 现场设备 | USB 身份 / 驱动 | 记录 |
+|---|---|---|
+| 10 月 14 日的四口卡，PCAN 兼容固件 | `0c72:0011` / kcan | 在当时驱动和固件组合下只接管两路；线插物理 CAN3/CAN4 时无回复，移到 CAN1/CAN2 后通 |
+| 10 月 16 日的 M.2 USB 四路卡 | `395e:0020 KCAN-USB X4` / kcan 1.4.2 | 四路 can0～can3 正常枚举；本次只接 CAN1/CAN2 |
+
+这是特定现场设备的观察，不意味着所有 `0c72:0011` 都是四路卡。
+`lsusb` 的文字来自设备描述符/USB ID 数据库，不能仅凭“PEAK”字符串判断实际厂商。
+M.2 是外形和连接形式之一；本次卡在系统里走 USB，不是 PCIe CAN 控制器。
+客户换 M.2 插槽/转接板时，要确认插槽实际提供该产品要求的 USB 信号。
+
+## CAN 参数
+
+Nero 对外整机接口在本次验收中使用：
+
+```text
+classic CAN (CAN 2.0), 1,000,000 bit/s, sample-point 0.75, MTU 16
+```
+
+Nero 内部采用的电机品牌不决定外部总线协议。对外使用 Nero SDK 的控制器协议，
+不应直接向整机接口发送达妙裸电机 MIT 帧。
+g1wh 的达妙台架曾使用 CAN FD 1M/2M，这个参数不能直接覆盖 Nero 的已验证配置。
+
+## 实物接线
+
+- 机械臂 CAN-H 接卡的 H，CAN-L 接 L；按对应产品说明处理地线与隔离。
+- 核对端子确实夹住导体，避免压在绝缘皮上。航插/DB9/小端子转换线必须核对双方线序。
+- 本次没有统一记录新卡的具体铭牌和针脚图；**不要凭本仓库猜不同型号的针脚编号**。
+- 终端电阻按整条总线拓扑配置，通常只有总线两端各 120 Ω。内置端接、拨码与接地方式查具体卡的产品手册。
+- 机械臂电源绿灯表示上电/初始化状态，不证明 CAN H/L 已接通。
+- 以太网管理页能打开也不证明 USB CAN 链路已经通。
+
+## 通道和左右臂
+
+本次四路卡的物理 CAN1/CAN2 对应 can0/can1。
+实际接线为右臂 can0、左臂 can1；客户可能完全不同。
+
+先查看 `ip -details link show type can` 和 USB 拓扑；只启用已接通道，再用被动反馈确认。
+若已有同一机械臂的固件反馈载荷，可作为辅助比对信息，但不要假设所有固件都提供唯一、稳定序列号。
+最终记录实物端口、系统接口和臂身份的对应关系。
+
+不要通过给不明通道发运动命令来“猜左右”。本仓库示例接受通道列表，不内置左右假设。
+
+## 更换卡后的检查
+
+```bash
+lsusb
+lsusb -t
+ip -details -statistics link show type can
+cat /proc/kcan
+```
+
+卡能枚举只是第一步。新旧 USB ID 不同、接口名称不同、通道数量不同，都需要重新核验初始化规则和接线。
+没有接线的通道不要做发包探测，以免 ACK 错误造成持续重发。
+
+## 厂商资料
+
+- [鲲弘 Linux SDK](https://docs.kunhong-elec.com/zh/tutorials/technical/linuxsdk/introduction/README.html)
+- [M.2 X2/X4 产品资料](https://docs.kunhong-elec.com/zh/products/can-communication/KH-UCANFD-M2-X4.html)
+- [Nero 首次 CAN 使用说明](https://github.com/agilexrobotics/pyAgxArm/blob/1ae40ad/docs/nero/first_time_user_guide_can.md)
+
+安装以仓库固定源码为准，产品接线以客户实际型号为准。

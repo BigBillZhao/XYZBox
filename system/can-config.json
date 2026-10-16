@@ -1,0 +1,5 @@
+{
+  "channels": ["can0", "can1"],
+  "bitrate": 1000000,
+  "sample_point": 0.75
+}

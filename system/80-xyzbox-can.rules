@@ -1,0 +1,3 @@
+# Only configured channels are brought up by xyzbox-can-up; unused ports stay down.
+ACTION=="add", SUBSYSTEM=="net", ATTR{type}=="280", ATTRS{idVendor}=="395e", ATTRS{idProduct}=="0020", TAG+="systemd", ENV{SYSTEMD_WANTS}+="xyzbox-can@%k.service"
+ACTION=="add", SUBSYSTEM=="net", ATTR{type}=="280", ATTRS{idVendor}=="0c72", ATTRS{idProduct}=="0011", TAG+="systemd", ENV{SYSTEMD_WANTS}+="xyzbox-can@%k.service"

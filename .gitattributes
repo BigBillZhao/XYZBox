@@ -1,0 +1,2 @@
+# Preserve imported license text verbatim.
+licenses/** -whitespace

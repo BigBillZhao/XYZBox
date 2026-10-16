@@ -1,0 +1,9 @@
+[Unit]
+Description=XYZBox CAN interface %I
+BindsTo=sys-subsystem-net-devices-%i.device
+After=sys-subsystem-net-devices-%i.device
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/xyzbox-can-up %I
+RemainAfterExit=yes
