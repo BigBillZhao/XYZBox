@@ -24,7 +24,12 @@
     "can2_unused_down": true,
     "can3_unused_down": true
   },
-  "human_gui_confirmation": "not received; display service, i915 and HDMI output checked",
+  "human_gui_confirmation": "passed; user confirmed normal display and desktop interaction after PREEMPT_RT reboot on 2026-10-16",
+  "human_gui_evidence": {
+    "date": "2026-10-16",
+    "source": "User reply to the post-reboot display, login, mouse and keyboard verification question",
+    "user_reply": "显示和操作都正常"
+  },
   "offline": {
     "imports": 11,
     "python_files": 628,

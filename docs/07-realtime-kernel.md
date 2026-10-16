@@ -7,7 +7,7 @@
 原 `7.0.0-38-generic` 及其 headers、modules 已标记为手工保留，作为回退入口。
 CAN 驱动 1.4.2 已为 RT 内核重新编译、签名并成功加载；四路接口可见，使用中的两路为经典 CAN 1 Mbps。
 SSH、显示服务、HDMI 输出、现有静态网络配置及离线软件检查通过。
-机械臂断电，本次没有运行机械臂运动、PICO 或相机硬件测试；桌面交互尚未获得现场人工复核。
+机械臂断电，本次没有运行机械臂运动、PICO 或相机硬件测试。2026-10-16 用户已现场确认，实时内核重启后的屏幕显示、登录及鼠标键盘操作正常。
 结果见 [`validation/DELIVERY-20261016.json`](../validation/DELIVERY-20261016.json)，客户机也保存于 `~/nero-delivery/manifests/`。
 
 PREEMPT_RT 必须实际启用 `CONFIG_PREEMPT_RT=y`；只增加 `preempt=full`、`threadirqs`
