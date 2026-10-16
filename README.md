@@ -26,7 +26,7 @@ RT 切换后已检查系统启动、驱动和离线软件；本轮机械臂断�
 ```bash
 sudo apt update
 sudo apt install -y git python3-venv
-git clone ssh://git@gitea.zenbotx.com:19035/zenbot/XYZBox.git
+git clone https://github.com/BigBillZhao/XYZBox.git
 cd XYZBox
 
 # 固定的驱动与源码在仓库内，不依赖“latest”下载链接。
@@ -36,6 +36,8 @@ sudo bash scripts/install_kcan.sh
 sudo nano /etc/xyzbox-can.json
 sudo reboot
 ```
+
+如使用 Gitea，克隆地址为 `ssh://git@gitea.zenbotx.com:19035/zenbot/XYZBox.git`；其余操作相同。
 
 重新登录，回到仓库目录：
 

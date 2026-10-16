@@ -3,11 +3,13 @@
 ## 1. 安装目标系统
 
 已验证目标为 Ubuntu 24.04.4 LTS / x86_64 / Python 3.12。
-现场内核为 `7.0.0-38-generic`。其他内核、ARM 主机与其他发行版尚未在本仓库重新验收。
+已验证原 `7.0.0-38-generic` 和当前 `7.0.14-xyzbox-rt` 内核；实时内核的验证范围见 [实时内核说明](07-realtime-kernel.md)。其他内核、ARM 主机与其他发行版尚未在本仓库重新验收。
 保存客户数据后，按整机常规流程安装 Ubuntu；本仓库不执行磁盘分区或清盘。
 
-准备软件源、网络和 Gitea 访问权限。仓库 URL 中的端口 `19035` 是 Git SSH 端口，
-不是工控机 SSH 端口。仓库不附带访问密钥；也可以由交付方提供完整仓库压缩包。
+准备软件源、网络和所选仓库的访问权限。可从 [GitHub 仓库](https://github.com/BigBillZhao/XYZBox) 获取资料，
+或使用 Gitea SSH 地址 `ssh://git@gitea.zenbotx.com:19035/zenbot/XYZBox.git`。
+Gitea URL 中的端口 `19035` 是 Git SSH 端口，不是工控机 SSH 端口。
+仓库不附带访问密钥；也可以由交付方提供完整仓库压缩包。
 
 ## 2. 安装 kcan 1.4.2
 
