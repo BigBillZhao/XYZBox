@@ -5,8 +5,7 @@
 
 ## kcan 1.4.2
 
-- 上游：[KH-UCANFD Linux SDK](https://gitee.com/ChengDu-KunHong/KH-UCANFD_Linux_SDK)
-- 原发行包来源：`https://gitee.com/ChengDu-KunHong/KH-UCANFD_Linux_SDK/releases/download/latest/KH-UCANFD_Linux_SDK.zip`
+- 原始发布来源见 `manifest.json` 中的 `upstream_url`，保留完整可追溯信息。
 - 获取时内容为 **1.4.2 / 2026-07-21**；原 ZIP SHA-256：
   `0859afc67dc63f232d64a8815a4c2a7bcf7129298c48748a70174647a4a6508c`
 - 仓库文件：`kcan-driver-1.4.2.tar.gz`。
@@ -19,9 +18,9 @@
 
 ## pyAgxArm
 
-- 上游：[agilexrobotics/pyAgxArm](https://github.com/agilexrobotics/pyAgxArm)
+- SDK 原始发布来源见 `manifest.json`。
 - 仓库文件：`pyAgxArm-1ae40ad.tar.gz`，原官方归档未修改。
-- 归档顶层为 `agilexrobotics-pyAgxArm-1ae40ad`，完整归档哈希用于精确复现：
+- 固定源码快照为 `1ae40ad`，完整归档哈希用于精确复现：
   `ea8a38af9e6e44255a53c351c4cf788592a21abe694e0f2ce683f2b9be177711`
 - 许可证：LGPL-3.0；完整源码、测试、构建文件和许可证随归档提供。
 - 该源码包含 Nero v112；不能仅凭安装包显示的 `1.0.0` 确认这一点。

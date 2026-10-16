@@ -56,7 +56,7 @@ RX 统计中的错误事件也不是机械臂关节帧；本仓库探测工具�
 
 官方 1.4.2 包中的静态 `driver/dkms.conf` 曾保留旧 `1.4.0` 标签，
 而 Makefile 的 `DKMS_VER` 已是 1.4.2。安装脚本只在新解压的源码目录删除并重新生成这个文件。
-检查结果应为 `kunhong-linux-driver/1.4.2, <当前内核>, x86_64: installed`。
+检查结果应为 `<驱动包名>/1.4.2, <当前内核>, x86_64: installed`。
 
 ### 3. 手工 insmod 报 Unknown symbol
 

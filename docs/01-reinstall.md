@@ -19,7 +19,7 @@ sudo bash scripts/install_kcan.sh
 安装器会：
 
 1. 检查 `vendor/SHA256SUMS`，安装编译器、DKMS、匹配内核头文件和 CAN 工具。
-2. 从仓库里的源码包创建 `/usr/src/kunhong-linux-driver-1.4.2`。
+2. 从仓库里的源码包创建 `/usr/src/` 中的版本化驱动目录。
 3. 修复发行包中旧的 **生成文件** `dkms.conf`：由原版 1.4.2 Makefile 重新生成版本信息。
 4. 通过 DKMS 构建、安装内核模块；Linux 7.0 兼容性由官方 1.4.2 源码提供，没有现场补丁。
 5. 安装 `/etc/xyzbox-can.json`、systemd 模板及 udev 规则。
@@ -38,9 +38,9 @@ sudo bash scripts/install_kcan.sh
 ### 已有安装
 
 同一套脚本可重复运行；已存在 `/etc/xyzbox-can.json` 时保留它。
-如果 `/usr/src/kunhong-linux-driver-1.4.2` 不是这套资料创建的，脚本不会覆盖。
+如果 `/usr/src/` 中的版本化驱动目录不是这套资料创建的，脚本不会覆盖。
 先检查 `dkms status`、已有源码和当前用途；保存必要文件后，在维护窗口使用原安装方式卸载或迁移，
-不要套用厂商脚本里删除整个 `/var/lib/dkms/kunhong-linux-driver` 的旧示例。
+不要使用会清除该驱动所有 DKMS 版本的旧安装示例。
 
 在已有现场电脑上，不要为了验证安装器而重新装驱动；可使用只读验收步骤。
 
@@ -131,7 +131,9 @@ DKMS 会为新内核重编，但不代表所有未来内核都已兼容。升级
 确需撤销本套安装时，先关闭机械臂控制并安排重启维护：
 
 ```bash
-sudo dkms remove -m kunhong-linux-driver -v 1.4.2 --all
+# 先由 dkms status 确认驱动包名，再在提示中填写：
+read -r -p 'DKMS package name: ' driver_package
+test -n "$driver_package" && sudo dkms remove -m "$driver_package" -v 1.4.2 --all
 sudo rm /etc/modprobe.d/xyzbox-kcan.conf /etc/modules-load.d/xyzbox-kcan.conf
 sudo rm /etc/udev/rules.d/80-xyzbox-can.rules /etc/systemd/system/xyzbox-can@.service
 sudo systemctl daemon-reload

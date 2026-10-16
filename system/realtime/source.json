@@ -1,0 +1,15 @@
+{
+  "distribution": "Ubuntu 24.04 noble-updates/main",
+  "source_package": "linux-hwe-7.0",
+  "source_version": "7.0.0-38.38~24.04.4",
+  "kernelversion": "7.0.14",
+  "kernelrelease": "7.0.14-xyzbox-rt",
+  "binary_package_version": "7.0.14-xyzbox1",
+  "source_authentication": "APT signed archive index and recorded SHA-256; individual .dsc developer signing key was not available locally",
+  "source_code_changes": "none; out-of-tree build with changed configuration",
+  "maintenance": "Locally built kernel; future kernel fixes require rebuilding and revalidating. No claim of Canonical support for this custom binary.",
+  "base_config": "config-generic-7.0.0-38",
+  "base_config_sha256": "cf4856351d3c0aa820f40ae8c185b3df9aa340a7a4812acd80dbef04995fedfa",
+  "configuration_recipe": "../../scripts/build_rt_kernel.sh",
+  "source_checksums": "SHA256SUMS.sources"
+}

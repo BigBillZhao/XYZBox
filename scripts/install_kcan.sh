@@ -47,7 +47,7 @@ install -m 644 "$repo/system/80-xyzbox-can.rules" /etc/udev/rules.d/80-xyzbox-ca
 if [[ ! -e /etc/xyzbox-can.json ]]; then
     install -m 644 "$repo/system/can-config.json" /etc/xyzbox-can.json
 fi
-printf '%s\n' '# XYZBox Kunhong SocketCAN driver' 'blacklist peak_usb' > /etc/modprobe.d/xyzbox-kcan.conf
+printf '%s\n' '# XYZBox USB CAN SocketCAN driver' 'blacklist peak_usb' > /etc/modprobe.d/xyzbox-kcan.conf
 printf '%s\n' kcan > /etc/modules-load.d/xyzbox-kcan.conf
 systemctl daemon-reload
 udevadm control --reload-rules

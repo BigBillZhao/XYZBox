@@ -1,6 +1,6 @@
 # XYZBox · USB CAN 与 Nero 关节控制
 
-本仓库用于客户重装工控机后恢复 **Kunhong（鲲弘）USB CAN / M.2 USB CAN → Nero** 链路。
+本仓库用于客户重装工控机后恢复 **USB CAN / M.2 USB CAN → Nero** 链路。
 包含固定版本驱动源码、离线 Python 依赖、安装配置、排障手册及一个独立关节控制示例。
 示例不依赖 LeRobot、ROS、GPU、PICO 或摄像头。
 
@@ -40,7 +40,7 @@ sudo reboot
 
 ```bash
 lsusb -t                             # 对应 USB 接口应为 Driver=kcan
-dkms status -m kunhong-linux-driver   # 应显示 1.4.2 installed
+dkms status                          # CAN 驱动应显示 1.4.2 installed
 ip -details link show type can       # 接线通道应 UP / 1000000 / mtu 16
 
 # Ubuntu x86_64 / Python 3.12 的 Python 安装包已随仓库提供。
@@ -75,6 +75,8 @@ bash scripts/setup_nero_env.sh
 | [排障](docs/03-troubleshooting.md) | 无回复、ACK、假回显、接口 DOWN、错误计数、USB 热解绑陷阱 |
 | [Nero 示例](docs/04-nero-example.md) | 无运动读取、单/双臂控制、参数、版本与退出行为 |
 | [验证范围](docs/05-validation.md) | 现场证据与本仓库测试边界；避免把枚举成功当成机械臂已通 |
+| [交付机软件清单](docs/06-delivery-software.md) | IK、XRoboToolkit、原录制流程、验收样例与维护归档 |
+| [实时内核](docs/07-realtime-kernel.md) | PREEMPT_RT 的来源、构建、安装、DKMS、试启动与回退 |
 | [第三方来源](vendor/README.md) | 固定版本、下载源、源码及 SHA-256 |
 
 仓库不包含客户密码、SSH 私钥、原系统用户目录、数据集或机械臂固件升级程序。

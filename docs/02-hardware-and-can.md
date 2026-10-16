@@ -56,10 +56,8 @@ cat /proc/kcan
 卡能枚举只是第一步。新旧 USB ID 不同、接口名称不同、通道数量不同，都需要重新核验初始化规则和接线。
 没有接线的通道不要做发包探测，以免 ACK 错误造成持续重发。
 
-## 厂商资料
+## 固定资料与接线依据
 
-- [鲲弘 Linux SDK](https://docs.kunhong-elec.com/zh/tutorials/technical/linuxsdk/introduction/README.html)
-- [M.2 X2/X4 产品资料](https://docs.kunhong-elec.com/zh/products/can-communication/KH-UCANFD-M2-X4.html)
-- [Nero 首次 CAN 使用说明](https://github.com/agilexrobotics/pyAgxArm/blob/1ae40ad/docs/nero/first_time_user_guide_can.md)
-
-安装以仓库固定源码为准，产品接线以客户实际型号为准。
+驱动和机械臂 SDK 源码、原始文档及版本校验值见仓库 `vendor/`。
+安装使用本仓库固定版本；具体引脚与电气定义按客户实际设备铭牌和随件手册核对。
+第三方来源和许可证原文单独保存在技术归档中。
