@@ -1,27 +1,29 @@
-# XYZBox · USB CAN 与 Nero 关节控制
+# XYZBox · USB CAN and Nero Joint Control
 
-本仓库用于客户重装工控机后恢复 **USB CAN / M.2 USB CAN → Nero** 链路。
-包含固定版本驱动源码、离线 Python 依赖、安装配置、排障手册及一个独立关节控制示例。
-示例不依赖 LeRobot、ROS、GPU、PICO 或摄像头。
+English | [简体中文](README.zh-CN.md)
 
-## 已验证的硬件与软件
+This repository provides the files and instructions needed to restore the **USB CAN / M.2 USB CAN → Nero** connection after reinstalling the industrial PC.
+It includes pinned driver sources, offline Python dependencies, installation configuration, troubleshooting guides, and a standalone joint control example.
+The example does not require LeRobot, ROS, a GPU, PICO, or cameras.
 
-| 项目 | 2026-10-16 现场结果 |
+## Verified hardware and software
+
+| Item | On-site result, October 16, 2026 |
 |---|---|
-| 主机 | x86_64，Ubuntu 24.04.4 LTS，Python 3.12 |
-| 内核 / 驱动 | `7.0.14-xyzbox-rt`（PREEMPT_RT）/ `kcan 1.4.2`，DKMS；保留原 generic 内核 |
-| 新卡 | M.2 经 USB 枚举，`395e:0020 KCAN-USB X4`，四路 `can0`～`can3` |
-| Nero 外部总线 | **经典 CAN，1 Mbps，采样点 0.75** |
-| 机械臂固件 | 两臂均为 1.12，对应 SDK `v112` |
-| 本次接线 | 物理 CAN1 → can0 → 右臂；物理 CAN2 → can1 → 左臂；其余两路未接 |
+| Host | x86_64, Ubuntu 24.04.4 LTS, Python 3.12 |
+| Kernel / driver | `7.0.14-xyzbox-rt` (PREEMPT_RT) / `kcan 1.4.2`, managed by DKMS; original generic kernel retained |
+| Current adapter | M.2 connected over USB, `395e:0020 KCAN-USB X4`, four interfaces: `can0`–`can3` |
+| Nero external bus | **Classic CAN, 1 Mbps, sample point 0.75** |
+| Arm firmware | Both arms: 1.12, using SDK profile `v112` |
+| Wiring on this machine | Physical CAN1 → can0 → right arm; physical CAN2 → can1 → left arm; other ports unused |
 
-**上表的左右关系只属于本次接线，客户现场必须重新确认。** 卡有四路，不代表四路都要启用。
-型号铭牌与引脚定义以客户实际产品为准；USB ID 是识别依据之一。
-RT 切换后已检查系统启动、驱动和离线软件；本轮机械臂断电，未重复执行运动测试。
+**The left/right mapping above applies only to this installation. Verify it again at the customer site.** A four-channel adapter does not require all four channels to be enabled.
+Use the actual product label and pinout for the customer's hardware; the USB ID is only one identification aid.
+System startup, the driver, and offline software were checked after switching to RT. The arms were powered off during that work, so motion tests were not repeated.
 
-## 重装后最短路径
+## Quick start after reinstalling
 
-先完成 Ubuntu 安装并联网。机械臂控制程序全部退出，在机械臂断电时安装驱动和重启主机。
+Install Ubuntu and establish network access first. Exit all arm control programs, and keep the arms powered off while installing the driver and rebooting the PC.
 
 ```bash
 sudo apt update
@@ -29,73 +31,74 @@ sudo apt install -y git python3-venv
 git clone https://github.com/BigBillZhao/XYZBox.git
 cd XYZBox
 
-# 固定的驱动与源码在仓库内，不依赖“latest”下载链接。
+# Pinned driver sources are included; no "latest" download is needed.
 sudo bash scripts/install_kcan.sh
 
-# 只填真正接线的系统接口名；默认 can0、can1。
+# List only the interfaces that are physically connected; defaults: can0, can1.
 sudo nano /etc/xyzbox-can.json
 sudo reboot
 ```
 
-如使用 Gitea，克隆地址为 `ssh://git@gitea.zenbotx.com:19035/zenbot/XYZBox.git`；其余操作相同。
+For Gitea, use `ssh://git@gitea.zenbotx.com:19035/zenbot/XYZBox.git` as the clone URL. The remaining steps are the same.
 
-重新登录，回到仓库目录：
+Log in again and return to the repository directory:
 
 ```bash
-lsusb -t                             # 对应 USB 接口应为 Driver=kcan
-dkms status                          # CAN 驱动应显示 1.4.2 installed
-ip -details link show type can       # 接线通道应 UP / 1000000 / mtu 16
+lsusb -t                             # The adapter should show Driver=kcan.
+dkms status                          # Driver 1.4.2 should be installed for this kernel.
+ip -details link show type can       # Connected channels: UP / 1000000 / mtu 16.
 
-# Ubuntu x86_64 / Python 3.12 的 Python 安装包已随仓库提供。
+# Packages for Ubuntu x86_64 / Python 3.12 are included.
 bash scripts/setup_nero_env.sh
 
-# 机械臂上电，等待初始化完成。以下两步不使能、不移动机械臂。
+# Power on the arms and wait for initialization. These checks do not enable or move them.
 .venv/bin/python tools/can_probe.py can0 can1
 .venv/bin/python examples/nero_joint_control.py --channels can0 can1 --read
 ```
 
-确认反馈正常、接线明确、运动空间允许后，**操作者主动执行**以下动作命令：
+After checking feedback, wiring, and clearance, the **on-site operator explicitly starts motion**:
 
 ```bash
-# 单臂先验证；--home 是本套工装的准备姿态，并非厂家零位。
+# Verify one arm first. --home is this fixture's ready pose, not the factory zero.
 .venv/bin/python examples/nero_joint_control.py --channels can0 --home --speed 10
 
-# 自定七关节绝对目标，单位 rad：
+# Seven absolute joint targets, in radians:
 .venv/bin/python examples/nero_joint_control.py --channels can0 \
   --joints 0 0.35 0 1.75 0 0 -0.6 --speed 10
 ```
 
-默认运行示例只有读取；只有 `--home` / `--joints` 才会使能并发运动命令。
-示例采用官方 SDK 的 **`move_j` 关节位置模式**。它不包含上位机持续 MIT/重力补偿循环。
-退出不主动发送 `disable()`；退出也不是急停或经过验证的安全保持功能。
+The example reads by default. Only `--home` / `--joints` enable the arm and send motion commands.
+It uses the official SDK's **`move_j` joint position mode** and does not run a continuous host-side MIT/gravity compensation loop.
+Exiting does not explicitly call `disable()`. Exiting is neither an emergency stop nor a verified safe hold function.
 
-## 资料导航
+## Documentation
 
-| 文档 | 内容 |
+| Guide | Contents |
 |---|---|
-| [重装与恢复](docs/01-reinstall.md) | 依赖、DKMS、Secure Boot、离线条件、已有安装、恢复和升级 |
-| [硬件与接线](docs/02-hardware-and-can.md) | 两代现场卡、通道、速率、左右确认、验收判据 |
-| [排障](docs/03-troubleshooting.md) | 无回复、ACK、假回显、接口 DOWN、错误计数、USB 热解绑陷阱 |
-| [Nero 示例](docs/04-nero-example.md) | 无运动读取、单/双臂控制、参数、版本与退出行为 |
-| [验证范围](docs/05-validation.md) | 现场证据与本仓库测试边界；避免把枚举成功当成机械臂已通 |
-| [交付机软件清单](docs/06-delivery-software.md) | IK、XRoboToolkit、原录制流程、验收样例与维护归档 |
-| [实时内核](docs/07-realtime-kernel.md) | PREEMPT_RT 的来源、构建、安装、DKMS、试启动与回退 |
-| [第三方来源](vendor/README.md) | 固定版本、下载源、源码及 SHA-256 |
+| [Reinstallation and recovery](docs/en/01-reinstall.md) | Dependencies, DKMS, Secure Boot, offline preparation, existing installations, recovery, and upgrades |
+| [Hardware and wiring](docs/en/02-hardware-and-can.md) | Two observed adapters, channels, bitrate, arm identification, and acceptance checks |
+| [Troubleshooting](docs/en/03-troubleshooting.md) | Missing feedback, ACK errors, local echo, DOWN interfaces, error counters, and USB unbind pitfalls |
+| [Nero joint example](docs/en/04-nero-example.md) | Reading without motion, single/dual-arm commands, parameters, firmware profiles, and exit behavior |
+| [Validation scope](docs/en/05-validation.md) | Recorded evidence and test boundaries; enumeration alone does not establish arm communication |
+| [Delivered software inventory](docs/en/06-delivery-software.md) | IK, XRoboToolkit, original recording workflow, acceptance sample, and maintenance archive |
+| [Real-time kernel](docs/en/07-realtime-kernel.md) | PREEMPT_RT source, build, installation, DKMS, trial boot, and rollback |
+| [Third-party sources](vendor/README.md) | Pinned versions, sources, archives, and SHA-256 checksums |
+| [Third-party notices](THIRD_PARTY_NOTICES.md) | Component licenses and source distribution information |
 
-仓库不包含客户密码、SSH 私钥、原系统用户目录、数据集或机械臂固件升级程序。
-本机接口配置不会刷写 CAN 卡或机械臂固件。PICO、相机与以太网管理页可独立配置；关节示例不需要它们。
+The repository does not contain customer passwords, SSH private keys, the original system's home directory, datasets, or arm firmware update tools.
+Host interface configuration does not flash the adapter or arm firmware. PICO, cameras, and the Ethernet management page can be configured independently; the joint example does not require them.
 
-## 离线恢复的边界
+## Offline recovery scope
 
-仓库包含驱动/SDK 源码以及 Linux x86_64、CPython 3.12 的 Python 轮子。
-Ubuntu 的 `dkms`、编译器、**与正在运行内核完全匹配的 headers** 等 apt 包仍需预先准备。
-详见 [离线准备](docs/01-reinstall.md#离线准备)。不要把旧系统编出的 `.ko` 直接拷到新内核使用。
+Driver/SDK sources and Linux x86_64 / CPython 3.12 wheels are included.
+Ubuntu packages such as `dkms`, the compiler, and **headers matching the running kernel exactly** must be prepared separately.
+See [offline preparation](docs/en/01-reinstall.md#offline-preparation). Do not reuse a `.ko` compiled for a different kernel.
 
-## 验证仓库本身
+## Verify the repository
 
 ```bash
 sha256sum --check vendor/SHA256SUMS
 .venv/bin/python -m unittest discover -s tests -v
 ```
 
-测试不会访问实体 CAN 或驱动机械臂。
+These tests do not access physical CAN devices or move the arms.

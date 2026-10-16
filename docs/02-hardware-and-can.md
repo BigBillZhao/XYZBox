@@ -1,5 +1,7 @@
 # 硬件、接线与识别
 
+[English](en/02-hardware-and-can.md) | 简体中文 · [首页](../README.zh-CN.md)
+
 ## 两种现场设备不要混淆
 
 | 现场设备 | USB 身份 / 驱动 | 记录 |

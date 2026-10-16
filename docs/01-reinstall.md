@@ -1,5 +1,7 @@
 # 重装与恢复
 
+[English](en/01-reinstall.md) | 简体中文 · [首页](../README.zh-CN.md)
+
 ## 1. 安装目标系统
 
 已验证目标为 Ubuntu 24.04.4 LTS / x86_64 / Python 3.12。

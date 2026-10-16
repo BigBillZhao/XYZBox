@@ -1,5 +1,7 @@
 # Nero 关节控制示例
 
+[English](en/04-nero-example.md) | 简体中文 · [首页](../README.zh-CN.md)
+
 入口：[`examples/nero_joint_control.py`](../examples/nero_joint_control.py)。
 它直接使用随仓库固定的官方 pyAgxArm，默认只读取。
 

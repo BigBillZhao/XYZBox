@@ -1,5 +1,7 @@
 # 交付机的软件与目录
 
+[English](en/06-delivery-software.md) | 简体中文 · [首页](../README.zh-CN.md)
+
 整理日期：2026-10-16。客户机上的总入口为 `~/nero-delivery/README.md`，桌面为 `XYZBox-使用说明.md`。
 
 ## 已有功能

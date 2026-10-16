@@ -1,22 +1,24 @@
-# 第三方组件
+# Third-Party Components
 
-第三方源码/二进制分发保留各自版权及许可证，具体条款以归档内部原文为准。
+English | [简体中文](THIRD_PARTY_NOTICES.zh-CN.md)
 
-| 组件 | 版本/快照 | 许可证材料 |
+Distributed third-party sources and binaries retain their respective copyrights and licenses. The original license text inside each archive governs that component.
+
+| Component | Version / snapshot | License materials |
 |---|---|---|
-| USB CAN Linux driver | 1.4.2 | `vendor/kcan-driver-1.4.2.tar.gz` 内许可证及源码头；`licenses/can-driver-*.txt` |
-| pyAgxArm | 官方归档 1ae40ad | 原始 LGPL-3.0，完整源码归档；`licenses/pyAgxArm-LGPL-3.0.txt` |
-| python-can | 4.6.1 | wheel 原许可证、对应源码发行包；`licenses/python-can-LICENSE.txt` |
-| typing_extensions | 4.15.0 | wheel 原许可证及 `licenses/wheels/typing_extensions/` |
-| packaging | 25.0 | wheel 原许可证及 `licenses/wheels/packaging/` |
-| wrapt | 1.17.3 | wheel 原许可证及 `licenses/wheels/wrapt/` |
-| setuptools | 80.10.2 | wheel 原许可证及 `licenses/wheels/setuptools/` |
-| wheel | 0.48.0 | wheel 原许可证及 `licenses/wheels/wheel/` |
-| Linux / Ubuntu 内核构建配方 | 源包 7.0.0-38.38~24.04.4 / Linux 7.0.14 | `licenses/linux-COPYING.txt`、`licenses/linux-GPL-2.0.txt`；完整源包及其他组件许可保存在交付机实时内核目录 |
+| USB CAN Linux driver | 1.4.2 | Licenses and source headers inside `vendor/kcan-driver-1.4.2.tar.gz`; `licenses/can-driver-*.txt` |
+| pyAgxArm | Official archive 1ae40ad | Original LGPL-3.0, complete source archive; `licenses/pyAgxArm-LGPL-3.0.txt` |
+| python-can | 4.6.1 | Original wheel license, corresponding source distribution; `licenses/python-can-LICENSE.txt` |
+| typing_extensions | 4.15.0 | Original wheel license and `licenses/wheels/typing_extensions/` |
+| packaging | 25.0 | Original wheel license and `licenses/wheels/packaging/` |
+| wrapt | 1.17.3 | Original wheel license and `licenses/wheels/wrapt/` |
+| setuptools | 80.10.2 | Original wheel license and `licenses/wheels/setuptools/` |
+| wheel | 0.48.0 | Original wheel license and `licenses/wheels/wheel/` |
+| Linux / Ubuntu kernel build recipe | Source package 7.0.0-38.38~24.04.4 / Linux 7.0.14 | `licenses/linux-COPYING.txt`, `licenses/linux-GPL-2.0.txt`; complete source packages and other component licenses retained in the delivery machine's real-time kernel directory |
 
-来源、固定哈希和提取范围见 [`vendor/manifest.json`](vendor/manifest.json)。
-LGPL-3.0 所引用的 GPL-3.0 完整原文见 [`licenses/GPL-3.0.txt`](licenses/GPL-3.0.txt)。
-这些名称仅用于识别组件，不代表第三方为 XYZBox 的集成或示例作额外认证。
+Sources, pinned hashes, and extraction scope are recorded in [`vendor/manifest.json`](vendor/manifest.json).
+The complete GPL-3.0 text referenced by LGPL-3.0 is in [`licenses/GPL-3.0.txt`](licenses/GPL-3.0.txt).
+Component names identify the software; they do not imply additional third-party certification of XYZBox's integration or examples.
 
-实时内核的源包校验、配置与构建步骤见 `system/realtime/` 和 `docs/07-realtime-kernel.md`。
-向客户复制自编译内核包时，一并交付三个原始源包、配置和构建脚本；保留源码中的所有许可文件。
+RT kernel source checksums, configuration, and build steps are in `system/realtime/` and [the real-time kernel guide](docs/en/07-realtime-kernel.md).
+When delivering custom kernel binaries to a customer, also deliver the three original source archives, configuration, and build script. Preserve all license files in the sources.

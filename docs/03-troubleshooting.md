@@ -1,5 +1,7 @@
 # USB CAN 排障
 
+[English](en/03-troubleshooting.md) | 简体中文 · [首页](../README.zh-CN.md)
+
 ## 按层排查
 
 | 现象 | 先查什么 | 下一步 |

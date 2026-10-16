@@ -1,37 +1,39 @@
-# 固定版本与来源
+# Pinned Versions and Sources
 
-所有归档和轮子的大小与 SHA-256 都在 [`manifest.json`](manifest.json)；
-可用 `sha256sum --check vendor/SHA256SUMS` 一次核对。
+English | [简体中文](README.zh-CN.md) · [Home](../README.md)
+
+Sizes and SHA-256 checksums for every archive and wheel are recorded in [`manifest.json`](manifest.json).
+Run `sha256sum --check vendor/SHA256SUMS` from the repository root to verify them together.
 
 ## kcan 1.4.2
 
-- 原始发布来源见 `manifest.json` 中的 `upstream_url`，保留完整可追溯信息。
-- 获取时内容为 **1.4.2 / 2026-07-21**；原 ZIP SHA-256：
+- The original release URL is retained as `upstream_url` in `manifest.json` for traceability.
+- The downloaded release was **1.4.2 / July 21, 2026**. Original ZIP SHA-256:
   `0859afc67dc63f232d64a8815a4c2a7bcf7129298c48748a70174647a4a6508c`
-- 仓库文件：`kcan-driver-1.4.2.tar.gz`。
-- 提取范围：原发行包 `driver/`，加原始许可证、README、release notes。
-  驱动源码未修改；安装时只重新生成原 Makefile 已支持的 dkms.conf。
-- 没有打包固件镜像或自动升级工具。恢复主机 CAN 驱动无需刷新设备固件。
-- 许可证：上游 `LICENSE.gpl` / `LICENSE.lgpl`；源码头部版权保留。
+- Bundled file: `kcan-driver-1.4.2.tar.gz`.
+- Extraction scope: the original release's `driver/` directory, original licenses, README, and release notes.
+  Driver sources are unchanged. Installation only regenerates `dkms.conf` using functionality already provided by the original Makefile.
+- Firmware images and automatic firmware upgrade tools are not bundled. Restoring the host CAN driver does not require flashing device firmware.
+- Licenses: upstream `LICENSE.gpl` / `LICENSE.lgpl`; source copyright headers are preserved.
 
-`latest` URL 将来可能变化，所以安装脚本只使用已经放入本仓库、哈希固定的源码包。
+A `latest` URL may change later, so the installer uses only the bundled source archive with its pinned hash.
 
 ## pyAgxArm
 
-- SDK 原始发布来源见 `manifest.json`。
-- 仓库文件：`pyAgxArm-1ae40ad.tar.gz`，原官方归档未修改。
-- 固定源码快照为 `1ae40ad`，完整归档哈希用于精确复现：
+- The SDK's original release source is recorded in `manifest.json`.
+- Bundled file: `pyAgxArm-1ae40ad.tar.gz`, the unmodified official archive.
+- The pinned source snapshot is `1ae40ad`. Full archive hash for exact reproduction:
   `ea8a38af9e6e44255a53c351c4cf788592a21abe694e0f2ce683f2b9be177711`
-- 许可证：LGPL-3.0；完整源码、测试、构建文件和许可证随归档提供。
-- 该源码包含 Nero v112；不能仅凭安装包显示的 `1.0.0` 确认这一点。
+- License: LGPL-3.0. Complete sources, tests, build files, and license are included in the archive.
+- This snapshot includes Nero v112 support. The displayed package version `1.0.0` alone does not establish that support.
 
-## Python 离线依赖
+## Offline Python dependencies
 
-`python-wheels/` 来自 PyPI，固定版本见根目录 `requirements-nero.txt`。
-目标为 Linux x86_64 / CPython 3.12；其他平台请在线取得相应轮子后单独验收。
-运行依赖为 python-can、typing_extensions、packaging、wrapt；setuptools 和 wheel 用于离线构建 SDK。
+`python-wheels/` contains packages from PyPI; pinned versions are in the root `requirements-nero.txt`.
+The target is Linux x86_64 / CPython 3.12. Obtain matching wheels online and validate separately for other platforms.
+Runtime dependencies are python-can, typing_extensions, packaging, and wrapt. setuptools and wheel support offline SDK builds.
 
-`python-sources/` 同时提供 python-can 4.6.1 的上游源码发行包。
-各 wheel 内原有 license/notice 均保留，并提取副本至 [`licenses/wheels/`](../licenses/wheels/)。
+`python-sources/` also contains the upstream source distribution of python-can 4.6.1.
+Original licenses/notices remain inside each wheel, with extracted copies in [`licenses/wheels/`](../licenses/wheels/).
 
-本仓库的安装过程不需要上游主分支实时可用，也不会自动升级到新驱动、SDK 或设备固件。
+Installation does not depend on a live upstream main branch and does not automatically upgrade the driver, SDK, or device firmware.
