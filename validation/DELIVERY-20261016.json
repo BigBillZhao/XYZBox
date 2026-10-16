@@ -1,0 +1,123 @@
+{
+  "date": "2026-10-16T19:01:00.389662+08:00",
+  "scope": "Customer handover and PREEMPT_RT boot/offline verification; no robot motion",
+  "kernel": "7.0.14-xyzbox-rt",
+  "preempt_rt": true,
+  "default_boot": "GRUB_DEFAULT=\"Advanced options for Ubuntu>Ubuntu, with Linux 7.0.14-xyzbox-rt\"",
+  "fallback_kernel": "7.0.0-38-generic",
+  "fallback_packages_retained_manually": [
+    "linux-image-7.0.0-38-generic",
+    "linux-headers-7.0.0-38-generic",
+    "linux-modules-7.0.0-38-generic"
+  ],
+  "platform_checks": {
+    "expected_kernel": true,
+    "preempt_rt": true,
+    "services_active": true,
+    "kcan_loaded_and_matches": true,
+    "display_driver_loaded": true,
+    "hdmi_connected": true,
+    "all_four_can_enumerated": true,
+    "static_profile_preserved": true,
+    "can0_classic_1mbps": true,
+    "can1_classic_1mbps": true,
+    "can2_unused_down": true,
+    "can3_unused_down": true
+  },
+  "human_gui_confirmation": "not received; display service, i915 and HDMI output checked",
+  "offline": {
+    "imports": 11,
+    "python_files": 628,
+    "mesh_references": 42,
+    "fk_and_gravity": "passed",
+    "teleop_help": "passed",
+    "unit_tests_passed": 13,
+    "unit_tests_failed": 0,
+    "hardware_connections_opened": false
+  },
+  "packages": {
+    "image": {
+      "file": "linux-image-7.0.14-xyzbox-rt_7.0.14-xyzbox1_amd64.deb",
+      "bytes": 109445198,
+      "sha256": "50b03c30b49ebe076ca99307f2daec29191e6b00f9dfa2b429705ff80d62d48c",
+      "control": "Package: linux-image-7.0.14-xyzbox-rt\nVersion: 7.0.14-xyzbox1\nArchitecture: amd64",
+      "private_key_files_found": false
+    },
+    "headers": {
+      "file": "linux-headers-7.0.14-xyzbox-rt_7.0.14-xyzbox1_amd64.deb",
+      "bytes": 10329868,
+      "sha256": "91ab88714443df8186f786da6a5bd5aa46d9dc5d6ee6dad2c8efb44a04d4981c",
+      "control": "Package: linux-headers-7.0.14-xyzbox-rt\nVersion: 7.0.14-xyzbox1\nArchitecture: amd64",
+      "private_key_files_found": false
+    },
+    "config": {
+      "file": "config-7.0.14-xyzbox-rt",
+      "bytes": 304867,
+      "sha256": "2e87c3e178d914375191ab44d4b8968879cf2c3991603b3746552dc5d5ca82c4",
+      "purpose": "Compatibility .config for Ubuntu DKMS; identical to installed /boot configuration"
+    }
+  },
+  "dkms_config_compatibility": "Installed an exact copy of /boot/config-7.0.14-xyzbox-rt as the headers .config; rebuilt and signed CAN module before reboot",
+  "driver_vermagic": "7.0.14-xyzbox-rt SMP preempt_rt mod_unload modversions",
+  "driver_signer": "ubuntu Secure Boot Module Signature key",
+  "driver_source": {
+    "source_archive_sha256": "eebb0f6a46e50a4299623c5771b1088dea1edc7e16e7620fc40310e8e35bda37",
+    "files_checked": 47,
+    "mismatches": [],
+    "generated_dkms_conf_excluded": true
+  },
+  "latency_observations": {
+    "time": "2026-10-16T18:56:05.275185+08:00",
+    "units": "microseconds",
+    "command": "cyclictest -a 2 -t1 -p80 -i1000 -D30s -m -q",
+    "load_command": "stress-ng --cpu 6 --cpu-method matrixprod --timeout 55s --quiet",
+    "load_active_for_entire_measurement": true,
+    "generic_idle": {
+      "min": 1,
+      "avg": 5,
+      "max": 44,
+      "cycles": 30000
+    },
+    "generic_load": {
+      "min": 1,
+      "avg": 1,
+      "max": 9,
+      "cycles": 30000
+    },
+    "rt_idle": {
+      "min": 1,
+      "avg": 5,
+      "max": 19,
+      "cycles": 30000
+    },
+    "rt_load": {
+      "min": 1,
+      "avg": 1,
+      "max": 4,
+      "cycles": 30000
+    },
+    "scope": "Single short scheduling observations; CPU latency QoS 0 us; not an end-to-end control deadline guarantee. No robot/camera test."
+  },
+  "original_record_script_sha256": "08220e435e79e6e21b77a3f6bca628e036891610ec22f5d1965d539853d4ac99",
+  "acceptance_sample": {
+    "frames": 846,
+    "cameras": 3,
+    "images_per_camera": 846,
+    "duration_seconds_approx": 28.8,
+    "archive_sha256": "4afe0c5b8febbf405f67b60b02d5eee62bf3a2b6e34d63e654ec99fbdd8c6c37"
+  },
+  "physical_motion_test": "not run; user powered off arms and waived further physical validation",
+  "pico_and_camera_hardware_tests": "not run",
+  "access": "Existing Mac SSH maintenance access retained by explicit user choice",
+  "publication": "Gitea push deferred by user after server receive hooks were killed with signal 9; files delivered locally and to the industrial PC",
+  "checked_files_sha256": {
+    "scripts/build_rt_kernel.sh": "e6e851bf1bab327088c21d4584a8b931b60de1fc06c1c8963b928029822b7c0c",
+    "scripts/install_kcan.sh": "b4553c979bc9cfe76684af54804527be575a9991de7eece51074d044244cb877",
+    "scripts/setup_nero_env.sh": "73a6ddc575817068cc72b8ccb283a6edb83d2da1dbe5e2b57abda5f9ae7f6070",
+    "examples/nero_joint_control.py": "b15189ccbe230fdb01f643479956448b2959a80fcad2f464df2686a9201567e5",
+    "tools/can_up.py": "83553ebfa62468a1c4a098d054862de86ff58f24e2ca6f23aa2fd9212d492efd",
+    "tools/can_probe.py": "8ee8e735986e4da513d637b495e8128585df56dbffe58694491c9f231cf648d5",
+    "system/realtime/config-generic-7.0.0-38": "cf4856351d3c0aa820f40ae8c185b3df9aa340a7a4812acd80dbef04995fedfa",
+    "system/realtime/SHA256SUMS.sources": "e647dd3f93c814b97cc8c850cc7a544d60d891e9fd6886b4f314fcaeaaffe29f"
+  }
+}

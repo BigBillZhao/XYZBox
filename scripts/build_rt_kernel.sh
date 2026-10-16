@@ -8,6 +8,13 @@ if [[ $# != 2 ]]; then
     exit 2
 fi
 if [[ $EUID == 0 ]]; then echo 'Build as an ordinary user, not root.' >&2; exit 2; fi
+if [[ $(uname -s) != Linux || $(uname -m) != x86_64 ]]; then
+    echo 'This recipe targets Linux x86_64.' >&2
+    exit 2
+fi
+for tool in make gcc ld bison flex gawk openssl dpkg-buildpackage; do
+    command -v "$tool" >/dev/null || { echo "Missing build tool: $tool (see docs/07-realtime-kernel.md)" >&2; exit 2; }
+done
 repo=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)
 src=$(realpath -- "$1")
 mkdir -p -- "$2"
@@ -42,4 +49,5 @@ jobs=${BUILD_JOBS:-6}
 make -C "$src" O="$out" -j"$jobs" \
     KBUILD_BUILD_USER=xyzbox KBUILD_BUILD_HOST=nero-control \
     KDEB_PKGVERSION=7.0.14-xyzbox1 bindeb-pkg
+cp "$out/.config" "$(dirname "$out")/config-7.0.14-xyzbox-rt"
 echo 'Packages are in the parent of the output directory. Install only the image and matching headers.'

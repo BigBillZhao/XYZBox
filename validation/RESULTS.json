@@ -63,5 +63,7 @@
     "tests/test_nero_example.py": "089fef19c0ba83224f3ad3d0812d2a2d5873129740c6cf08e68cde0134c09220",
     "vendor/SHA256SUMS": "1e8afaa6657684c0cfd4c1652055552dde9419706106506b01be5e8fd1a19b83"
   },
-  "user_confirmed_hardware_power_off": true
+  "user_confirmed_hardware_power_off": true,
+  "source_revision": "1ed8aef686c4228e559cd46318622e7cb8af3260",
+  "scope_note": "Original USB CAN kit validation. Later delivery/kernel validation is recorded separately; this record retains its original file hashes."
 }

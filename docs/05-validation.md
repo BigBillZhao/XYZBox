@@ -1,6 +1,6 @@
 # 验证记录与边界
 
-## 2026-10-16 现场链路
+## 2026-10-16 RT 切换前的现场链路
 
 环境：Ubuntu 24.04.4 LTS / x86_64，内核 `7.0.0-38-generic`，kcan `Release_1.4.2_20260721_n`，
 Python 3.12，pyAgxArm 固定归档 `1ae40ad`，python-can 4.6.1。
@@ -31,8 +31,18 @@ Python 3.12，pyAgxArm 固定归档 `1ae40ad`，python-can 4.6.1。
 - CAN 启用 helper：未选通道不操作、不同配置的 UP 接口拒绝重配、正常配置的行为测试。
 - 真实硬件验证限于明确记录的只读测试；没有为编写仓库资料而额外移动机械臂。
 
-最终结果见 [`validation/RESULTS.json`](../validation/RESULTS.json)。
+原始 USB CAN 资料包结果见 [`validation/RESULTS.json`](../validation/RESULTS.json)，对应提交 `1ed8aef`。
 若某项写着未执行，不应视为通过。
+
+## 交付整理与 RT 切换后的复验
+
+`7.0.14-xyzbox-rt` 已实际启动，PREEMPT_RT 生效，已设置为默认，原 generic 内核保留。
+USB CAN 驱动匹配新内核并已加载；四路接口、两路经典 CAN 1 Mbps、原网络配置、显示服务与 HDMI 输出检查通过。
+11 个模块导入、628 个 Python 文件、42 处模型资源、FK/重力补偿和 13 项离线测试通过。
+原录制程序源码哈希不变，完整三相机验收样例压缩包哈希不变。
+本轮没有连接机械臂执行运动，未测试 PICO/相机硬件，也未取得桌面交互的现场人工确认。
+详细结果见 [`validation/DELIVERY-20261016.json`](../validation/DELIVERY-20261016.json)；
+调度观测及恢复步骤见 [实时内核说明](07-realtime-kernel.md)。
 
 ## 客户恢复后仍须验证
 

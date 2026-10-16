@@ -2,9 +2,13 @@
 
 ## 交付状态
 
-2026-10-16：原内核为 `7.0.0-38-generic`，已保存基线配置与调度测试。
-同源 `7.0.14-xyzbox-rt` 正在编译，**尚未安装、重启或完成 RT 验证**。
-最终安装状态以本页更新和客户机 `~/nero-delivery/manifests/` 的记录为准。
+2026-10-16：`7.0.14-xyzbox-rt` 已安装、完成试启动和复验，并设为默认启动内核。
+`uname` 显示 `PREEMPT_RT`，`/sys/kernel/realtime` 为 `1`。
+原 `7.0.0-38-generic` 及其 headers、modules 已标记为手工保留，作为回退入口。
+CAN 驱动 1.4.2 已为 RT 内核重新编译、签名并成功加载；四路接口可见，使用中的两路为经典 CAN 1 Mbps。
+SSH、显示服务、HDMI 输出、现有静态网络配置及离线软件检查通过。
+机械臂断电，本次没有运行机械臂运动、PICO 或相机硬件测试；桌面交互尚未获得现场人工复核。
+结果见 [`validation/DELIVERY-20261016.json`](../validation/DELIVERY-20261016.json)，客户机也保存于 `~/nero-delivery/manifests/`。
 
 PREEMPT_RT 必须实际启用 `CONFIG_PREEMPT_RT=y`；只增加 `preempt=full`、`threadirqs`
 或安装 lowlatency 内核不能代替这项检查。[Linux 内核配置说明](https://docs.kernel.org/core-api/real-time/kernel-configuration.html)
@@ -28,7 +32,7 @@ sudo apt install linux-realtime-hwe-24.04
 此后仍需检查匹配 headers、USB CAN DKMS、启动回退，再重启；不要把 Pro 凭据写进仓库。
 支持的内核版本以实际订阅源和[官方安装说明](https://ubuntu.com/pro-client/docs/en/docs/howtoguides/enable_realtime_kernel/)为准。
 
-本机尚未绑定 Pro。下面提供从现用 Ubuntu 内核**同一源包**构建的路线：
+本机未绑定 Pro，交付方选择从原 Ubuntu 内核**同一源包**构建的路线：
 源包 `linux-hwe-7.0 7.0.0-38.38~24.04.4`，源码版本 `7.0.14`。
 Ubuntu 包的 ABI 编号与源码的 stable 版本号不同，这是正常的。
 自编译包需要交付维护方持续跟进内核更新、重新构建并复验；它不属于官方维护的 RT 二进制包。
@@ -40,8 +44,8 @@ Ubuntu 包的 ABI 编号与源码的 stable 版本号不同，这是正常的。
 
 ```bash
 sudo apt update
-sudo apt install build-essential bc bison flex libssl-dev libelf-dev libdw-dev \
-  libncurses-dev dwarves rsync cpio kmod fakeroot dpkg-dev debhelper zstd rt-tests
+sudo apt install build-essential bc bison flex gawk libssl-dev libelf-dev libdw-dev \
+  libncurses-dev dwarves rsync cpio kmod fakeroot dpkg-dev debhelper zstd rt-tests stress-ng
 ```
 
 APT 需启用 Ubuntu 24.04 的 `deb-src`，使用带 Ubuntu 归档签名的镜像。
@@ -79,6 +83,7 @@ BUILD_JOBS=6 bash "$repo/scripts/build_rt_kernel.sh" "$rt/source" "$rt/build"
 make -C "$rt/source" O="$rt/build" -j6 \
   KBUILD_BUILD_USER=xyzbox KBUILD_BUILD_HOST=nero-control \
   KDEB_PKGVERSION=7.0.14-xyzbox1 bindeb-pkg
+cp "$rt/build/.config" "$rt/config-7.0.14-xyzbox-rt"
 ```
 
 ## 安装与首次试启动
@@ -92,13 +97,19 @@ make -C "$rt/source" O="$rt/build" -j6 \
 
 ```bash
 # 安装前先固定旧内核，避免安装包改变下次默认启动项。
+sudo apt-mark manual linux-image-7.0.0-38-generic linux-headers-7.0.0-38-generic \
+  linux-modules-7.0.0-38-generic
 echo 'GRUB_DEFAULT="Advanced options for Ubuntu>Ubuntu, with Linux 7.0.0-38-generic"' \
   | sudo tee /etc/default/grub.d/90-xyzbox-kernel.cfg
 sudo update-grub
 
-# 只装内核 image 和对应 headers；不要用 *.deb 把 linux-libc-dev 一起覆盖。
-sudo dpkg -i "$rt/linux-headers-7.0.14-xyzbox-rt_7.0.14-xyzbox1_amd64.deb" \
-  "$rt/linux-image-7.0.14-xyzbox-rt_7.0.14-xyzbox1_amd64.deb"
+# 先装 headers，并补入与该内核一致的配置，供 Ubuntu DKMS 读取。
+sudo dpkg -i "$rt/linux-headers-7.0.14-xyzbox-rt_7.0.14-xyzbox1_amd64.deb"
+sudo install -m 644 "$rt/config-7.0.14-xyzbox-rt" \
+  /usr/src/linux-headers-7.0.14-xyzbox-rt/.config
+# 再装 image，安装钩子会为新内核编译 CAN 模块。
+# 不要用 *.deb 把 linux-libc-dev 一起覆盖。
+sudo dpkg -i "$rt/linux-image-7.0.14-xyzbox-rt_7.0.14-xyzbox1_amd64.deb"
 sudo dkms autoinstall -k 7.0.14-xyzbox-rt
 dkms status
 modinfo -k 7.0.14-xyzbox-rt kcan
@@ -111,6 +122,11 @@ sudo reboot
 ```
 
 DKMS 必须显示新内核下已安装，`modinfo` 的 vermagic 必须匹配新内核，失败时不要试启动。
+Linux 7.0 的上游 headers 包不带顶层 `.config`；上面的补入步骤用于兼容 Ubuntu 24.04 的 DKMS。
+如果安装时已出现 `Kernel config ... not found`，即使模块编译成功，也应补配置后对该模块执行
+`dkms build --force` 和 `dkms install --force`，再更新 initramfs；不要忽略日志中的兼容问题。
+驱动构建参数中的 `RT=NO_RT` 指普通 Linux 接口与 Xenomai/RTDM 接口的选择；
+使用 Linux PREEMPT_RT + SocketCAN 时保留普通 Linux 接口，不要据这个名称切成 Xenomai 构建。
 保留原有 `video=eDP-1:d` 显示修复、网络配置和 CAN 通道配置。
 一次性启动项不会自动检测机器是否健康；若启动挂住，需现场重新启动机器，下一次会回到固定的旧内核。
 
@@ -129,8 +145,20 @@ sudo cyclictest -a 2 -t1 -p80 -i1000 -D30s -m -q
 
 核验管理网、设备网静态配置、显示/登录和原 Python 环境。未接相机或机械臂时，
 只能完成内核、驱动枚举与离线软件检查，不能记为完整遥操验收。
-本次 generic 空闲基线：30,000 周期，最小 1 µs、平均 5 µs、最大 44 µs；
-它只是同条件对比值，不能当作最坏情况承诺。正式应用还需带相机、图形和控制负载测试。
+本次每组均测量 30 秒、30,000 周期；数值单位为 µs：
+
+| 内核 / 条件 | 最小 | 平均 | 最大观测值 |
+|---|---:|---:|---:|
+| generic / 空闲 | 1 | 5 | 44 |
+| generic / 6 个 CPU 负载进程 | 1 | 1 | 9 |
+| PREEMPT_RT / 空闲 | 1 | 5 | 19 |
+| PREEMPT_RT / 6 个 CPU 负载进程 | 1 | 1 | 4 |
+
+CPU 负载使用 `stress-ng --cpu 6 --cpu-method matrixprod --timeout 55s --quiet`，
+开始 3 秒后执行同一条 cyclictest 命令。先完成 sudo 认证，再开始计时，避免密码提示耗尽负载窗口；
+测量结束时确认负载仍在运行。cyclictest 施加了 0 µs 的 CPU latency QoS 请求。
+这些是单次短时观测，不能当作最坏情况承诺或真实控制程序的延迟上限。
+正式应用还需带相机、图形和控制负载测试。
 
 全部基础验证通过后才设为默认：
 
@@ -148,3 +176,5 @@ sudo update-grub
 
 以后每次换内核均需匹配 headers、重编 USB CAN DKMS、试启动和复验。
 固定默认内核不会自动切到新安全版本；维护方必须主动安排更新，不应长期停留在这个快照。
+若修改源码或构建配置，使用新的内核后缀和包版本，不要让不同构建共用同一个 `uname -r`，
+否则 DKMS 可能误把旧模块当作已经为新构建安装。
