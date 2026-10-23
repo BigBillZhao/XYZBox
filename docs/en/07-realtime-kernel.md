@@ -4,6 +4,16 @@ English | [简体中文](../07-realtime-kernel.md) · [Home](../../README.md)
 
 ## Delivery status
 
+On October 23, 2026, the new dual-Piper box (session address `192.168.110.12`)
+booted `7.0.14-xyzbox-rt`, package version `7.0.14-xyzbox2`, and made it the default while retaining generic.
+PREEMPT_RT, CAN DKMS, networking and desktop services passed verification. Five-second passive captures received approximately
+15,200 frames on each 1 Mbps CAN channel, with zero CAN error frames and all twelve drivers disabled.
+No arm motion was run during this RT validation. A 30-second idle cyclictest observed a 52 µs maximum versus 39 µs on generic;
+these samples do not demonstrate lower latency or establish a worst-case bound.
+See [build and runtime evidence](../../artifacts/rt-kernel-20261023/).
+
+The following records the earlier Nero delivery machine:
+
 October 16, 2026: `7.0.14-xyzbox-rt` was installed, trial-booted, checked, and set as the default kernel.
 `uname` reports `PREEMPT_RT`, and `/sys/kernel/realtime` is `1`.
 The original `7.0.0-38-generic` image, headers, and modules are marked as manually installed and retained for rollback.
@@ -46,7 +56,7 @@ Prepare at least 40 GB of space and build as a normal user. Keep the PC connecte
 
 ```bash
 sudo apt update
-sudo apt install build-essential bc bison flex gawk libssl-dev libelf-dev libdw-dev \
+sudo apt install build-essential python3 bc bison flex gawk libssl-dev libelf-dev libdw-dev \
   libncurses-dev dwarves rsync cpio kmod fakeroot dpkg-dev debhelper zstd rt-tests stress-ng
 ```
 
@@ -78,6 +88,8 @@ The script retains broad hardware support, enables PREEMPT_RT, and disables dyna
 The latter two choices match the available toolchain and limit build size. RT dependencies disable some incompatible options, such as legacy iptables;
 this machine uses the nftables backend. Configuration differences are saved in `config-diff.txt` in the build directory.
 Public certificates still come from the Ubuntu source package. Do not commit a module signing private key generated during the build.
+The build script also restores executable permission on `debian/scripts/sign-module`.
+Files added by the source-package diff may have mode 0644; without this fix, module installation reports `Permission denied` and skips signing.
 
 After fixing a missing dependency, resume an interrupted build with the same source and build directories:
 

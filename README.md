@@ -84,6 +84,7 @@ Exiting does not explicitly call `disable()`. Exiting is neither an emergency st
 | [Validation scope](docs/en/05-validation.md) | Recorded evidence and test boundaries; enumeration alone does not establish arm communication |
 | [Delivered software inventory](docs/en/06-delivery-software.md) | IK, XRoboToolkit, original recording workflow, acceptance sample, and maintenance archive |
 | [Real-time kernel](docs/en/07-realtime-kernel.md) | PREEMPT_RT source, build, installation, DKMS, trial boot, and rollback |
+| [Disk cloning](docs/09-disk-cloning.md) | Offline used-block images, source/target identification, and unique clone identities (Chinese) |
 | [Third-party sources](vendor/README.md) | Pinned versions, sources, archives, and SHA-256 checksums |
 | [Third-party notices](THIRD_PARTY_NOTICES.md) | Component licenses and source distribution information |
 

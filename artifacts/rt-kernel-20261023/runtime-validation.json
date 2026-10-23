@@ -1,0 +1,48 @@
+{
+  "kernel": "7.0.14-xyzbox-rt",
+  "realtime_sysfs": 1,
+  "default_kernel": "7.0.14-xyzbox-rt",
+  "retained_fallback": "7.0.0-38-generic",
+  "verified_at": "2026-10-23T22:13:48+08:00",
+  "services": {
+    "ssh": "active",
+    "NetworkManager": "active",
+    "display-manager": "active"
+  },
+  "can": {
+    "bitrate": 1000000,
+    "sample_point": 0.75,
+    "left": "can0 / physical CAN1",
+    "right": "can1 / physical CAN2",
+    "frames_in_5_seconds": {
+      "can0": 15200,
+      "can1": 15201
+    },
+    "error_frames": {
+      "can0": 0,
+      "can1": 0
+    },
+    "all_six_disabled": {
+      "can0": true,
+      "can1": true
+    }
+  },
+  "cyclictest_us": {
+    "duration_seconds": 30,
+    "period_us": 1000,
+    "priority": 80,
+    "cpu": 2,
+    "generic": {
+      "min": 1,
+      "average": 5,
+      "max": 39
+    },
+    "rt": {
+      "min": 1,
+      "average": 11,
+      "max": 52
+    }
+  },
+  "interpretation": "Short idle samples only; do not establish worst-case latency or a measured improvement.",
+  "arm_motion_during_rt_validation": false
+}

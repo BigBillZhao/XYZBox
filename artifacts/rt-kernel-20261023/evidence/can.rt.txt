@@ -1,0 +1,28 @@
+4: can0: <NOARP,UP,LOWER_UP,ECHO> mtu 16 qdisc pfifo_fast state UP mode DEFAULT group default qlen 10
+    link/can  promiscuity 0  allmulti 0 minmtu 16 maxmtu 16 
+    can state ERROR-ACTIVE (berr-counter tx 0 rx 0) restart-ms 0 
+	  bitrate 1000000 sample-point 0.750
+	  tq 12 prop-seg 29 phase-seg1 30 phase-seg2 20 sjw 10 brp 1
+	  kcan: tseg1 1..256 tseg2 1..128 sjw 1..128 brp 1..1024 brp_inc 1
+	  kcan: dtseg1 1..32 dtseg2 1..16 dsjw 1..16 dbrp 1..1024 dbrp_inc 1
+	  clock 80000000 numtxqueues 1 numrxqueues 1 gso_max_size 65536 gso_max_segs 65535 tso_max_size 65536 tso_max_segs 65535 gro_max_size 65536 parentbus usb parentdev 3-9:1.0 
+5: can1: <NOARP,UP,LOWER_UP,ECHO> mtu 16 qdisc pfifo_fast state UP mode DEFAULT group default qlen 10
+    link/can  promiscuity 0  allmulti 0 minmtu 16 maxmtu 16 
+    can state ERROR-ACTIVE (berr-counter tx 0 rx 0) restart-ms 0 
+	  bitrate 1000000 sample-point 0.750
+	  tq 12 prop-seg 29 phase-seg1 30 phase-seg2 20 sjw 10 brp 1
+	  kcan: tseg1 1..256 tseg2 1..128 sjw 1..128 brp 1..1024 brp_inc 1
+	  kcan: dtseg1 1..32 dtseg2 1..16 dsjw 1..16 dbrp 1..1024 dbrp_inc 1
+	  clock 80000000 numtxqueues 1 numrxqueues 1 gso_max_size 65536 gso_max_segs 65535 tso_max_size 65536 tso_max_segs 65535 gro_max_size 65536 parentbus usb parentdev 3-9:1.0 
+6: can2: <NOARP,ECHO> mtu 16 qdisc noop state DOWN mode DEFAULT group default qlen 10
+    link/can  promiscuity 0  allmulti 0 minmtu 16 maxmtu 16 
+    can state STOPPED (berr-counter tx 0 rx 0) restart-ms 0 
+	  kcan: tseg1 1..256 tseg2 1..128 sjw 1..128 brp 1..1024 brp_inc 1
+	  kcan: dtseg1 1..32 dtseg2 1..16 dsjw 1..16 dbrp 1..1024 dbrp_inc 1
+	  clock 80000000 numtxqueues 1 numrxqueues 1 gso_max_size 65536 gso_max_segs 65535 tso_max_size 65536 tso_max_segs 65535 gro_max_size 65536 parentbus usb parentdev 3-9:1.0 
+7: can3: <NOARP,ECHO> mtu 16 qdisc noop state DOWN mode DEFAULT group default qlen 10
+    link/can  promiscuity 0  allmulti 0 minmtu 16 maxmtu 16 
+    can state STOPPED (berr-counter tx 0 rx 0) restart-ms 0 
+	  kcan: tseg1 1..256 tseg2 1..128 sjw 1..128 brp 1..1024 brp_inc 1
+	  kcan: dtseg1 1..32 dtseg2 1..16 dsjw 1..16 dbrp 1..1024 dbrp_inc 1
+	  clock 80000000 numtxqueues 1 numrxqueues 1 gso_max_size 65536 gso_max_segs 65535 tso_max_size 65536 tso_max_segs 65535 gro_max_size 65536 parentbus usb parentdev 3-9:1.0 

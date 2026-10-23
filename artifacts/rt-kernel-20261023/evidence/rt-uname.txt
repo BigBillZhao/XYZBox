@@ -1,0 +1,1 @@
+Linux ubuntu 7.0.14-xyzbox-rt #xyzbox2 SMP PREEMPT_RT Fri Oct 23 14:08:39 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux

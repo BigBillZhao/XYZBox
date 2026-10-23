@@ -1,0 +1,32 @@
+{
+  "image_name": "yikai-box-noble-piper-rt-20261023-v1",
+  "image_directory_bytes": 4622365169,
+  "image_data_partition_used_bytes": 18998923264,
+  "source_disk_bytes": 256060514304,
+  "target_disk_bytes": 256060514304,
+  "logical_sector_bytes": 512,
+  "source_read_only_during_clone": true,
+  "source_filesystems_unmounted_during_clone": true,
+  "clonezilla_image_restorability_check": "passed",
+  "target_restore": "passed",
+  "target_identity_reset": "passed",
+  "target_hostname": "yikai-21c5e86e",
+  "target_unmounted_at": "2026-10-23T14:18:21+00:00",
+  "target_kernel": "7.0.14-xyzbox-rt",
+  "target_efi_fallback_present": true,
+  "target_kcan_module_present": true,
+  "archive": "5090d:/data/xyzbox-images/yikai-box-noble-piper-rt-20261023-v1",
+  "archive_b3_verification": "passed",
+  "target_cold_boot": "deferred by user; target SSD removed for later test",
+  "archive_verified_files": 28,
+  "source_return_boot": "7.0.14-xyzbox-rt",
+  "source_return_realtime_sysfs": 1,
+  "source_return_root": "/dev/nvme0n1p2 ext4 rw",
+  "source_return_services": {
+    "ssh": "active",
+    "NetworkManager": "active",
+    "display-manager": "active"
+  },
+  "temporary_live_boot_entry_removed": true,
+  "target_removed_confirmed_by_user": true
+}

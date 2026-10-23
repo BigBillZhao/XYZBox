@@ -4,6 +4,16 @@
 
 ## 交付状态
 
+2026-10-23：新 Piper 双臂 box（本轮地址 `192.168.110.12`）已安装并实际启动
+`7.0.14-xyzbox-rt`，包版本 `7.0.14-xyzbox2`，设为默认；原 generic 内核保留。
+`CONFIG_PREEMPT_RT=y`、`/sys/kernel/realtime=1`、CAN DKMS、网络与桌面服务验证通过。
+两路 1 Mbps CAN 的 5 秒只读采样各收到约 15,200 帧，无 CAN 错误帧，12 个驱动均禁能。
+本轮 RT 验收没有运行机械臂运动。30 秒空闲 cyclictest 的最大观测值为 52 µs，
+切换前 generic 为 39 µs；此短测没有证明延迟降低，也不是最坏时延保证。
+构建包、配置与验收证据见 [`artifacts/rt-kernel-20261023`](../artifacts/rt-kernel-20261023/)。
+
+以下为旧 Nero 交付机的历史验收：
+
 2026-10-16：`7.0.14-xyzbox-rt` 已安装、完成试启动和复验，并设为默认启动内核。
 `uname` 显示 `PREEMPT_RT`，`/sys/kernel/realtime` 为 `1`。
 原 `7.0.0-38-generic` 及其 headers、modules 已标记为手工保留，作为回退入口。
@@ -46,7 +56,7 @@ Ubuntu 包的 ABI 编号与源码的 stable 版本号不同，这是正常的。
 
 ```bash
 sudo apt update
-sudo apt install build-essential bc bison flex gawk libssl-dev libelf-dev libdw-dev \
+sudo apt install build-essential python3 bc bison flex gawk libssl-dev libelf-dev libdw-dev \
   libncurses-dev dwarves rsync cpio kmod fakeroot dpkg-dev debhelper zstd rt-tests stress-ng
 ```
 
@@ -78,6 +88,8 @@ BUILD_JOBS=6 bash "$repo/scripts/build_rt_kernel.sh" "$rt/source" "$rt/build"
 后两项用于匹配本机工具链并控制构建体积。RT 依赖会关闭部分不兼容配置（例如 legacy iptables）；
 本机使用 nftables 后端。配置差异保存在构建目录的 `config-diff.txt`。
 公钥证书继续来自 Ubuntu 源包，构建产生的模块签名私钥不得提交到仓库。
+源码解包后，构建脚本会补上 `debian/scripts/sign-module` 的执行权限；
+该文件由源包补丁加入时可能只有 0644，否则模块安装阶段会跳过签名并报告 `Permission denied`。
 
 若编译中断，修复依赖后在相同源码和构建目录继续：
 

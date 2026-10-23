@@ -12,7 +12,7 @@ if [[ $(uname -s) != Linux || $(uname -m) != x86_64 ]]; then
     echo 'This recipe targets Linux x86_64.' >&2
     exit 2
 fi
-for tool in make gcc ld bison flex gawk openssl dpkg-buildpackage; do
+for tool in make gcc ld bison flex gawk openssl python3 dpkg-buildpackage; do
     command -v "$tool" >/dev/null || { echo "Missing build tool: $tool (see docs/07-realtime-kernel.md)" >&2; exit 2; }
 done
 repo=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)
@@ -26,6 +26,11 @@ fi
 [[ $(make -s -C "$src" kernelversion) == 7.0.14 ]] || { echo 'Expected the documented 7.0.14 source.' >&2; exit 2; }
 test -f "$src/debian/canonical-certs.pem"
 test -f "$src/debian/canonical-revoked-certs.pem"
+# dpkg-source cannot preserve executable modes for files added by a diff.
+# Ubuntu's module-signing predicate must be executable during modules_install.
+if [[ -f "$src/debian/scripts/sign-module" ]]; then
+    chmod +x "$src/debian/scripts/sign-module"
+fi
 cp "$repo/system/realtime/config-generic-7.0.0-38" "$out/.config"
 "$src/scripts/config" --file "$out/.config" \
     --enable EXPERT --enable PREEMPT_RT --enable PREEMPT \

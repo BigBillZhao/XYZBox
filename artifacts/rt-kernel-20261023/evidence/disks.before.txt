@@ -1,0 +1,15 @@
+NAME                SIZE MODEL                  SERIAL            TRAN   TYPE FSTYPE   MOUNTPOINTS
+loop0               4096                                                 loop squashfs /snap/bare/5
+loop1          263892992                                                 loop squashfs /snap/firefox/7766
+loop2           77549568                                                 loop squashfs /snap/core22/2292
+loop3           19386368                                                 loop squashfs /snap/firmware-updater/210
+loop4          557187072                                                 loop squashfs /snap/gnome-42-2204/247
+loop5           96141312                                                 loop squashfs /snap/gtk-common-themes/1535
+loop6           50421760                                                 loop squashfs /snap/snapd/25935
+loop7           11354112                                                 loop squashfs /snap/snap-store/1270
+loop8             589824                                                 loop squashfs /snap/snapd-desktop-integration/343
+loop9          237617152                                                 loop squashfs /snap/thunderbird/959
+sda         256060514304 ASM246X                AAAABBBB0010      usb    disk          
+nvme0n1     256060514304 Fanxiang S500Pro 256GB 26030958613001465 nvme   disk          
+├─nvme0n1p1   1127219200                                          nvme   part vfat     /boot/efi
+└─nvme0n1p2 254930845696                                          nvme   part ext4     /
