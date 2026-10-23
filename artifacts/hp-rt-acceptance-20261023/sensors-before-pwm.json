@@ -1,0 +1,170 @@
+{
+   "it8786-isa-0a40":{
+      "Adapter": "ISA adapter",
+      "in0":{
+         "in0_input": 0.816,
+         "in0_min": 0.000,
+         "in0_max": 3.060,
+         "in0_alarm": 0.000
+      },
+      "in1":{
+         "in1_input": 1.344,
+         "in1_min": 0.000,
+         "in1_max": 3.060,
+         "in1_alarm": 0.000
+      },
+      "in2":{
+         "in2_input": 2.160,
+         "in2_min": 0.000,
+         "in2_max": 3.060,
+         "in2_alarm": 0.000
+      },
+      "in3":{
+         "in3_input": 2.256,
+         "in3_min": 0.000,
+         "in3_max": 3.060,
+         "in3_alarm": 0.000
+      },
+      "in4":{
+         "in4_input": 2.172,
+         "in4_min": 0.000,
+         "in4_max": 3.060,
+         "in4_alarm": 0.000
+      },
+      "in5":{
+         "in5_input": 2.172,
+         "in5_min": 0.000,
+         "in5_max": 3.060,
+         "in5_alarm": 0.000
+      },
+      "in6":{
+         "in6_input": 2.052,
+         "in6_min": 0.000,
+         "in6_max": 3.060,
+         "in6_alarm": 0.000
+      },
+      "3VSB":{
+         "in7_input": 3.552,
+         "in7_min": 0.000,
+         "in7_max": 6.120,
+         "in7_alarm": 0.000
+      },
+      "Vbat":{
+         "in8_input": 3.264
+      },
+      "fan1":{
+         "fan1_input": 4530.000,
+         "fan1_min": 0.000,
+         "fan1_alarm": 0.000
+      },
+      "fan2":{
+         "fan2_input": 4623.000,
+         "fan2_min": 0.000,
+         "fan2_alarm": 0.000
+      },
+      "temp1":{
+         "temp1_input": 34.000,
+         "temp1_max": 127.000,
+         "temp1_min": -128.000,
+         "temp1_alarm": 0.000,
+         "temp1_type": 6.000,
+         "temp1_offset": 100.000
+      },
+      "temp2":{
+         "temp2_input": 24.000,
+         "temp2_max": 127.000,
+         "temp2_min": -128.000,
+         "temp2_alarm": 0.000,
+         "temp2_type": 3.000,
+         "temp2_offset": 0.000
+      },
+      "temp3":{
+         "temp3_input": -56.000,
+         "temp3_max": 127.000,
+         "temp3_min": -128.000,
+         "temp3_alarm": 0.000,
+         "temp3_type": 3.000,
+         "temp3_offset": 0.000
+      },
+      "intrusion0":{
+         "intrusion0_alarm": 1.000
+      }
+   },
+   "coretemp-isa-0000":{
+      "Adapter": "ISA adapter",
+      "Package id 0":{
+         "temp1_input": 35.000,
+         "temp1_max": 100.000,
+         "temp1_crit": 100.000,
+         "temp1_crit_alarm": 0.000
+      },
+      "Core 0":{
+         "temp2_input": 31.000,
+         "temp2_max": 100.000,
+         "temp2_crit": 100.000,
+         "temp2_crit_alarm": 0.000
+      },
+      "Core 4":{
+         "temp6_input": 26.000,
+         "temp6_max": 100.000,
+         "temp6_crit": 100.000,
+         "temp6_crit_alarm": 0.000
+      },
+      "Core 12":{
+         "temp14_input": 34.000,
+         "temp14_max": 100.000,
+         "temp14_crit": 100.000,
+         "temp14_crit_alarm": 0.000
+      },
+      "Core 13":{
+         "temp15_input": 34.000,
+         "temp15_max": 100.000,
+         "temp15_crit": 100.000,
+         "temp15_crit_alarm": 0.000
+      },
+      "Core 14":{
+         "temp16_input": 34.000,
+         "temp16_max": 100.000,
+         "temp16_crit": 100.000,
+         "temp16_crit_alarm": 0.000
+      },
+      "Core 15":{
+         "temp17_input": 34.000,
+         "temp17_max": 100.000,
+         "temp17_crit": 100.000,
+         "temp17_crit_alarm": 0.000
+      }
+   },
+   "acpitz_0-acpi-0":{
+      "Adapter": "ACPI interface",
+      "temp1":{
+         "temp1_input": 27.800
+      }
+   },
+   "iwlwifi_1_2-virtual-0":{
+      "Adapter": "Virtual device",
+      "temp1":{
+         "temp1_input": 27.000
+      }
+   },
+   "nvme-pci-0100":{
+      "Adapter": "PCI adapter",
+      "Composite":{
+         "temp1_input": 39.850,
+         "temp1_max": 89.850,
+         "temp1_min": -273.150,
+         "temp1_crit": 94.850,
+         "temp1_alarm": 0.000
+      },
+      "Sensor 1":{
+         "temp2_input": 39.850,
+         "temp2_max": 65261.850,
+         "temp2_min": -273.150
+      },
+      "Sensor 2":{
+         "temp3_input": 33.850,
+         "temp3_max": 65261.850,
+         "temp3_min": -273.150
+      }
+   }
+}

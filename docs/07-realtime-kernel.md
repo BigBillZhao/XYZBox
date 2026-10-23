@@ -8,7 +8,9 @@
 `7.0.14-xyzbox-rt`，包版本 `7.0.14-xyzbox2`，设为默认；原 generic 内核保留。
 `CONFIG_PREEMPT_RT=y`、`/sys/kernel/realtime=1`、CAN DKMS、网络与桌面服务验证通过。
 两路 1 Mbps CAN 的 5 秒只读采样各收到约 15,200 帧，无 CAN 错误帧，12 个驱动均禁能。
-本轮 RT 验收没有运行机械臂运动。30 秒空闲 cyclictest 的最大观测值为 52 µs，
+初次 RT 验收没有运行机械臂运动；22:31 用户将源盘替换为惠普克隆盘后，
+同一台 box 又通过双臂抬升、回 home、禁能测试，见 [HP + RT 实机验收](../artifacts/hp-rt-acceptance-20261023/README.md)。
+30 秒空闲 cyclictest 的最大观测值为 52 µs，
 切换前 generic 为 39 µs；此短测没有证明延迟降低，也不是最坏时延保证。
 构建包、配置与验收证据见 [`artifacts/rt-kernel-20261023`](../artifacts/rt-kernel-20261023/)。
 

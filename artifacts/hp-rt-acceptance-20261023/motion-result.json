@@ -1,0 +1,70 @@
+{
+  "host": "yikai-21c5e86e",
+  "disk_model": "HP SSD EX900 Plus M.2 256GB",
+  "disk_serial": "HASI26340100227",
+  "kernel": "7.0.14-xyzbox-rt",
+  "realtime_sysfs": 1,
+  "matches_cloned_kernel_checksum": true,
+  "cold_boot_scope": "Original industrial PC; Fanxiang replaced by HP clone; user confirmed Ubuntu desktop",
+  "run_dir": "/home/ubuntu/xyzbox-commissioning-20261023/bimanual-8cm-20261023-223147",
+  "arms": {
+    "left": {
+      "started_utc": "2026-10-23T14:31:48.753351+00:00",
+      "ended_utc": "2026-10-23T14:32:37.503077+00:00",
+      "trial_success": true,
+      "returned_support_confirmed": true,
+      "disable_confirmed": true,
+      "shutdown_state": "six_drivers_confirmed_disabled",
+      "stop_reason": "Returned to recorded home within3deg and stable1s",
+      "initial_q_rad": [
+        0.02083923126881229,
+        -0.05941100773788698,
+        0.027576202181510405,
+        0.0869173967493176,
+        0.3543018381548489,
+        -0.3908664859841301
+      ],
+      "target_q_rad": [
+        0.021223185400521503,
+        0.12176487828901691,
+        -0.2722422968000317,
+        0.06549466369681449,
+        0.3785265429888297,
+        -0.379951313237584
+      ]
+    },
+    "right": {
+      "started_utc": "2026-10-23T14:31:48.805165+00:00",
+      "ended_utc": "2026-10-23T14:32:37.543629+00:00",
+      "trial_success": true,
+      "returned_support_confirmed": true,
+      "disable_confirmed": true,
+      "shutdown_state": "six_drivers_confirmed_disabled",
+      "stop_reason": "Returned to recorded home within3deg and stable1s",
+      "initial_q_rad": [
+        -0.04839798015780276,
+        -0.04366813788489812,
+        0.03920009499979264,
+        0.0,
+        0.27314402793711257,
+        0.07435102613495843
+      ],
+      "target_q_rad": [
+        -0.04862486452288982,
+        0.12726069649028024,
+        -0.27228701746933764,
+        -0.009588536005501504,
+        0.2647607131835249,
+        0.04554487396165388
+      ]
+    }
+  },
+  "final_can_error_frames": {
+    "can0": 0,
+    "can1": 0
+  },
+  "final_all_six_disabled": {
+    "can0": true,
+    "can1": true
+  }
+}

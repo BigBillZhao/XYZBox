@@ -1,0 +1,24 @@
+{
+  "checked_at": "2026-10-23T14:38:53.811716+00:00",
+  "hostname": "yikai-21c5e86e",
+  "kernel": "7.0.14-xyzbox-rt",
+  "realtime": "1",
+  "root": "/dev/nvme0n1p2",
+  "disk": "HP\\x20SSD\\x20EX900\\x20Plus\\x20M.2\\x20256GB HASI26340100227",
+  "machine_id_matches_hostname": true,
+  "hwmon": "/sys/class/hwmon/hwmon4",
+  "fan_rpm": {
+    "1": 4591,
+    "2": 4326
+  },
+  "pwm": {
+    "1": 0,
+    "2": 0
+  },
+  "pwm_enable": {
+    "1": 0,
+    "2": 0
+  },
+  "module_autoload": "# The commissioned i3-1315U box has an ITE IT8786E at 0xa40.\n# Read fan tachometers and expose PWM controls; do not alter the fan policy.\nit87\n",
+  "kernel_sha256": "49eded986182d0f6e1605f271f7776fb6074ba8c0e82e65ba3c2049dc6dd2f58"
+}

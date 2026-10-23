@@ -17,7 +17,7 @@
   "target_kcan_module_present": true,
   "archive": "5090d:/data/xyzbox-images/yikai-box-noble-piper-rt-20261023-v1",
   "archive_b3_verification": "passed",
-  "target_cold_boot": "deferred by user; target SSD removed for later test",
+  "target_cold_boot": "passed on the original box after replacing its internal SSD",
   "archive_verified_files": 28,
   "source_return_boot": "7.0.14-xyzbox-rt",
   "source_return_realtime_sysfs": 1,
@@ -28,5 +28,10 @@
     "display-manager": "active"
   },
   "temporary_live_boot_entry_removed": true,
-  "target_removed_confirmed_by_user": true
+  "target_removed_confirmed_by_user": true,
+  "target_boot_disk": "HP SSD EX900 Plus M.2 256GB",
+  "target_boot_serial": "HASI26340100227",
+  "rt_dual_arm_motion": "passed, both returned home and confirmed disabled",
+  "new_motherboard_empty_nvram_boot": "not tested",
+  "followup_evidence": "../hp-rt-acceptance-20261023/README.md"
 }

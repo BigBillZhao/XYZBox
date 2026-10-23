@@ -1,0 +1,175 @@
+{
+  "chip": "ITE IT8786E",
+  "address": "0xa40",
+  "kernel_driver": "it87",
+  "autoload_file": "/etc/modules-load.d/xyzbox-hwmon.conf",
+  "original_mode": "0 = full speed / no PWM speed control",
+  "final_pwm_enable": {
+    "1": 0,
+    "2": 0
+  },
+  "physical_headers": {
+    "33": "CPU_FAN1",
+    "34": "SYS_FAN1"
+  },
+  "header_pinout": {
+    "1": "GND",
+    "2": "12V default; 5V resistor option",
+    "3": "tachometer",
+    "4": "fan speed control"
+  },
+  "linux_channel_to_physical_header": "not independently verified",
+  "fan1_control": "stable response to pwm1=204, mode=1",
+  "fan2_control": "response present, RPM feedback unstable at lowered duty; cause undetermined",
+  "persistent_speed_policy_changed": false,
+  "golden_image_v1_contains_new_monitoring_config": false,
+  "manual": {
+    "file": "SV3-12P26-1235U Series Motherboard User Guide (Ver0.0) E4R20260817.pdf",
+    "sha256": "96b749bf847cd818dd21f77d4859d121c84a6f6742d2c2a7ff2251f259c2eb1d",
+    "printed_page": 22,
+    "pdf_page": 23
+  },
+  "tests": [
+    {
+      "stage": "baseline",
+      "samples": 1,
+      "rpm": {
+        "1": {
+          "min": 4500,
+          "median": 4500,
+          "max": 4500
+        },
+        "2": {
+          "min": 4354,
+          "median": 4354,
+          "max": 4354
+        }
+      }
+    },
+    {
+      "stage": "pwm1-80pct",
+      "samples": 6,
+      "rpm": {
+        "1": {
+          "min": 3792,
+          "median": 3802.5,
+          "max": 3813
+        },
+        "2": {
+          "min": 4326,
+          "median": 4488.5,
+          "max": 4655
+        }
+      }
+    },
+    {
+      "stage": "pwm1-restored",
+      "samples": 1,
+      "rpm": {
+        "1": {
+          "min": 4530,
+          "median": 4530,
+          "max": 4530
+        },
+        "2": {
+          "min": 4623,
+          "median": 4623,
+          "max": 4623
+        }
+      }
+    },
+    {
+      "stage": "pwm2-80pct",
+      "samples": 6,
+      "rpm": {
+        "1": {
+          "min": 4500,
+          "median": 4530.0,
+          "max": 4560
+        },
+        "2": {
+          "min": 3924,
+          "median": 4299.5,
+          "max": 4383
+        }
+      }
+    },
+    {
+      "stage": "pwm2-restored",
+      "samples": 1,
+      "rpm": {
+        "1": {
+          "min": 4560,
+          "median": 4560,
+          "max": 4560
+        },
+        "2": {
+          "min": 4326,
+          "median": 4326,
+          "max": 4326
+        }
+      }
+    },
+    {
+      "stage": "baseline",
+      "samples": 1,
+      "rpm": {
+        "1": {
+          "min": 4500,
+          "median": 4500,
+          "max": 4500
+        },
+        "2": {
+          "min": 4354,
+          "median": 4354,
+          "max": 4354
+        }
+      }
+    },
+    {
+      "stage": "pwm2-60pct",
+      "samples": 6,
+      "rpm": {
+        "1": {
+          "min": 4500,
+          "median": 4530.0,
+          "max": 4530
+        },
+        "2": {
+          "min": 2376,
+          "median": 3792.0,
+          "max": 4383
+        }
+      }
+    },
+    {
+      "stage": "pwm2-restored",
+      "samples": 1,
+      "rpm": {
+        "1": {
+          "min": 4530,
+          "median": 4530,
+          "max": 4530
+        },
+        "2": {
+          "min": 4299,
+          "median": 4299,
+          "max": 4299
+        }
+      }
+    }
+  ],
+  "restored_baseline": {
+    "fan1": {
+      "min": 4470,
+      "median": 4515.0,
+      "max": 4560
+    },
+    "fan2": {
+      "min": 4326,
+      "median": 4623.0,
+      "max": 4655
+    }
+  },
+  "all_baseline_modes_restored": true
+}

@@ -83,6 +83,7 @@ bash scripts/setup_nero_env.sh
 | [交付机软件清单](docs/06-delivery-software.md) | IK、XRoboToolkit、原录制流程、验收样例与维护归档 |
 | [实时内核](docs/07-realtime-kernel.md) | PREEMPT_RT 的来源、构建、安装、DKMS、试启动与回退 |
 | [整盘克隆](docs/09-disk-cloning.md) | 离线按已用数据块制作镜像、源盘/目标盘识别、克隆机身份初始化 |
+| [风扇监控](docs/10-fan-monitoring.md) | IT8786E 识别、RPM、PWM 实测及当前设置 |
 | [第三方来源](vendor/README.zh-CN.md) | 固定版本、下载源、源码及 SHA-256 |
 | [第三方组件声明](THIRD_PARTY_NOTICES.zh-CN.md) | 组件许可证与源码分发说明 |
 

@@ -1,0 +1,273 @@
+{
+  "started_utc": "2026-10-23T14:31:48.753351+00:00",
+  "plan": {
+    "version": "bimanual-8cm-lift",
+    "script_sha256": "eb7702e8193ea875b6f92fa2115a5c2b6df83de0eaf833063521fcae098f43a5",
+    "dry_run": false,
+    "execution_approved": true,
+    "channel": "can0",
+    "geometry_sha256": "4b7bce97f9f42313ffe9b766587da766b8c89ccc9711ed2b835ec96c82edf167",
+    "geometry_start_rad": [
+      0.02083923126881229,
+      -0.05941100773788698,
+      0.027576202181510405,
+      0.0869173967493176,
+      0.3543018381548489,
+      -0.3908664859841301
+    ],
+    "target_rad": [
+      0.021223185400521503,
+      0.12176487828901691,
+      -0.2722422968000317,
+      0.06549466369681449,
+      0.3785265429888297,
+      -0.379951313237584
+    ],
+    "home_rad": [
+      0.021223203704251046,
+      -0.0512777734235934,
+      0.03022910264454179,
+      0.09810495725460128,
+      0.24951226986510935,
+      -0.4141666314982544
+    ],
+    "limits_report_sha256": "019f285dd15accc8ae7168fc9d7774bac3f7f4a32c6adccb163d14ce392342b9",
+    "sdk_archive_sha256": "ea8a38af9e6e44255a53c351c4cf788592a21abe694e0f2ce683f2b9be177711",
+    "durations_s": {
+      "outbound": 20.0,
+      "hold_fixed": 8.0,
+      "return": 20.0,
+      "active_deadline": 120.0
+    },
+    "gains": {
+      "kp": 20.0,
+      "kd": 1.0,
+      "v_des": 0.0,
+      "t_ff": 0.0
+    },
+    "arrival": {
+      "target_deg": 2.0,
+      "return_support_deg": 3.0,
+      "stable_seconds": 1.0,
+      "stable_peak_to_peak_deg": 0.5
+    },
+    "guards": {
+      "feedback_speed_abort_rad_s": null,
+      "reference_speed_bound_rad_s": 0.15,
+      "tracking_abort_deg": null,
+      "start_limit_exception_max_deg": 5.0,
+      "reference_envelope": "union(start,target)+one MIT LSB, this path only",
+      "actual_outer_tolerance_deg": 0.1,
+      "kernel_rx_and_drop_checks": true
+    },
+    "supported_release_file": "/home/ubuntu/xyzbox-commissioning-20261023/bimanual-8cm-20261023-223147/left-supported-release.json",
+    "fault_policy": "departed latch -> fixed actual PD only if trusted, else no new MIT; await task-bound operator supported-release file before disable",
+    "forbidden_tx": [
+      "0x150",
+      "0x470",
+      "limits/zero/firmware writes"
+    ],
+    "interface_changes": 0
+  },
+  "phase": "FINISHED",
+  "trial_success": true,
+  "enable_send_attempted": true,
+  "disable_confirmed": true,
+  "safe_shutdown_claimed": false,
+  "send_counts": {
+    "0x151": 4814,
+    "0x15A": 4814,
+    "0x15B": 4814,
+    "0x15C": 4814,
+    "0x15D": 4814,
+    "0x15E": 4814,
+    "0x15F": 4814,
+    "0x471": 2
+  },
+  "stop_reason": "Returned to recorded home within3deg and stable1s",
+  "trial_id": "95185fea2b8a48808115d0d10a6474fe",
+  "before_link": {
+    "ifindex": 4,
+    "ifname": "can0",
+    "flags": [
+      "NOARP",
+      "UP",
+      "LOWER_UP",
+      "ECHO"
+    ],
+    "mtu": 16,
+    "qdisc": "pfifo_fast",
+    "operstate": "UP",
+    "linkmode": "DEFAULT",
+    "group": "default",
+    "txqlen": 10,
+    "link_type": "can",
+    "promiscuity": 0,
+    "allmulti": 0,
+    "min_mtu": 16,
+    "max_mtu": 16,
+    "linkinfo": {
+      "info_kind": "can",
+      "info_data": {
+        "ctrlmode_supported": [
+          "LOOPBACK",
+          "LISTEN-ONLY",
+          "TRIPLE-SAMPLING",
+          "ONE-SHOT",
+          "BERR-REPORTING",
+          "FD",
+          "FD-NON-ISO",
+          "CC-LEN8-DLC"
+        ],
+        "state": "ERROR-ACTIVE",
+        "berr_counter": {
+          "tx": 0,
+          "rx": 0
+        },
+        "restart_ms": 0,
+        "bittiming": {
+          "bitrate": 1000000,
+          "sample_point": "0.750",
+          "tq": 12,
+          "prop_seg": 29,
+          "phase_seg1": 30,
+          "phase_seg2": 20,
+          "sjw": 10,
+          "brp": 1
+        },
+        "bittiming_const": {
+          "name": "kcan",
+          "tseg1": {
+            "min": 1,
+            "max": 256
+          },
+          "tseg2": {
+            "min": 1,
+            "max": 128
+          },
+          "sjw": {
+            "min": 1,
+            "max": 128
+          },
+          "brp": {
+            "min": 1,
+            "max": 1024
+          },
+          "brp_inc": 1
+        },
+        "data_bittiming_const": {
+          "name": "kcan",
+          "tseg1": {
+            "min": 1,
+            "max": 32
+          },
+          "tseg2": {
+            "min": 1,
+            "max": 16
+          },
+          "sjw": {
+            "min": 1,
+            "max": 16
+          },
+          "brp": {
+            "min": 1,
+            "max": 1024
+          },
+          "brp_inc": 1
+        },
+        "clock": 80000000
+      },
+      "info_xstats": {
+        "restarts": 0,
+        "bus_error": 0,
+        "arbitration_lost": 0,
+        "error_warning": 0,
+        "error_passive": 0,
+        "bus_off": 0
+      }
+    },
+    "num_tx_queues": 1,
+    "num_rx_queues": 1,
+    "gso_max_size": 65536,
+    "gso_max_segs": 65535,
+    "tso_max_size": 65536,
+    "tso_max_segs": 65535,
+    "gro_max_size": 65536,
+    "parentbus": "usb",
+    "parentdev": "3-9:1.0",
+    "stats64": {
+      "rx": {
+        "bytes": 3675448,
+        "packets": 459431,
+        "errors": 0,
+        "dropped": 416491,
+        "over_errors": 0,
+        "multicast": 0
+      },
+      "tx": {
+        "bytes": 0,
+        "packets": 0,
+        "errors": 0,
+        "dropped": 0,
+        "carrier_errors": 0,
+        "collisions": 0
+      }
+    }
+  },
+  "initial_q_rad": [
+    0.02083923126881229,
+    -0.05941100773788698,
+    0.027576202181510405,
+    0.0869173967493176,
+    0.3543018381548489,
+    -0.3908664859841301
+  ],
+  "target_q_rad": [
+    0.021223185400521503,
+    0.12176487828901691,
+    -0.2722422968000317,
+    0.06549466369681449,
+    0.3785265429888297,
+    -0.379951313237584
+  ],
+  "reference_rule": "fresh actual to reviewed target and exact reverse; no clamping",
+  "enable_barrier_wall_ns": 1792765909260429786,
+  "departed_support_latch": true,
+  "arrival_experience_confirmed": false,
+  "release_barriers_wall_ns": [
+    1792765957387757421
+  ],
+  "disable_attempts": 1,
+  "shutdown_state": "six_drivers_confirmed_disabled",
+  "returned_support_confirmed": true,
+  "ended_utc": "2026-10-23T14:32:37.503077+00:00",
+  "last_feedback": {
+    "joint_deg": [
+      1.176,
+      -3.398,
+      1.543,
+      5.118,
+      20.919,
+      -23.881
+    ],
+    "joint_age_s": 0.0011272430419921875,
+    "status": [
+      1,
+      0,
+      4,
+      0,
+      0,
+      0,
+      0
+    ],
+    "driver_codes": {
+      "1": 0,
+      "6": 0,
+      "5": 0,
+      "4": 0,
+      "3": 0,
+      "2": 0
+    },
+    "error_frames": 0
+  }
+}

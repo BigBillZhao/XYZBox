@@ -8,7 +8,9 @@ On October 23, 2026, the new dual-Piper box (session address `192.168.110.12`)
 booted `7.0.14-xyzbox-rt`, package version `7.0.14-xyzbox2`, and made it the default while retaining generic.
 PREEMPT_RT, CAN DKMS, networking and desktop services passed verification. Five-second passive captures received approximately
 15,200 frames on each 1 Mbps CAN channel, with zero CAN error frames and all twelve drivers disabled.
-No arm motion was run during this RT validation. A 30-second idle cyclictest observed a 52 µs maximum versus 39 µs on generic;
+No arm motion was run during the initial RT validation. At 22:31 local time, after replacing the original SSD with the HP clone,
+the same box passed the dual-arm lift, return-home and disable sequence; see [HP + RT acceptance](../../artifacts/hp-rt-acceptance-20261023/README.md).
+A 30-second idle cyclictest observed a 52 µs maximum versus 39 µs on generic;
 these samples do not demonstrate lower latency or establish a worst-case bound.
 See [build and runtime evidence](../../artifacts/rt-kernel-20261023/).
 
