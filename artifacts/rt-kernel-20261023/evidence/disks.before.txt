@@ -9,7 +9,7 @@ loop6           50421760                                                 loop sq
 loop7           11354112                                                 loop squashfs /snap/snap-store/1270
 loop8             589824                                                 loop squashfs /snap/snapd-desktop-integration/343
 loop9          237617152                                                 loop squashfs /snap/thunderbird/959
-sda         256060514304 ASM246X                AAAABBBB0010      usb    disk          
-nvme0n1     256060514304 Fanxiang S500Pro 256GB 26030958613001465 nvme   disk          
+sda         256060514304 ASM246X                AAAABBBB0010      usb    disk
+nvme0n1     256060514304 Fanxiang S500Pro 256GB 26030958613001465 nvme   disk
 ├─nvme0n1p1   1127219200                                          nvme   part vfat     /boot/efi
 └─nvme0n1p2 254930845696                                          nvme   part ext4     /
