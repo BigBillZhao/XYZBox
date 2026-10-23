@@ -6,6 +6,8 @@ This repository provides the files and instructions needed to restore the **USB 
 It includes pinned driver sources, offline Python dependencies, installation configuration, troubleshooting guides, and a standalone joint control example.
 The example does not require LeRobot, ROS, a GPU, PICO, or cameras.
 
+The replacement-box Piper factory work is recorded in the [October 23 commissioning checkpoint](docs/checkpoints/2026-10-23-piper.md), including the verified two-arm lift/return/disable sequence. Its wiring is **left CAN1/can0, right CAN2/can1**; the older Nero installation below has a different mapping.
+
 ## Verified hardware and software
 
 | Item | On-site result, October 16, 2026 |

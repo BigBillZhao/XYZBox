@@ -1,0 +1,229 @@
+{
+  "recorded_at": "2026-10-23T18:26:10.389500+08:00",
+  "harness": "codex",
+  "model": "unknown",
+  "native_session": "01a1678d-3bfb-75b0-964e-4b2dc0a3a6a9",
+  "host": "Yuntians-MacBook-Pro.local",
+  "user_confirmed_assembly": {
+    "left": "physical CAN1",
+    "right": "physical CAN2",
+    "unused": [
+      "physical CAN3",
+      "physical CAN4"
+    ]
+  },
+  "system_interface_mapping": {
+    "physical_CAN1": "can0 (left)",
+    "physical_CAN2": "can1 (right)",
+    "physical_CAN3": "can2 (unused)",
+    "physical_CAN4": "can3 (unused)"
+  },
+  "requested_actions": [
+    "configure host CAN",
+    "research Piper teaching leader SDK",
+    "capture current joint positions as home",
+    "offline target-pose proposal using fleet engineering tools"
+  ],
+  "preserve": [
+    "review-board service, source document and sidecars",
+    "original measured home values and raw evidence"
+  ],
+  "motion_authorized_this_turn": true,
+  "source_repo_revision": "7bae9b2",
+  "home_capture_status": "Both leader teaching-output home references captured; left return-to-home explicitly confirmed by user. Saved frozen references, not live telemetry.",
+  "target_proposal_status": "Both independent 30mm flange-lift offline proposals completed and browser-verified. Not executed; nominal start limits and unmodeled fixture remain.",
+  "user_confirmed_geometry": {
+    "base_spacing_m": 0.7,
+    "orientation_description": "70cm 和nero一样，朝着工作区域",
+    "interpretation_for_proposal": "approximately parallel facing workspace; same base height and exact yaw remain assumptions"
+  },
+  "user_confirmed_arm": {
+    "model": "Piper (standard; not X or L)",
+    "end_effector": "scissor-style teaching handle",
+    "base_led": "green blinking",
+    "teaching_button_led": "off",
+    "physical_observation": "user feels clear gravity compensation effect",
+    "protocol_mode": "Leader teaching command stream observed; H-V1.2-1 / S-V1.7-3 on both. User feels gravity compensation; this is not slave feedback proving a specific internal controller."
+  },
+  "host_configuration_status": "kcan and offline SDK installed; can0/1 UP at 1 Mbps; can2/3 DOWN; reboot not tested",
+  "photo_home_draft": {
+    "status": "PHOTO_ESTIMATE_VISUALIZATION_ONLY",
+    "angles_deg_both": [
+      0,
+      0,
+      0,
+      0,
+      10,
+      0
+    ],
+    "path": "photo-home/frame-proposal/estimate.json",
+    "measured_home": false,
+    "execution_allowed": false
+  },
+  "fan_inspection": "Read-only; temperature sensors exposed, no fan RPM/PWM interface; hardware capability unresolved",
+  "current_diagnostic_wiring": {
+    "updated_at": "2026-10-23T20:23:42.564062+08:00",
+    "user_confirmed": true,
+    "user_statement": "对，左右都和最初的相反；左1右2，从1开始编号",
+    "left": {
+      "physical": "CAN1",
+      "netdev": "can0",
+      "signal_pair_swapped": true,
+      "communication_after_swap": "External firmware responses and complete leader joint groups captured; static leader may be silent."
+    },
+    "right": {
+      "physical": "CAN2",
+      "netdev": "can1",
+      "signal_pair_swapped": true,
+      "communication_after_swap": "External firmware responses and complete leader joint groups captured; static leader may be silent."
+    },
+    "unused_physical_ports": [
+      "CAN3",
+      "CAN4"
+    ],
+    "temporary_left_on_can3_mapping_superseded": true
+  },
+  "updated_at": "2026-10-23T20:23:42.564062+08:00",
+  "motion_authorization_scope": "User authorized slow home, then current-position hold; latest instruction pure PD with commanded feedforward=0. No motor-affecting command executed as of this update.",
+  "operator_synchronization": "User reports zalert unavailable on MBP; explicit in-conversation ready/done messages.",
+  "user_confirmed_support": "Both arms have reliable physical support, user confirmed before takeover preparation.",
+  "control_state": "SUCCESS: both arms physically lifted and returned near recorded home; six drivers per arm confirmed disabled. No active motion loop remains.",
+  "target_user_decision": {
+    "accepted": "current independent 30mm flange-lift poses",
+    "future": "another +50mm only after this version is verified",
+    "future_status": "deferred, do not execute now"
+  },
+  "credential_authorization": {
+    "host": "ubuntu@192.168.110.12",
+    "scope": "use existing installation sudo credential for task CAN configuration, read-only limits, authorized pure-PD takeover",
+    "user_response": "授权使用已有凭据完成上述操作",
+    "secret_value_recorded": false
+  },
+  "actual_limits_status": "Both arms 6/6 external 0x473 reports; frozen leader J2/J3 outside reported target limits; original home retained.",
+  "left_role_transition": {
+    "application_frame": "470#FC00000000000000",
+    "count": 1,
+    "physical_restart": true,
+    "setting_response": "476 byte0=0x70; not proof of persistence",
+    "observed_effect": "continuous standard feedback; all six driver enable flags false",
+    "persistence_after_power_cycle": "After user-confirmed physical restart, standard actual/state/driver feedback remains continuous; no role resend.",
+    "first_actual_deg": [
+      1.216,
+      -2.938,
+      1.732,
+      5.612,
+      14.311,
+      -23.73
+    ],
+    "later_actual_deg": [
+      1.216,
+      -3.625,
+      1.921,
+      3.05,
+      18.997,
+      -35.724
+    ],
+    "later_observed_at": "2026-10-23T20:32:43.58+08:00",
+    "cause_of_pose_change": "not established; awaiting operator observation"
+  },
+  "next_control_stage": "v3 draft: fresh measured start -> accepted left raised target via25s quintic, short operator hold, reverse25s to supported start, then disable; phase-aware fault handling pending code review.",
+  "pd_code_review": "DRAFT, not authorized for execution: kernel RX timestamps and queue-overflow validation require repair before freshness or post-disable confirmations can be trusted.",
+  "post_restart_actual_reference": "can-diagnostics/live-checks/left-post-restart-actual-reference.json",
+  "left_pd_trial": {
+    "script_sha256": "8cb917cd808e5a23fddd847e62bce0747de6ff5cb9031048ff8512c9acef258c",
+    "precheck_at": "2026-10-23T20:47:39.595+08:00",
+    "enable_mit_confirmed_at": "2026-10-23T20:47:39.711+08:00",
+    "guard_triggered_at": "2026-10-23T20:47:39.831+08:00",
+    "all_disabled_confirmed_at": "2026-10-23T20:47:39.971+08:00",
+    "ready_to_feel": false,
+    "guard": "reported J4 high-speed motor-state velocity -0.172 rad/s exceeds 0.15 raw-field threshold",
+    "max_actual_joint_displacement_deg": {
+      "J1": 0,
+      "J2": 0,
+      "J3": 0,
+      "J4": 0.054,
+      "J5": 0.051,
+      "J6": 0.051
+    },
+    "diagnostic_question": "Is high-speed motor velocity field rotor-side versus output-joint-side; investigate scale/timing before any retry",
+    "retry_authorized_by_root": false
+  },
+  "v3_local_limit_finding": "Fixed SDK _joint_limits_enabled defaults False; this local option is not a hardware limit write. Prior nearby-hold step strategy superseded by user-authorized bounded interpolation; original measured home remains intact.",
+  "last_successful_motion": {
+    "completed": true,
+    "run": "bimanual-8cm-20261023-214424",
+    "executed_script_sha256": "8d5bcb1aeb86ed0499176838675f9bace467c35c2d437a6c42d1e883ad91e57e",
+    "actual_lift_from_start_cm": {
+      "left": 8.260447299991764,
+      "right": 8.919850296533605
+    },
+    "lift_estimation": "FK from measured plateau joint angles using previously verified standard Piper MDH model",
+    "return_tolerance_deg": 3.0,
+    "results": {
+      "left": {
+        "disabled_confirmed": true,
+        "trial_fault": null,
+        "last_joint_deg": [
+          1.167,
+          -3.9920000000000004,
+          2.0500000000000003,
+          5.179,
+          21.387000000000004,
+          -23.569
+        ],
+        "max_home_error_deg": 7.091000000000005
+      },
+      "right": {
+        "disabled_confirmed": true,
+        "trial_fault": null,
+        "last_joint_deg": [
+          -2.744,
+          -3.0250000000000004,
+          2.3840000000000003,
+          0.0,
+          14.870000000000001,
+          3.6539999999999995
+        ],
+        "max_home_error_deg": 7.475000000000001
+      }
+    },
+    "control_fix": "Mode refreshed at100Hz before each six-axis MIT group; speed-rate field restored from0 to SDK default50. Their individual effects were not isolated.",
+    "gains": {
+      "kp": 20,
+      "kd": 1,
+      "feedforward_command": 0
+    },
+    "note": "Original measured home preserved. Some runtime strings still say0.5deg; actual configured return tolerance was3deg. This annotation corrects the label without editing raw logs."
+  },
+  "checkpoint_document": "docs/checkpoints/2026-10-23-piper.md",
+  "checkpoint_evidence": "checkpoint-evidence/checkpoint-results.json",
+  "final_read_only_snapshot": {
+    "observed_at": "2026-10-23T13:51:30.241899+00:00",
+    "read_only": true,
+    "raw": {
+      "can0": {
+        "0x2a1": "0100040200000000",
+        "0x261": "00e6001f1b000000",
+        "0x266": "00e600221c000000",
+        "0x265": "00e600221d000000",
+        "0x264": "00e600201c000000",
+        "0x263": "00e600201b000000",
+        "0x262": "00e6001f1a000000"
+      },
+      "can1": {
+        "0x2a1": "0100040000000000",
+        "0x262": "00e600241f000000",
+        "0x261": "00e600231e000000",
+        "0x266": "00e6002925000000",
+        "0x265": "00e6002a24000000",
+        "0x264": "00f0002722000000",
+        "0x263": "00e6002521000000"
+      }
+    },
+    "all_six_disabled": {
+      "can0": true,
+      "can1": true
+    }
+  },
+  "latest_video_repeat_run": "bimanual-8cm-20261023-214618"
+}

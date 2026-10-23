@@ -1,0 +1,98 @@
+{
+  "docs/checkpoints/2026-10-23-piper.md": {
+    "bytes": 7684,
+    "sha256": "ffa7d80108391110d3fdc4257293289478b2a515f95a27d2a6206b48e8d0b284"
+  },
+  "artifacts/piper-commissioning-20261023/session-scope.json": {
+    "bytes": 9634,
+    "sha256": "e0815f10826abe491f9f0467f2a52a6adc4f4675d6fd28c71d910bf2ad8cf77d"
+  },
+  "artifacts/piper-commissioning-20261023/can-diagnostics/driver-review/bimanual_lift_arm.py": {
+    "bytes": 41120,
+    "sha256": "eb7702e8193ea875b6f92fa2115a5c2b6df83de0eaf833063521fcae098f43a5"
+  },
+  "artifacts/piper-commissioning-20261023/bimanual-lift-8cm/run_bimanual_8cm.py": {
+    "bytes": 2659,
+    "sha256": "f37d6c4dcf568d24beb27ade5636e1665f9003e3a8e672172939ae2a692282db"
+  },
+  "artifacts/piper-commissioning-20261023/bimanual-lift-8cm/make_targets.py": {
+    "bytes": 1319,
+    "sha256": "7b6445ac3e5e532cb5b539a99e17981c585b8565d214db0ebcac4cad385c4523"
+  },
+  "artifacts/piper-commissioning-20261023/bimanual-lift-8cm/sdk_constants.py": {
+    "bytes": 6449,
+    "sha256": "5b2b0dbb4bce00d92733f284e99b438f3997c6727c982bdf2e0f2a6126d0ac61"
+  },
+  "artifacts/piper-commissioning-20261023/bimanual-lift-8cm/targets.json": {
+    "bytes": 1635,
+    "sha256": "fd013f4d1c2fe3d6eb524b59c7d4cf28c7a889f9f2780c43a086038f6f8cba1b"
+  },
+  "artifacts/piper-commissioning-20261023/bimanual-lift-8cm/home-poses.json": {
+    "bytes": 1250,
+    "sha256": "a5d658a4e142db289b13eeb99968839b84727dac774639a971e0c9e55ed558e7"
+  },
+  "artifacts/piper-commissioning-20261023/can-diagnostics/live-checks/angle-limits-left-01/summary.json": {
+    "bytes": 48512,
+    "sha256": "019f285dd15accc8ae7168fc9d7774bac3f7f4a32c6adccb163d14ce392342b9"
+  },
+  "artifacts/piper-commissioning-20261023/can-diagnostics/live-checks/angle-limits-right-01/summary.json": {
+    "bytes": 55095,
+    "sha256": "138a9bb684becbc3affb0dce2ae86cc2a21634dbbe80b7edb3101a799e22ee1f"
+  },
+  "artifacts/piper-commissioning-20261023/checkpoint-evidence/bimanual-8cm-20261023-214424/executed-script.py": {
+    "bytes": 41138,
+    "sha256": "8d5bcb1aeb86ed0499176838675f9bace467c35c2d437a6c42d1e883ad91e57e"
+  },
+  "artifacts/piper-commissioning-20261023/checkpoint-evidence/bimanual-8cm-20261023-214424/left/events.compact.jsonl": {
+    "bytes": 27238,
+    "sha256": "8e7ce1e7299231cd8ccaf166988fea9efcc2e113ab4827613ebc0eb5dabd1de3"
+  },
+  "artifacts/piper-commissioning-20261023/checkpoint-evidence/bimanual-8cm-20261023-214424/left/summary.json": {
+    "bytes": 6619,
+    "sha256": "abfe7ba9f2e5bcecd9598820fa307d15ccf2846e1328a899b0e2d7bc233bab88"
+  },
+  "artifacts/piper-commissioning-20261023/checkpoint-evidence/bimanual-8cm-20261023-214424/right/events.compact.jsonl": {
+    "bytes": 27121,
+    "sha256": "090933475b09e6751a1b784d47824db4d364c81ac1a024bf754bb773a83b4a28"
+  },
+  "artifacts/piper-commissioning-20261023/checkpoint-evidence/bimanual-8cm-20261023-214424/right/summary.json": {
+    "bytes": 6629,
+    "sha256": "4b4e247b1e6073c66bef0e6672ff6344a0417544908617c48879e5387996939a"
+  },
+  "artifacts/piper-commissioning-20261023/checkpoint-evidence/bimanual-8cm-20261023-214424/source-manifest.json": {
+    "bytes": 849,
+    "sha256": "717a507ee49bd133b6d5a6ad07a45ff53073ddeb04902d88243bbd3fe1cf2807"
+  },
+  "artifacts/piper-commissioning-20261023/checkpoint-evidence/bimanual-8cm-20261023-214618/executed-script.py": {
+    "bytes": 41120,
+    "sha256": "eb7702e8193ea875b6f92fa2115a5c2b6df83de0eaf833063521fcae098f43a5"
+  },
+  "artifacts/piper-commissioning-20261023/checkpoint-evidence/bimanual-8cm-20261023-214618/left/events.compact.jsonl": {
+    "bytes": 27143,
+    "sha256": "4dc8009a483c26d529a7703e4c3fd9baa97455cfca854a0b30730dd11a8a7b83"
+  },
+  "artifacts/piper-commissioning-20261023/checkpoint-evidence/bimanual-8cm-20261023-214618/left/summary.json": {
+    "bytes": 6575,
+    "sha256": "c022f10d8475db779ac287ec1fbe22b4718d35e73632059e95e8c1c1a14ea0fc"
+  },
+  "artifacts/piper-commissioning-20261023/checkpoint-evidence/bimanual-8cm-20261023-214618/right/events.compact.jsonl": {
+    "bytes": 27207,
+    "sha256": "b85fb8d94f3ddbd618bd9d6be445d93591f7e5e9285eaa14f68a54d2c21ec796"
+  },
+  "artifacts/piper-commissioning-20261023/checkpoint-evidence/bimanual-8cm-20261023-214618/right/summary.json": {
+    "bytes": 6543,
+    "sha256": "064232ce282c138d5fb96feca29a6bafcb0b06d12d10dbd8c1bb708811b0a834"
+  },
+  "artifacts/piper-commissioning-20261023/checkpoint-evidence/bimanual-8cm-20261023-214618/source-manifest.json": {
+    "bytes": 849,
+    "sha256": "691a369daf9b7d2433713ccfc665df8e596a5d16088593f5187db27adf5aec23"
+  },
+  "artifacts/piper-commissioning-20261023/checkpoint-evidence/checkpoint-results.json": {
+    "bytes": 3640,
+    "sha256": "c5a494b74d80094ca4fb86425d056d941f844a1aae1d67bafb994df149a164c3"
+  },
+  "artifacts/piper-commissioning-20261023/checkpoint-evidence/final-disabled-snapshot.json": {
+    "bytes": 685,
+    "sha256": "cba38fa430de88594e41559f503c3648c6e2fd4f6bce5a78d455310c8987a4a9"
+  }
+}

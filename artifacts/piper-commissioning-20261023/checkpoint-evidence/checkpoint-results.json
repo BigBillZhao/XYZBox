@@ -1,0 +1,133 @@
+{
+  "runs": {
+    "bimanual-8cm-20261023-214424": {
+      "left": {
+        "trial_success": true,
+        "fault": null,
+        "disable_confirmed": true,
+        "returned_before_disable_deg": [
+          1.167,
+          -3.5300000000000002,
+          2.133,
+          5.452,
+          16.884999999999998,
+          -23.658
+        ],
+        "returned_before_disable_max_error_deg": 2.5889999999999986,
+        "post_disable_deg": [
+          1.167,
+          -3.9920000000000004,
+          2.0500000000000003,
+          5.179,
+          21.387000000000004,
+          -23.569
+        ],
+        "post_disable_max_home_error_deg": 7.091000000000005,
+        "end_utc": "2026-10-23T13:45:12.902128+00:00"
+      },
+      "right": {
+        "trial_success": true,
+        "fault": null,
+        "disable_confirmed": true,
+        "returned_before_disable_deg": [
+          -2.744,
+          -2.493,
+          2.004,
+          -0.9309999999999999,
+          9.488,
+          3.019
+        ],
+        "returned_before_disable_max_error_deg": 2.093,
+        "post_disable_deg": [
+          -2.744,
+          -3.0250000000000004,
+          2.3840000000000003,
+          0.0,
+          14.870000000000001,
+          3.6539999999999995
+        ],
+        "post_disable_max_home_error_deg": 7.475000000000001,
+        "end_utc": "2026-10-23T13:45:12.906771+00:00"
+      }
+    },
+    "bimanual-8cm-20261023-214618": {
+      "left": {
+        "trial_success": true,
+        "fault": null,
+        "disable_confirmed": true,
+        "returned_before_disable_deg": [
+          1.167,
+          -3.4879999999999995,
+          2.144,
+          5.423,
+          16.884999999999998,
+          -23.551000000000002
+        ],
+        "returned_before_disable_max_error_deg": 2.5889999999999986,
+        "post_disable_deg": [
+          1.167,
+          -4.042000000000001,
+          2.081,
+          5.145,
+          21.317,
+          -23.586
+        ],
+        "post_disable_max_home_error_deg": 7.021000000000001,
+        "end_utc": "2026-10-23T13:47:08.320025+00:00"
+      },
+      "right": {
+        "trial_success": true,
+        "fault": null,
+        "disable_confirmed": true,
+        "returned_before_disable_deg": [
+          -2.744,
+          -2.5140000000000002,
+          1.9960000000000002,
+          -0.9229999999999999,
+          9.517,
+          3.046
+        ],
+        "returned_before_disable_max_error_deg": 2.122,
+        "post_disable_deg": [
+          -2.744,
+          -2.807,
+          2.4330000000000003,
+          0.0,
+          15.435,
+          3.428
+        ],
+        "post_disable_max_home_error_deg": 8.040000000000001,
+        "end_utc": "2026-10-23T13:47:08.295183+00:00"
+      }
+    }
+  },
+  "final_read_only_snapshot": {
+    "observed_at": "2026-10-23T13:51:30.241899+00:00",
+    "read_only": true,
+    "raw": {
+      "can0": {
+        "0x2a1": "0100040200000000",
+        "0x261": "00e6001f1b000000",
+        "0x266": "00e600221c000000",
+        "0x265": "00e600221d000000",
+        "0x264": "00e600201c000000",
+        "0x263": "00e600201b000000",
+        "0x262": "00e6001f1a000000"
+      },
+      "can1": {
+        "0x2a1": "0100040000000000",
+        "0x262": "00e600241f000000",
+        "0x261": "00e600231e000000",
+        "0x266": "00e6002925000000",
+        "0x265": "00e6002a24000000",
+        "0x264": "00f0002722000000",
+        "0x263": "00e6002521000000"
+      }
+    },
+    "all_six_disabled": {
+      "can0": true,
+      "can1": true
+    }
+  },
+  "note": "Return acceptance uses3deg before disable. After disable, joints can relax on support; post-disable angles are not the return acceptance sample."
+}

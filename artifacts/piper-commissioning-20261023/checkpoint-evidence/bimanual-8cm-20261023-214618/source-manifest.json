@@ -1,0 +1,30 @@
+{
+  "left": {
+    "raw-can.jsonl": {
+      "bytes": 45785502,
+      "sha256": "f51297e3fe5170961ef6f538c1fa2694ae7ea7dfaff818cc159ba0f790db15f1"
+    },
+    "events.jsonl": {
+      "bytes": 3698917,
+      "sha256": "1b639e5d91fd1c6028473cbd0f9838e971d68f527c87db9e085edcb109f3b73a"
+    },
+    "summary.json": {
+      "bytes": 6575,
+      "sha256": "c022f10d8475db779ac287ec1fbe22b4718d35e73632059e95e8c1c1a14ea0fc"
+    }
+  },
+  "right": {
+    "raw-can.jsonl": {
+      "bytes": 45786479,
+      "sha256": "2e6a010c437645a8addd56f2c3c742e99f524be8e2588f11a0fe274eb8645122"
+    },
+    "events.jsonl": {
+      "bytes": 3698981,
+      "sha256": "d159944ef5930ee83e53291818b3f1282db6aebc74208f6415c019c806327784"
+    },
+    "summary.json": {
+      "bytes": 6543,
+      "sha256": "064232ce282c138d5fb96feca29a6bafcb0b06d12d10dbd8c1bb708811b0a834"
+    }
+  }
+}
