@@ -1,0 +1,65 @@
+{
+  "read_only": true,
+  "arms": [
+    {
+      "channel": "can0",
+      "model": "piper",
+      "profile": "default",
+      "joints_rad": [
+        0.020525072003453316,
+        -0.05930628798276732,
+        0.026930430358272504,
+        0.09014625586550712,
+        0.36248743234670233,
+        -0.41680207866876584
+      ],
+      "joints_deg": [
+        1.176,
+        -3.398,
+        1.543,
+        5.165,
+        20.769000000000002,
+        -23.881
+      ],
+      "enabled": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "status": "ArmMsgFeedbackStatus:\n  ctrl_mode: CAN_CTRL(0x1)\n  arm_status: NORMAL(0x0)\n  mode_feedback: MOVE_MIT(0x4)\n  teach_status: DISABLED(0x0)\n  motion_status: REACH_TARGET_POS_SUCCESSFULLY(0x0)\n  trajectory_num: 0\n  err_status:   ErrStatus:\n    joint_1_angle_limit: False\n    joint_2_angle_limit: False\n    joint_3_angle_limit: False\n    joint_4_angle_limit: False\n    joint_5_angle_limit: False\n    joint_6_angle_limit: False\n    communication_status_joint_1: False\n    communication_status_joint_2: False\n    communication_status_joint_3: False\n    communication_status_joint_4: False\n    communication_status_joint_5: False\n    communication_status_joint_6: False"
+    },
+    {
+      "channel": "can1",
+      "model": "piper",
+      "profile": "default",
+      "joints_rad": [
+        -0.048397980157802764,
+        -0.04302236606166022,
+        0.03902556207459321,
+        0.0,
+        0.270246781378802,
+        0.06267477343911637
+      ],
+      "joints_deg": [
+        -2.7730000000000006,
+        -2.465,
+        2.236,
+        0.0,
+        15.484,
+        3.5909999999999997
+      ],
+      "enabled": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "status": "ArmMsgFeedbackStatus:\n  ctrl_mode: CAN_CTRL(0x1)\n  arm_status: NORMAL(0x0)\n  mode_feedback: MOVE_MIT(0x4)\n  teach_status: DISABLED(0x0)\n  motion_status: REACH_TARGET_POS_SUCCESSFULLY(0x0)\n  trajectory_num: 0\n  err_status:   ErrStatus:\n    joint_1_angle_limit: False\n    joint_2_angle_limit: False\n    joint_3_angle_limit: False\n    joint_4_angle_limit: False\n    joint_5_angle_limit: False\n    joint_6_angle_limit: False\n    communication_status_joint_1: False\n    communication_status_joint_2: False\n    communication_status_joint_3: False\n    communication_status_joint_4: False\n    communication_status_joint_5: False\n    communication_status_joint_6: False"
+    }
+  ]
+}

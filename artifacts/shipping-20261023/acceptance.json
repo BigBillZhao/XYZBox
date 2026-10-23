@@ -1,0 +1,58 @@
+{
+  "release_id": "yikai-box-piper-20261023",
+  "checked_at": "2026-10-23T14:47:38.240720+00:00",
+  "hostname": "yikai-21c5e86e",
+  "boot_disk": "HP SSD EX900 Plus M.2 256GB HASI26340100227",
+  "kernel": "7.0.14-xyzbox-rt",
+  "realtime": "1",
+  "sdk": "pyAgxArm",
+  "sdk_revision": "1ae40ad",
+  "sdk_archive_sha256": "ea8a38af9e6e44255a53c351c4cf788592a21abe694e0f2ce683f2b9be177711",
+  "python_packages": {
+    "pyAgxArm": "1.0.0",
+    "python-can": "4.6.1",
+    "typing_extensions": "4.15.0"
+  },
+  "can": {
+    "physical_CAN1": "can0 / left test arm",
+    "physical_CAN2": "can1 / right test arm",
+    "bitrate": 1000000,
+    "sample_point": 0.75,
+    "CAN3_CAN4": "unused, DOWN"
+  },
+  "customer_root": "/home/ubuntu/yikai-box",
+  "sdk_readback_passed": true,
+  "sdk_enabled_status": {
+    "can0": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "can1": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "motion_receipt": "bimanual-8cm-20261023-223147, both arms passed and disabled",
+  "fan_driver": "it87 (IT8786E)",
+  "fan_policy": "original full-speed modes restored",
+  "auto_motion": false,
+  "source_baseline_revision": "87780b28ea63df45952c8af8e6ada5b21bd179b6",
+  "sdk_after_reboot_passed": true,
+  "it87_autoload_after_reboot_passed": true,
+  "services_after_reboot": {
+    "xyzbox-can@can0": "active",
+    "xyzbox-can@can1": "active",
+    "ssh": "active",
+    "display-manager": "active"
+  },
+  "shutdown_requested_utc": "2026-10-23T14:50:45+00:00",
+  "shutdown_acknowledged_by_system": true
+}

@@ -6,6 +6,8 @@
 包含固定版本驱动源码、离线 Python 依赖、安装配置、排障手册及一个独立关节控制示例。
 示例不依赖 LeRobot、ROS、GPU、PICO 或摄像头。
 
+2026-10-23 惠普盘 Piper 交付机使用[客户快速说明](customer/PIPER-QUICKSTART.zh-CN.md)与[发货 checkpoint](docs/checkpoints/2026-10-23-shipping.md)。客户目录为 `~/yikai-box`，接线为左 CAN1/can0、右 CAN2/can1；下方旧 Nero 机器的左右映射不适用于这台 Piper box。
+
 ## 已验证的硬件与软件
 
 | 项目 | 2026-10-16 现场结果 |

@@ -1,0 +1,9 @@
+{
+  "release_id": "yikai-box-piper-20261023",
+  "customer_root": "/home/ubuntu/yikai-box",
+  "desktop_document": "/home/ubuntu/Desktop/YikaiBox-使用说明.md",
+  "maintenance_root": "/home/ubuntu/.local/share/xyzbox/maintenance-20261023",
+  "legacy_absolute_paths_preserved_by_symlink": true,
+  "offline_kit": "5090d:/data/xyzbox-images/customer-kit-20261023/yikai-box-sdk-kit.tar",
+  "offline_kit_sha256": "de355cf3a42b06dde72030b14e63f40988960e35ffb5c091a0a9b708a2b7b39b"
+}

@@ -7,6 +7,7 @@ It includes pinned driver sources, offline Python dependencies, installation con
 The example does not require LeRobot, ROS, a GPU, PICO, or cameras.
 
 The replacement-box Piper factory work is recorded in the [October 23 commissioning checkpoint](docs/checkpoints/2026-10-23-piper.md), including the verified two-arm lift/return/disable sequence. Its wiring is **left CAN1/can0, right CAN2/can1**; the older Nero installation below has a different mapping.
+The shipped HP-disk box has a [Piper customer quick start](customer/PIPER-QUICKSTART.zh-CN.md) and a [delivery checkpoint](docs/checkpoints/2026-10-23-shipping.md). Its customer entry is `~/yikai-box`, with an independently verified SDK environment.
 
 ## Verified hardware and software
 

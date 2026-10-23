@@ -10,7 +10,7 @@
 ## 已部署的监控入口
 
 当前惠普盘已安装 `lm-sensors`，并将 [`system/xyzbox-hwmon.conf`](../system/xyzbox-hwmon.conf)
-安装到 `/etc/modules-load.d/xyzbox-hwmon.conf`，用于开机加载 `it87`。本次尚未为此再次重启。
+安装到 `/etc/modules-load.d/xyzbox-hwmon.conf`，用于开机加载 `it87`。发货收尾时再次重启，已验证驱动自动加载及转速节点出现。
 
 ```bash
 sudo modprobe it87
