@@ -1,0 +1,17 @@
+{
+  "server": "192.168.100.100",
+  "account": "AlgoLaptop",
+  "share": "home",
+  "directory": "XYZBoxImages",
+  "credential_value_recorded": false,
+  "client": "zenbot-alg@192.168.106.3",
+  "bytes": 67108864,
+  "write_seconds": 0.682796647000032,
+  "read_seconds": 0.6672808540001824,
+  "write_MiB_s": 93.73215331562254,
+  "read_MiB_s": 95.9116384298095,
+  "sha256_match": true,
+  "probe_file_deleted": true,
+  "nas_reported_available_bytes": 95065099137024,
+  "measurement_scope": "64MiB SMB put/get including connection overhead; not a long-duration or complete image benchmark"
+}

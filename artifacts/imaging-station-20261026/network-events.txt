@@ -1,0 +1,4 @@
+Oct 26 11:59:20 zenbot-alg-ThinkBook-16-G8-AHP NetworkManager[1008]: <info>  [1793015960.4213] manager: sleep: sleep requested (sleeping: no  enabled: yes)
+Oct 26 12:05:21 zenbot-alg-ThinkBook-16-G8-AHP NetworkManager[1008]: <info>  [1793016321.4394] manager: sleep: wake requested (sleeping: yes  enabled: yes)
+Oct 26 12:05:27 zenbot-alg-ThinkBook-16-G8-AHP NetworkManager[1008]: <info>  [1793016327.1977] device (enp3s0): conflict detected for IP address 192.168.106.3 with host 14:B5:CD:D0:A3:FF
+Oct 26 12:19:31 zenbot-alg-ThinkBook-16-G8-AHP NetworkManager[1008]: <info>  [1793017171.6483] audit: op="device-disconnect" interface="enp3s0" ifindex=2 pid=6221 uid=1000 result="success"

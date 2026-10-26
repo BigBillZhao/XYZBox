@@ -1,0 +1,440 @@
+{
+  "observed_at": "2026-10-26T12:26:30.423681+00:00",
+  "hostname": "zenbot-alg-ThinkBook-16-G8-AHP",
+  "kernel": "7.0.0-38-generic",
+  "architecture": "x86_64",
+  "python": "3.12.3",
+  "filesystems": {
+    "/": {
+      "total_bytes": 119323721728,
+      "available_bytes": 22046289920
+    },
+    "/home": {
+      "total_bytes": 294148931584,
+      "available_bytes": 262676275200
+    }
+  },
+  "cpu_model": "AMD Ryzen 7 H 255 w/ Radeon 780M Graphics",
+  "memory_total_kib": 32103508,
+  "disks": {
+    "blockdevices": [
+      {
+        "name": "loop0",
+        "size": 4096,
+        "model": null,
+        "serial": null,
+        "tran": null,
+        "type": "loop",
+        "fstype": "squashfs",
+        "mountpoints": [
+          "/snap/bare/5"
+        ]
+      },
+      {
+        "name": "loop1",
+        "size": 77586432,
+        "model": null,
+        "serial": null,
+        "tran": null,
+        "type": "loop",
+        "fstype": "squashfs",
+        "mountpoints": [
+          "/snap/core22/2437"
+        ]
+      },
+      {
+        "name": "loop2",
+        "size": 77574144,
+        "model": null,
+        "serial": null,
+        "tran": null,
+        "type": "loop",
+        "fstype": "squashfs",
+        "mountpoints": [
+          "/snap/core22/2955"
+        ]
+      },
+      {
+        "name": "loop3",
+        "size": 70049792,
+        "model": null,
+        "serial": null,
+        "tran": null,
+        "type": "loop",
+        "fstype": "squashfs",
+        "mountpoints": [
+          "/snap/core24/1643"
+        ]
+      },
+      {
+        "name": "loop4",
+        "size": 70033408,
+        "model": null,
+        "serial": null,
+        "tran": null,
+        "type": "loop",
+        "fstype": "squashfs",
+        "mountpoints": [
+          "/snap/core24/2124"
+        ]
+      },
+      {
+        "name": "loop5",
+        "size": 272957440,
+        "model": null,
+        "serial": null,
+        "tran": null,
+        "type": "loop",
+        "fstype": "squashfs",
+        "mountpoints": [
+          "/snap/firefox/8763"
+        ]
+      },
+      {
+        "name": "loop6",
+        "size": 297603072,
+        "model": null,
+        "serial": null,
+        "tran": null,
+        "type": "loop",
+        "fstype": "squashfs",
+        "mountpoints": [
+          "/snap/firefox/9057"
+        ]
+      },
+      {
+        "name": "loop7",
+        "size": 19386368,
+        "model": null,
+        "serial": null,
+        "tran": null,
+        "type": "loop",
+        "fstype": "squashfs",
+        "mountpoints": [
+          "/snap/firmware-updater/210"
+        ]
+      },
+      {
+        "name": "loop8",
+        "size": 17301504,
+        "model": null,
+        "serial": null,
+        "tran": null,
+        "type": "loop",
+        "fstype": "squashfs",
+        "mountpoints": [
+          "/snap/firmware-updater/226"
+        ]
+      },
+      {
+        "name": "loop9",
+        "size": 557187072,
+        "model": null,
+        "serial": null,
+        "tran": null,
+        "type": "loop",
+        "fstype": "squashfs",
+        "mountpoints": [
+          "/snap/gnome-42-2204/247"
+        ]
+      },
+      {
+        "name": "loop10",
+        "size": 557309952,
+        "model": null,
+        "serial": null,
+        "tran": null,
+        "type": "loop",
+        "fstype": "squashfs",
+        "mountpoints": [
+          "/snap/gnome-42-2204/263"
+        ]
+      },
+      {
+        "name": "loop11",
+        "size": 644382720,
+        "model": null,
+        "serial": null,
+        "tran": null,
+        "type": "loop",
+        "fstype": "squashfs",
+        "mountpoints": [
+          "/snap/gnome-46-2404/164"
+        ]
+      },
+      {
+        "name": "loop12",
+        "size": 96141312,
+        "model": null,
+        "serial": null,
+        "tran": null,
+        "type": "loop",
+        "fstype": "squashfs",
+        "mountpoints": [
+          "/snap/gtk-common-themes/1535"
+        ]
+      },
+      {
+        "name": "loop13",
+        "size": 414167040,
+        "model": null,
+        "serial": null,
+        "tran": null,
+        "type": "loop",
+        "fstype": "squashfs",
+        "mountpoints": [
+          "/snap/mesa-2404/1165"
+        ]
+      },
+      {
+        "name": "loop14",
+        "size": 421507072,
+        "model": null,
+        "serial": null,
+        "tran": null,
+        "type": "loop",
+        "fstype": "squashfs",
+        "mountpoints": [
+          "/snap/mesa-2404/1839"
+        ]
+      },
+      {
+        "name": "loop15",
+        "size": 12382208,
+        "model": null,
+        "serial": null,
+        "tran": null,
+        "type": "loop",
+        "fstype": "squashfs",
+        "mountpoints": [
+          "/snap/snap-store/1390"
+        ]
+      },
+      {
+        "name": "loop16",
+        "size": 12537856,
+        "model": null,
+        "serial": null,
+        "tran": null,
+        "type": "loop",
+        "fstype": "squashfs",
+        "mountpoints": [
+          "/snap/snap-store/1447"
+        ]
+      },
+      {
+        "name": "loop17",
+        "size": 52531200,
+        "model": null,
+        "serial": null,
+        "tran": null,
+        "type": "loop",
+        "fstype": "squashfs",
+        "mountpoints": [
+          "/snap/snapd/27406"
+        ]
+      },
+      {
+        "name": "loop18",
+        "size": 46882816,
+        "model": null,
+        "serial": null,
+        "tran": null,
+        "type": "loop",
+        "fstype": "squashfs",
+        "mountpoints": [
+          "/snap/snapd/28254"
+        ]
+      },
+      {
+        "name": "loop19",
+        "size": 847872,
+        "model": null,
+        "serial": null,
+        "tran": null,
+        "type": "loop",
+        "fstype": "squashfs",
+        "mountpoints": [
+          "/snap/snapd-desktop-integration/387"
+        ]
+      },
+      {
+        "name": "loop20",
+        "size": 847872,
+        "model": null,
+        "serial": null,
+        "tran": null,
+        "type": "loop",
+        "fstype": "squashfs",
+        "mountpoints": [
+          "/snap/snapd-desktop-integration/391"
+        ]
+      },
+      {
+        "name": "sda",
+        "size": 256060514304,
+        "model": "ASM246X",
+        "serial": "AAAABBBB0010",
+        "tran": "usb",
+        "type": "disk",
+        "fstype": null,
+        "mountpoints": [
+          null
+        ],
+        "children": [
+          {
+            "name": "sda1",
+            "size": 1127219200,
+            "model": null,
+            "serial": null,
+            "tran": null,
+            "type": "part",
+            "fstype": "vfat",
+            "mountpoints": [
+              null
+            ]
+          },
+          {
+            "name": "sda2",
+            "size": 254930845696,
+            "model": null,
+            "serial": null,
+            "tran": null,
+            "type": "part",
+            "fstype": "ext4",
+            "mountpoints": [
+              "/media/zenbot-alg/9a77295f-c637-43ce-95a5-38a845f5c878"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "nvme0n1",
+        "size": 1024209543168,
+        "model": "UMIS RPJYJ1T24RLS1QWY",
+        "serial": "SS1Q23148Z1CD6340C7N",
+        "tran": "nvme",
+        "type": "disk",
+        "fstype": null,
+        "mountpoints": [
+          null
+        ],
+        "children": [
+          {
+            "name": "nvme0n1p1",
+            "size": 471859200,
+            "model": null,
+            "serial": null,
+            "tran": "nvme",
+            "type": "part",
+            "fstype": "vfat",
+            "mountpoints": [
+              "/boot/efi"
+            ]
+          },
+          {
+            "name": "nvme0n1p2",
+            "size": 16777216,
+            "model": null,
+            "serial": null,
+            "tran": "nvme",
+            "type": "part",
+            "fstype": null,
+            "mountpoints": [
+              null
+            ]
+          },
+          {
+            "name": "nvme0n1p3",
+            "size": 536871960576,
+            "model": null,
+            "serial": null,
+            "tran": "nvme",
+            "type": "part",
+            "fstype": "ntfs",
+            "mountpoints": [
+              null
+            ]
+          },
+          {
+            "name": "nvme0n1p4",
+            "size": 62914560000,
+            "model": null,
+            "serial": null,
+            "tran": "nvme",
+            "type": "part",
+            "fstype": "BitLocker",
+            "mountpoints": [
+              null
+            ]
+          },
+          {
+            "name": "nvme0n1p5",
+            "size": 2097152000,
+            "model": null,
+            "serial": null,
+            "tran": "nvme",
+            "type": "part",
+            "fstype": "ntfs",
+            "mountpoints": [
+              null
+            ]
+          },
+          {
+            "name": "nvme0n1p6",
+            "size": 121836142592,
+            "model": null,
+            "serial": null,
+            "tran": "nvme",
+            "type": "part",
+            "fstype": "ext4",
+            "mountpoints": [
+              "/"
+            ]
+          },
+          {
+            "name": "nvme0n1p7",
+            "size": 299999690752,
+            "model": null,
+            "serial": null,
+            "tran": "nvme",
+            "type": "part",
+            "fstype": "ext4",
+            "mountpoints": [
+              "/home"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "ethernet_driver": {
+    "returncode": 0,
+    "stdout": "driver: r8169\nversion: 7.0.0-38-generic\nfirmware-version: rtl8168h-2_0.0.2 02/26/15\nexpansion-rom-version: \nbus-info: 0000:03:00.0\nsupports-statistics: yes\nsupports-test: no\nsupports-eeprom-access: no\nsupports-register-dump: yes\nsupports-priv-flags: no",
+    "stderr": ""
+  },
+  "ethernet_link": {
+    "returncode": 0,
+    "stdout": "Settings for enp3s0:\n\tSupported ports: [ TP\t MII ]\n\tSupported link modes:   10baseT/Half 10baseT/Full\n\t                        100baseT/Half 100baseT/Full\n\t                        1000baseT/Full\n\tSupported pause frame use: Symmetric Receive-only\n\tSupports auto-negotiation: Yes\n\tSupported FEC modes: Not reported\n\tAdvertised link modes:  10baseT/Half 10baseT/Full\n\t                        100baseT/Half 100baseT/Full\n\t                        1000baseT/Full\n\tAdvertised pause frame use: Symmetric Receive-only\n\tAdvertised auto-negotiation: Yes\n\tAdvertised FEC modes: Not reported\n\tLink partner advertised link modes:  10baseT/Half 10baseT/Full\n\t                                     100baseT/Half 100baseT/Full\n\t                                     1000baseT/Full\n\tLink partner advertised pause frame use: Symmetric Receive-only\n\tLink partner advertised auto-negotiation: Yes\n\tLink partner advertised FEC modes: Not reported\n\tSpeed: 1000Mb/s\n\tDuplex: Full\n\tAuto-negotiation: on\n\tmaster-slave cfg: preferred slave\n\tmaster-slave status: slave\n\tPort: Twisted Pair\n\tPHYAD: 0\n\tTransceiver: external\n\tMDI-X: Unknown\n\tLink detected: yes",
+    "stderr": "netlink error: Operation not permitted"
+  },
+  "wifi_mac": "14:b5:cd:d0:a3:ff",
+  "ethernet_mac": "04:55:b2:01:92:95",
+  "wifi_radio": {
+    "returncode": 0,
+    "stdout": "disabled",
+    "stderr": ""
+  },
+  "host_timezone": {
+    "returncode": 0,
+    "stdout": "America/New_York",
+    "stderr": ""
+  },
+  "source_system": {
+    "mountpoint": "/media/zenbot-alg/9a77295f-c637-43ce-95a5-38a845f5c878",
+    "hostname": "ubuntu",
+    "customer_root_present": false,
+    "it87_autoload_present": false,
+    "rt_kernel_present": true
+  }
+}
