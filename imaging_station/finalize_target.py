@@ -109,7 +109,10 @@ def main():
                     'boot_tested': False, 'filesystem_uuid': mapping[oldroot]}
             dest = root / 'var/lib/xyzbox'
             dest.mkdir(exist_ok=True)
-            (dest / 'provisioning.json').write_text(json.dumps(info, ensure_ascii=False, indent=2) + '\n')
+            dest.chmod(0o755)
+            receipt = dest / 'provisioning.json'
+            receipt.write_text(json.dumps(info, ensure_ascii=False, indent=2) + '\n')
+            receipt.chmod(0o644)  # Non-secret receipt is a customer-facing diagnostic.
             os.sync()
             print(json.dumps(info))
     finally:

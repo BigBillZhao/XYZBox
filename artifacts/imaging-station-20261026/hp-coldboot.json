@@ -1,0 +1,17 @@
+{
+  "observed_at": "2026-10-26T13:27:50.281883+00:00",
+  "hostname": "yikai-f98ac0a5",
+  "target_serial": "HASI26340100088",
+  "image_id": "20261026T124736Z-cdaaebd4",
+  "job_id": "209f8d6cec0d42849fff1a6efa4ca041",
+  "boot_tested": true,
+  "kernel": "7.0.14-xyzbox-rt",
+  "realtime": "1",
+  "can_interfaces": [],
+  "dkms": "kunhong-linux-driver/1.4.2, 7.0.0-38-generic, x86_64: installed\nkunhong-linux-driver/1.4.2, 7.0.14-xyzbox-rt, x86_64: installed",
+  "usb": "Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub\nBus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub\nBus 003 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub\nBus 004 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub",
+  "pip_check": "No broken requirements found.",
+  "clock": "Timezone=Asia/Shanghai\nNTP=yes\nNTPSynchronized=yes",
+  "can_feedback_passed": false,
+  "note": "CAN driver loads, but no USB peripheral/CAN hardware enumerated. Hardware clarification pending; no arm motion."
+}

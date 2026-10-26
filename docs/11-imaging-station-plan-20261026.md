@@ -1,6 +1,6 @@
 # 2026-10-26 · 专用刷盘工作站：需求与资源评估
 
-状态（2026-10-26 21:10 上海）：NAS 原样备份、客户母盘整理、WebUI 部署、客户镜像制作及惠普目标盘恢复/离线验收完成；目标盘已安全卸载，实际冷启动待用户装入信步 box。操作说明见 [刷盘工作站](../imaging_station/README.md)。
+状态（2026-10-26 21:28 上海）：NAS 原样备份、客户母盘整理、WebUI 部署、客户镜像制作、惠普目标盘恢复及实际冷启动完成；尚未枚举到 USB CAN 硬件，待确认其是否接入。操作说明见 [刷盘工作站](../imaging_station/README.md)。
 
 ## 用户本轮目标
 
@@ -138,3 +138,7 @@ ASMedia 硬盘盒的 USB 序列号 `AAAABBBB0010` 在换盘后不会改变；识
 - 最终恢复任务 `209f8d6cec0d42849fff1a6efa4ca041`，21:05:01–21:08:45 上海，成功；逐分区读回、fsck、系统身份与 UEFI fallback 均通过。
 - 新主机名 `yikai-f98ac0a5`。离线只读复验确认 fstab/GRUB 与新 UUID 一致、UEFI fallback 文件正确、RT/generic 内核及 kcan 模块存在、SDK import/profile 和 pip check 通过。
 - 目标盘已安全卸载。实际冷启动、RT/CAN 验收仍需将其装入信步 box；`customer_ready` 仍为 false，不混用旧盘验收。
+- 后续实际冷启动：用户将盘装入 box，地址仍为 `192.168.110.12`。SSH 验证主机名 `yikai-f98ac0a5`、物理 HP 序列号 `HASI26340100088`、RT 内核 `7.0.14-xyzbox-rt` 与 `/sys/kernel/realtime=1`；SDK `pip check`、it87 自动加载和传感器读取、NTP 同步正常。
+- 冷启动时 `kcan` 模块已加载，但 `lsusb` 只有四个 root hub，无外设；没有 `can0/can1`，对应 udev 服务未被触发。只读 SDK 连接因此返回缺少 can0。这不能记为双臂通信通过；已询问用户 CAN 卡/内部 USB 是否尚未接入。
+- 非秘密的 `provisioning.json` 原先继承刷盘服务 umask=0077，普通 ubuntu 账户读取失败；已修正初始化程序为 0644 并实机验证，记录 `boot_tested=true`、`can_hardware_tested=false`。
+- SSH 使用原安装会话 `01a16823-f27a-7c93-89df-8489c618368b` 的既有安装凭据，经程序直接消费。未在文档、代码、收据或模型输出中保存其值；没有重新加入调试公钥。

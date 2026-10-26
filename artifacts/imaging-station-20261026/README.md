@@ -28,6 +28,7 @@ See [requirements and feasibility assessment](../../docs/11-imaging-station-plan
 - Thirty-one disk-free Python tests cover device exclusion, native serial/hot-swap, locking, interrupted jobs, integrity failures before writes, capacity, NAS output failure cleanup, and HTTP Host/origin/request boundaries.
 - Final automatic restore job `209f8d6cec0d42849fff1a6efa4ca041` succeeded 13:05:01–13:08:45 UTC (3m44s), including used-block read-back, filesystem checks and identity/boot finalization. New hostname: `yikai-f98ac0a5`.
 - `hp-offline-inspection.json` verifies the new UUID references in fstab/GRUB, UEFI fallback file contents, RT/generic kernels, kcan module and the customer SDK/pip environment. The target is unmounted and safe to remove.
-- Physical cold boot and actual CAN behavior of this new target are separate acceptance steps. The previous `HASI26340100227` shipping test is not evidence for this different HP SSD.
+- `hp-coldboot.json` records actual cold boot at `192.168.110.12`: correct target SSD, hostname, RT kernel/realtime=1, SDK dependencies and synchronized clock. kcan/it87 loaded. The customer-facing non-secret provisioning receipt was made readable to ubuntu.
+- CAN feedback remains unverified: USB inventory contains only root hubs, no CAN device/interface. User clarification about CAN/internal USB assembly is pending; no arm movement occurred. The previous `HASI26340100227` shipping test is not evidence for this different HP SSD.
 
 Runtime procedures and limitations: [imaging_station/README.md](../../imaging_station/README.md).
