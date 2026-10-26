@@ -8,6 +8,16 @@
 仅内存负载与校验，没有 `-f/-d/--findfiles`，不运行 fio、SMART 长测或盘面写入测试。硬盘仅保存少量日志。
 在线测试不能覆盖操作系统正在占用的全部物理 RAM，不替代离线全内存测试。
 
+## 本次运行
+
+- run ID：`20261026T134923Z`
+- 开始：2026-10-26 **21:49:23**，Asia/Shanghai。
+- 预计结束：2026-10-27 **07:49:23**，Asia/Shanghai。
+- 配置：5120MiB，4 线程，36000 秒；cgroup `MemorySwapMax=0`，防止把被测页换出到硬盘。
+- 256MiB / 20 秒短测已通过，0 hardware incidents、0 errors；这是启动前验证，不是整夜测试结果。
+- 正式任务由 systemd 管理，已确认 active/running。没有配置测试结束后自动关机。
+- 无显示器时原机的 `plymouth-quit-wait` 使 multi-user.target 未完成，测试服务因此仅依赖 journald，避免等待图形启动；未修改显示/启动目标配置。
+
 ## 本机运行与记录
 
 - 程序：`/opt/xyzbox-memory-test/run.py`
@@ -17,6 +27,8 @@
 - `stdout.log`：程序原始输出；`telemetry.jsonl`：每分钟温度、RAM、swap 和负载。
 - `state.json`：运行状态；`summary.json`：结束后的结果、退出码、峰值温度和内核异常。
 - `kernel.log`：测试时间内的内核记录，辅助判断 MCE、OOM 等。
+
+内核日志按启动时记录的 journal cursor 截取，避免机器启动初期校时造成历史日志混入。
 
 断开 SSH 不影响任务。若 box 重启、断电或进程异常结束，不能记为通过；状态查询会区分中断。
 该服务不设开机自动重跑，避免重启后把失败的一晚覆盖成新的测试。

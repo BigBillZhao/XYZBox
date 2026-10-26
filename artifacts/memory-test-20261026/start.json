@@ -1,0 +1,227 @@
+{
+  "captured_at": "2026-10-26T13:50:11.436089+00:00",
+  "state": {
+    "run_id": "20261026T134923Z",
+    "status": "running",
+    "pid": 4494,
+    "boot_id": "0e933ff8-f289-4629-8196-e5aa61e99d8d",
+    "kernel_cursor": "s=73c83883122e4ebb84fe84ac043ec91c;i=e6f;b=0e933ff8f28946298196e5aa61e99d8d;m=3d0a76e;t=65ebe2071dd97;x=48e335a8a8cb0594",
+    "process_start_ticks": "208640",
+    "hostname": "yikai-f98ac0a5",
+    "started_at": "2026-10-26T13:49:23+00:00",
+    "requested_seconds": 36000,
+    "expected_finish_at": "2026-10-26T23:49:23+00:00",
+    "memory_mb": 5120,
+    "threads": 4,
+    "disk_stress": false,
+    "directory": "/var/lib/xyzbox-memory-test/20261026T134923Z",
+    "elapsed_seconds": 0,
+    "initial": {
+      "at": "2026-10-26T13:49:23+00:00",
+      "loadavg": [
+        0.4794921875,
+        0.3984375,
+        0.3642578125
+      ],
+      "memory": {
+        "MemTotal_KiB": 7850680,
+        "MemAvailable_KiB": 7057520,
+        "SwapTotal_KiB": 4194300,
+        "SwapFree_KiB": 4194300
+      },
+      "temperatures_c": {
+        "it8786:temp3_input": -56.0,
+        "it8786:temp1_input": 36.0,
+        "it8786:temp2_input": 24.0,
+        "acpitz_0:temp1_input": 27.8,
+        "coretemp:Core 4": 28.0,
+        "coretemp:Core 15": 36.0,
+        "coretemp:Core 12": 36.0,
+        "coretemp:Package id 0": 38.0,
+        "coretemp:Core 13": 36.0,
+        "coretemp:Core 0": 38.0,
+        "coretemp:Core 14": 36.0,
+        "nvme:Sensor 2": 35.85,
+        "nvme:Composite": 39.85,
+        "nvme:Sensor 1": 39.85
+      }
+    },
+    "command": [
+      "/usr/bin/stressapptest",
+      "-s",
+      "36000",
+      "-M",
+      "5120",
+      "-m",
+      "4",
+      "-W",
+      "--stop_on_errors",
+      "--printsec",
+      "60",
+      "-l",
+      "/var/lib/xyzbox-memory-test/20261026T134923Z/memory.log"
+    ],
+    "latest": {
+      "at": "2026-10-26T13:49:24+00:00",
+      "loadavg": [
+        0.4794921875,
+        0.3984375,
+        0.3642578125
+      ],
+      "memory": {
+        "MemTotal_KiB": 7850680,
+        "MemAvailable_KiB": 7057520,
+        "SwapTotal_KiB": 4194300,
+        "SwapFree_KiB": 4194300
+      },
+      "temperatures_c": {
+        "it8786:temp3_input": -56.0,
+        "it8786:temp1_input": 36.0,
+        "it8786:temp2_input": 24.0,
+        "acpitz_0:temp1_input": 27.8,
+        "coretemp:Core 4": 28.0,
+        "coretemp:Core 15": 36.0,
+        "coretemp:Core 12": 36.0,
+        "coretemp:Package id 0": 38.0,
+        "coretemp:Core 13": 36.0,
+        "coretemp:Core 0": 38.0,
+        "coretemp:Core 14": 36.0,
+        "nvme:Sensor 2": 35.85,
+        "nvme:Composite": 40.85,
+        "nvme:Sensor 1": 40.85
+      }
+    },
+    "peak_temperatures_c": {
+      "it8786:temp3_input": -56.0,
+      "it8786:temp1_input": 36.0,
+      "it8786:temp2_input": 24.0,
+      "acpitz_0:temp1_input": 27.8,
+      "coretemp:Core 4": 28.0,
+      "coretemp:Core 15": 36.0,
+      "coretemp:Core 12": 36.0,
+      "coretemp:Package id 0": 38.0,
+      "coretemp:Core 13": 36.0,
+      "coretemp:Core 0": 38.0,
+      "coretemp:Core 14": 36.0,
+      "nvme:Sensor 2": 35.85,
+      "nvme:Composite": 40.85,
+      "nvme:Sensor 1": 40.85
+    }
+  },
+  "smoke": {
+    "run_id": "20261026T134730Z",
+    "status": "passed",
+    "pid": 4338,
+    "boot_id": "0e933ff8-f289-4629-8196-e5aa61e99d8d",
+    "process_start_ticks": "197296",
+    "hostname": "yikai-f98ac0a5",
+    "started_at": "2026-10-26T13:47:30+00:00",
+    "requested_seconds": 20,
+    "expected_finish_at": "2026-10-26T13:47:50+00:00",
+    "memory_mb": 256,
+    "threads": 2,
+    "disk_stress": false,
+    "directory": "/var/lib/xyzbox-memory-test/smoke/20261026T134730Z",
+    "elapsed_seconds": 21,
+    "initial": {
+      "at": "2026-10-26T13:47:30+00:00",
+      "loadavg": [
+        0.22900390625,
+        0.29931640625,
+        0.32861328125
+      ],
+      "memory": {
+        "MemTotal_KiB": 7850680,
+        "MemAvailable_KiB": 7054308,
+        "SwapTotal_KiB": 4194300,
+        "SwapFree_KiB": 4194300
+      },
+      "temperatures_c": {
+        "it8786:temp3_input": -56.0,
+        "it8786:temp1_input": 34.0,
+        "it8786:temp2_input": 23.0,
+        "acpitz_0:temp1_input": 27.8,
+        "coretemp:Core 4": 29.0,
+        "coretemp:Core 15": 34.0,
+        "coretemp:Core 12": 34.0,
+        "coretemp:Package id 0": 39.0,
+        "coretemp:Core 13": 34.0,
+        "coretemp:Core 0": 39.0,
+        "coretemp:Core 14": 34.0,
+        "nvme:Sensor 2": 35.85,
+        "nvme:Composite": 39.85,
+        "nvme:Sensor 1": 39.85
+      }
+    },
+    "command": [
+      "/usr/bin/stressapptest",
+      "-s",
+      "20",
+      "-M",
+      "256",
+      "-m",
+      "2",
+      "-W",
+      "--stop_on_errors",
+      "--printsec",
+      "60",
+      "-l",
+      "/var/lib/xyzbox-memory-test/smoke/20261026T134730Z/memory.log"
+    ],
+    "latest": {
+      "at": "2026-10-26T13:47:30+00:00",
+      "loadavg": [
+        0.22900390625,
+        0.29931640625,
+        0.32861328125
+      ],
+      "memory": {
+        "MemTotal_KiB": 7850680,
+        "MemAvailable_KiB": 7053996,
+        "SwapTotal_KiB": 4194300,
+        "SwapFree_KiB": 4194300
+      },
+      "temperatures_c": {
+        "it8786:temp3_input": -56.0,
+        "it8786:temp1_input": 34.0,
+        "it8786:temp2_input": 23.0,
+        "acpitz_0:temp1_input": 27.8,
+        "coretemp:Core 4": 29.0,
+        "coretemp:Core 15": 34.0,
+        "coretemp:Core 12": 34.0,
+        "coretemp:Package id 0": 39.0,
+        "coretemp:Core 13": 34.0,
+        "coretemp:Core 0": 39.0,
+        "coretemp:Core 14": 34.0,
+        "nvme:Sensor 2": 35.85,
+        "nvme:Composite": 39.85,
+        "nvme:Sensor 1": 39.85
+      }
+    },
+    "peak_temperatures_c": {
+      "it8786:temp3_input": -56.0,
+      "it8786:temp1_input": 34.0,
+      "it8786:temp2_input": 23.0,
+      "acpitz_0:temp1_input": 27.8,
+      "coretemp:Core 4": 29.0,
+      "coretemp:Core 15": 34.0,
+      "coretemp:Core 12": 34.0,
+      "coretemp:Package id 0": 39.0,
+      "coretemp:Core 13": 34.0,
+      "coretemp:Core 0": 39.0,
+      "coretemp:Core 14": 34.0,
+      "nvme:Sensor 2": 35.85,
+      "nvme:Composite": 39.85,
+      "nvme:Sensor 1": 39.85
+    },
+    "finished_at": "2026-10-26T13:47:51+00:00",
+    "exit_code": 0,
+    "error": null,
+    "stressapptest_pass": true,
+    "kernel_alerts": [],
+    "kernel_collection_exit_code": 0,
+    "coverage": "Online test of allocated RAM; excludes RAM occupied by OS/other processes"
+  },
+  "unit": "MainPID=4493\nControlGroup=/system.slice/xyzbox-memory-test.service\nMemoryMax=6442450944\nMemorySwapMax=0\nActiveState=active\nSubState=running\n",
+  "swap_current_bytes": 0
+}

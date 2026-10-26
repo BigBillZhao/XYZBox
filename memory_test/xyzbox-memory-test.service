@@ -1,6 +1,6 @@
 [Unit]
 Description=XYZBox overnight RAM-only stability verification
-After=multi-user.target
+After=systemd-journald.service
 
 [Service]
 Type=exec
