@@ -1,0 +1,20 @@
+[Unit]
+Description=XYZBox overnight RAM-only stability verification
+After=multi-user.target
+
+[Service]
+Type=exec
+ExecStart=/usr/bin/systemd-inhibit --what=sleep:idle --mode=block --who=XYZBox-RAM-test --why=Overnight-memory-verification /usr/bin/python3 /opt/xyzbox-memory-test/run.py run
+ExecStopPost=/usr/bin/python3 /opt/xyzbox-memory-test/run.py finalize
+WorkingDirectory=/var/lib/xyzbox-memory-test
+Restart=no
+KillMode=control-group
+TimeoutStopSec=40
+RuntimeMaxSec=11h
+MemoryMax=6G
+MemorySwapMax=0
+OOMPolicy=stop
+UMask=0022
+Nice=5
+
+# Deliberately no Install section: a reboot must not silently restart the test.
