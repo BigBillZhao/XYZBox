@@ -1,0 +1,4 @@
+vfat: readonly filesystem check
+{"test": "partclone-regular-file-roundtrip", "passed": true, "uses_physical_devices": false, "results": [{"filesystem": "ext4", "filesystem_bytes": 134217728, "partclone_sha256": "2d7744567c1845c7d9f6d6d0c062a1cddcdf2c78e85ca11dd96f1b1bf250cf03", "repeated_capture_equal": true, "stdout_image_matches_file_image": true, "restored_readback_equal": true, "partclone_crc_passed": true, "readonly_fscheck_passed": true}, {"filesystem": "vfat", "filesystem_bytes": 134217728, "partclone_sha256": "f85dc65b732a3d771befd11b53a24f63700c28451002a7408218b3d86bea4b5a", "repeated_capture_equal": true, "stdout_image_matches_file_image": true, "restored_readback_equal": true, "partclone_crc_passed": true, "readonly_fscheck_passed": true}]}
+xyzbox-partclone-roundtrip.service: Deactivated successfully.
+xyzbox-partclone-roundtrip.service: Consumed 1.272s CPU time.

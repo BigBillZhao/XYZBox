@@ -1,0 +1,19 @@
+{
+  "id": "35a7a500c94049f6ac021009a715d4e8",
+  "operation": "capture",
+  "status": "succeeded",
+  "phase": "complete",
+  "progress": 100,
+  "device": "/dev/sda",
+  "serial": "26030958613001465",
+  "image_id": "20261026T124736Z-cdaaebd4",
+  "started_at": "2026-10-26T12:47:36+00:00",
+  "finished_at": "2026-10-26T12:50:29+00:00",
+  "error": null,
+  "log": [
+    {
+      "at": "2026-10-26T12:50:29+00:00",
+      "message": "Image checksums and Partclone CRC verified; original captured unchanged"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "id": "b533571d261d4766815586627da79bda",
+  "operation": "restore",
+  "status": "failed",
+  "phase": "failed",
+  "progress": 20,
+  "device": "/dev/sda",
+  "serial": "HASI26340100088",
+  "image_id": "20261026T124736Z-cdaaebd4",
+  "started_at": "2026-10-26T12:53:19+00:00",
+  "finished_at": "2026-10-26T12:55:03+00:00",
+  "error": "sgdisk failed (3): ",
+  "log": [
+    {
+      "at": "2026-10-26T12:55:03+00:00",
+      "message": "Failed: sgdisk failed (3): "
+    }
+  ]
+}

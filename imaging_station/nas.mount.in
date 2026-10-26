@@ -1,0 +1,14 @@
+[Unit]
+Description=XYZBox private NAS image repository
+Wants=network-online.target
+After=network-online.target
+
+[Mount]
+What=//192.168.100.100/home
+Where=/mnt/xyzbox-nas
+Type=cifs
+Options=credentials=/etc/xyzbox-imager/nas.credentials,vers=3.1.1,uid=0,gid=0,file_mode=0600,dir_mode=0700,nosuid,nodev,noexec,_netdev
+TimeoutSec=30
+
+[Install]
+WantedBy=multi-user.target

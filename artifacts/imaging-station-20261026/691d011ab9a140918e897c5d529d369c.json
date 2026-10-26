@@ -1,0 +1,19 @@
+{
+  "id": "691d011ab9a140918e897c5d529d369c",
+  "operation": "restore",
+  "status": "failed",
+  "phase": "failed",
+  "progress": 90,
+  "device": "/dev/sda",
+  "serial": "HASI26340100088",
+  "image_id": "20261026T124736Z-cdaaebd4",
+  "started_at": "2026-10-26T12:57:05+00:00",
+  "finished_at": "2026-10-26T13:00:45+00:00",
+  "error": "python3 failed (1): Traceback (most recent call last):\n  File \"/opt/xyzbox-imager/finalize_target.py\", line 111, in <module>\n    main()\n  File \"/opt/xyzbox-imager/finalize_target.py\", line 31, in main\n    assert len(parts) == 2 and all(not any(p.get('mountpoints') or []) for p in parts)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+  "log": [
+    {
+      "at": "2026-10-26T13:00:45+00:00",
+      "message": "Failed: python3 failed (1): Traceback (most recent call last):\n  File \"/opt/xyzbox-imager/finalize_target.py\", line 111, in <module>\n    main()\n  File \"/opt/xyzbox-imager/finalize_target.py\", line 31, in main\n    assert len(parts) == 2 and all(not any(p.get('mountpoints') or []) for p in parts)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError"
+    }
+  ]
+}

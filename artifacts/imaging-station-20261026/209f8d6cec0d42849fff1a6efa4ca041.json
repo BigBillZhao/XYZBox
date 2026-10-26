@@ -1,0 +1,19 @@
+{
+  "id": "209f8d6cec0d42849fff1a6efa4ca041",
+  "operation": "restore",
+  "status": "succeeded",
+  "phase": "complete",
+  "progress": 100,
+  "device": "/dev/sda",
+  "serial": "HASI26340100088",
+  "image_id": "20261026T124736Z-cdaaebd4",
+  "started_at": "2026-10-26T13:05:01+00:00",
+  "finished_at": "2026-10-26T13:08:45+00:00",
+  "error": null,
+  "log": [
+    {
+      "at": "2026-10-26T13:08:45+00:00",
+      "message": "Used-block read-back, filesystem checks and target finalization passed"
+    }
+  ]
+}

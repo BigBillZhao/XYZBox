@@ -1,0 +1,55 @@
+{
+  "format": "xyzbox-partclone-v1",
+  "id": "20261026T124736Z-cdaaebd4",
+  "label": "信步 Piper RT · 客户系统 20261026-v2",
+  "profile": "seavo-sv3-piper-rt",
+  "created_at": "2026-10-26T12:49:17+00:00",
+  "status": "ready",
+  "minimum_disk_bytes": 256060514304,
+  "sector_size": 512,
+  "source": {
+    "model": "Fanxiang S500Pro 256GB",
+    "serial": "26030958613001465",
+    "size_bytes": 256060514304
+  },
+  "software": {
+    "ubuntu": "24.04.4",
+    "kernel": "7.0.14-xyzbox-rt",
+    "sdk": "pyAgxArm 1ae40ad",
+    "can_driver": "1.4.2",
+    "fan_monitoring": "it87 + lm-sensors"
+  },
+  "customer_ready": false,
+  "verified": true,
+  "partitions": [
+    {
+      "number": 1,
+      "start": 2048,
+      "sectors": 2201600,
+      "type": "C12A7328-F81F-11D2-BA4B-00A0C93EC93B",
+      "fstype": "vfat",
+      "file": "part-1.pcl.zst",
+      "partclone_sha256": "aa3baee410fa1c6fddae8de5cd33f14a559305a6b153d85d961473847b04a1b7",
+      "sha256": "5a9ac58e45478c91e17fb07620aed399cffbf0fd17aac5fe130777f71d65738d",
+      "compressed_bytes": 2281098
+    },
+    {
+      "number": 2,
+      "start": 2203648,
+      "sectors": 497911808,
+      "type": "0FC63DAF-8483-4772-8E79-3D69D8477DE4",
+      "fstype": "ext4",
+      "file": "part-2.pcl.zst",
+      "partclone_sha256": "d8c6c42f29f6901c61119875659679dcd071773749927f4617e167fd9e242fe2",
+      "sha256": "1dbeaa93467e0d80ddf7aedf50f065a34d9f5897eebf413495658ad027c0f07c",
+      "compressed_bytes": 3905022990
+    }
+  ],
+  "files": {
+    "gpt.bin": "3082e1519f80f1d3ef374d7863c712fe10b5eff205a0a9084ebd0f626a589d6b",
+    "partition-table.json": "881bb7e8716b8b0c4ee50a4bc99b2ae74f830315e0e8d5905bc3fe0259beb561"
+  },
+  "verified_at": "2026-10-26T12:50:29+00:00",
+  "size_bytes": 3907322618,
+  "version": "20261026-v2"
+}

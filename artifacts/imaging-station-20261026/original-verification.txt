@@ -1,0 +1,8 @@
+                                                                                Current block:   60476944, Total block:   62238976, Complete:  97.17%[A                                                                                Elapsed: 00:01:00, Remaining: 00:00:00, Completed: 100.00%, Rate:  19.03GB/min,
+                                                                                Current block:   62238976, Total block:   62238976, Complete: 100.00%
+Total Time: 00:01:00, Ave. Rate:  19.03GB/min, 100.00% completed!
+Partclone successfully checked the image (-)
+Checked successfully.
+ORIGINAL_BACKUP_VERIFIED 2026-10-26T12:40:46+00:00
+xyzbox-original-backup.service: Deactivated successfully.
+xyzbox-original-backup.service: Consumed 2min 9.786s CPU time.

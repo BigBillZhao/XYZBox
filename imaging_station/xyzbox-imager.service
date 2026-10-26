@@ -1,0 +1,21 @@
+[Unit]
+Description=XYZBox local disk imaging workbench
+Wants=network-online.target mnt-xyzbox\x2dnas.mount
+After=network-online.target mnt-xyzbox\x2dnas.mount
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /opt/xyzbox-imager/server.py
+WorkingDirectory=/opt/xyzbox-imager
+Restart=on-failure
+RestartSec=5
+KillMode=control-group
+TimeoutStopSec=15
+UMask=0077
+Environment=PYTHONDONTWRITEBYTECODE=1 LC_ALL=C.UTF-8
+PrivateTmp=true
+ProtectSystem=full
+ProtectHome=read-only
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,25 @@
+{
+  "observed_at": "2026-10-26T13:09:27.609104+00:00",
+  "model": "HP SSD EX900 Plus M.2 256GB",
+  "serial": "HASI26340100088",
+  "job_id": "209f8d6cec0d42849fff1a6efa4ca041",
+  "provisioning": {
+    "hostname": "yikai-f98ac0a5",
+    "machine_id": "f98ac0a53bcf456bbf310953eb2bb838",
+    "image_id": "20261026T124736Z-cdaaebd4",
+    "job_id": "209f8d6cec0d42849fff1a6efa4ca041",
+    "prepared_at": "2026-10-26T13:08:45.226986+00:00",
+    "boot_tested": false,
+    "filesystem_uuid": "51ba246a-8bf5-4c81-a029-d172efd96918"
+  },
+  "root_uuid": "51ba246a-8bf5-4c81-a029-d172efd96918",
+  "efi_uuid": "2DE4-E64D",
+  "fstab_grub_uuid_checks_passed": true,
+  "uefi_fallback_checks_passed": true,
+  "rt_and_generic_kernels_present": true,
+  "kcan_module_version": "Release_1.4.2_20260721_n",
+  "sdk_check": "Piper SDK import/profile passed",
+  "pip_check": "No broken requirements found.",
+  "boot_tested": false,
+  "note": "Offline checks only; actual cold boot and CAN require Seavo box"
+}

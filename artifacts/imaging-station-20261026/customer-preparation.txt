@@ -1,0 +1,56 @@
+Starting xyzbox-prepare-customer.service - /usr/bin/systemd-inhibit --what=sleep:idle --mode=block "--why=XYZBox customer image preparation" /bin/bash /var/lib/xyzbox-imager/prepare_customer_source.sh /mnt/xyzbox-source 26030958613001465 /mnt/xyzbox-nas/XYZBoxImages/fanxiang-original-20261026.partial/VERIFIED /home/zenbot-alg/xyzbox-customer-kit.tar /home/zenbot-alg/lm-sensors_1%3a3.6.0-9build1_amd64.deb...
+Started xyzbox-prepare-customer.service - /usr/bin/systemd-inhibit --what=sleep:idle --mode=block "--why=XYZBox customer image preparation" /bin/bash /var/lib/xyzbox-imager/prepare_customer_source.sh /mnt/xyzbox-source 26030958613001465 /mnt/xyzbox-nas/XYZBoxImages/fanxiang-original-20261026.partial/VERIFIED /home/zenbot-alg/xyzbox-customer-kit.tar /home/zenbot-alg/lm-sensors_1%3a3.6.0-9build1_amd64.deb.
+Selecting previously unselected package lm-sensors.
+(Reading database ... 195002 files and directories currently installed.)
+Preparing to unpack /tmp/xyzbox-lm-sensors.deb ...
+Unpacking lm-sensors (1:3.6.0-9build1) ...
+Setting up lm-sensors (1:3.6.0-9build1) ...
+/proc/ is not mounted. This is not a supported mode of operation. Please fix
+your invocation environment to mount /proc/ and /sys/ properly. Proceeding anyway.
+Your mileage may vary.
+Created symlink /etc/systemd/system/multi-user.target.wants/lm-sensors.service → /usr/lib/systemd/system/lm-sensors.service.
+Processing triggers for man-db (2.12.0-4build2) ...
+vendor/kcan-driver-1.4.2.tar.gz: OK
+vendor/pyAgxArm-1ae40ad.tar.gz: OK
+vendor/python-sources/python_can-4.6.1.tar.gz: OK
+vendor/python-wheels/packaging-25.0-py3-none-any.whl: OK
+vendor/python-wheels/python_can-4.6.1-py3-none-any.whl: OK
+vendor/python-wheels/setuptools-80.10.2-py3-none-any.whl: OK
+vendor/python-wheels/typing_extensions-4.15.0-py3-none-any.whl: OK
+vendor/python-wheels/wheel-0.48.0-py3-none-any.whl: OK
+vendor/python-wheels/wrapt-1.17.3-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl: OK
+Looking in links: /home/ubuntu/yikai-box/vendor/python-wheels
+Processing /home/ubuntu/yikai-box/vendor/python-wheels/python_can-4.6.1-py3-none-any.whl (from -r /home/ubuntu/yikai-box/requirements-nero.txt (line 1))
+Processing /home/ubuntu/yikai-box/vendor/python-wheels/typing_extensions-4.15.0-py3-none-any.whl (from -r /home/ubuntu/yikai-box/requirements-nero.txt (line 2))
+Processing /home/ubuntu/yikai-box/vendor/python-wheels/packaging-25.0-py3-none-any.whl (from -r /home/ubuntu/yikai-box/requirements-nero.txt (line 3))
+Processing /home/ubuntu/yikai-box/vendor/python-wheels/wrapt-1.17.3-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (from -r /home/ubuntu/yikai-box/requirements-nero.txt (line 4))
+Processing /home/ubuntu/yikai-box/vendor/python-wheels/setuptools-80.10.2-py3-none-any.whl (from -r /home/ubuntu/yikai-box/requirements-nero.txt (line 5))
+Processing /home/ubuntu/yikai-box/vendor/python-wheels/wheel-0.48.0-py3-none-any.whl (from -r /home/ubuntu/yikai-box/requirements-nero.txt (line 6))
+Installing collected packages: wrapt, typing_extensions, setuptools, packaging, wheel, python-can
+Successfully installed packaging-25.0 python-can-4.6.1 setuptools-80.10.2 typing_extensions-4.15.0 wheel-0.48.0 wrapt-1.17.3
+Processing /home/ubuntu/yikai-box/vendor/pyAgxArm-1ae40ad.tar.gz
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: pyAgxArm
+  Building wheel for pyAgxArm (pyproject.toml): started
+  Building wheel for pyAgxArm (pyproject.toml): finished with status 'done'
+  Created wheel for pyAgxArm: filename=pyagxarm-1.0.0-py3-none-any.whl size=297966 sha256=703638f55d79126594a13c13661728ecb0a2936dff3e02031fb4fccb66e716f8
+  Stored in directory: /root/.cache/pip/wheels/06/ea/19/15662d70606b9f0589a3c2bd8185e764817fbd1ba3ef201ded
+Successfully built pyAgxArm
+Installing collected packages: pyAgxArm
+Successfully installed pyAgxArm-1.0.0
+No broken requirements found.
+Piper SDK environment ready
+usage: piper_read_status.py [-h] [--channels CHANNELS [CHANNELS ...]]
+                            [--profile {default,v183,v188,v189}]
+                            [--timeout TIMEOUT]
+Read standard Piper SDK feedback. Does not enable, move, reset or query
+firmware.
+options:
+  -h, --help            show this help message and exit
+  --channels CHANNELS [CHANNELS ...]
+  --profile {default,v183,v188,v189}
+  --timeout TIMEOUT
+CUSTOMER_SOURCE_PREPARED
+xyzbox-prepare-customer.service: Deactivated successfully.
+xyzbox-prepare-customer.service: Consumed 4.965s CPU time.
