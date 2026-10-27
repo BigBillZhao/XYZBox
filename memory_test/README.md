@@ -18,6 +18,21 @@
 - 正式任务由 systemd 管理，已确认 active/running。没有配置测试结束后自动关机。
 - 无显示器时原机的 `plymouth-quit-wait` 使 multi-user.target 未完成，测试服务因此仅依赖 journald，避免等待图形启动；未修改显示/启动目标配置。
 
+## 2026-10-27 已核验结果
+
+**PASS**。实际运行 36002 秒（10 小时 2 秒），2026-10-27 **07:49:25** 北京时间正常结束，退出码 0。
+`stressapptest` 报告 **0 hardware incidents、0 errors**；没有记录到 MCE、OOM 等筛选的内核异常。
+2026-10-27 10:32 SSH 复核时 boot ID 仍与开始一致，服务已正常退出，没有重启后重跑。
+
+- 600 条每分钟遥测，最大采样间隔 61 秒。
+- CPU 封装温度：采样峰值 **62°C**，中位数 **59°C**。
+- 系统可用内存最低约 **1.69GiB**。
+- File Copy、Disk 工作量均为 0；本轮没有硬盘压力测试。
+- 内核原文含 perf 自动降低采样频率及 AppArmor 状态日志，保留供复核；未进行实时调度延迟评测。
+
+证据已取回 [`artifacts/memory-test-20261026/results`](../artifacts/memory-test-20261026/results/summary.json)，包括完整结果、内存校验日志、温度遥测和内核日志。
+结论限定于本次在线分配的 5GiB RAM 与此负载，不等于离线检测了全部物理内存。
+
 ## 本机运行与记录
 
 - 程序：`/opt/xyzbox-memory-test/run.py`
