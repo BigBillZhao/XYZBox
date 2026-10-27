@@ -4,6 +4,7 @@ from http.server import ThreadingHTTPServer
 import json
 from pathlib import Path
 import threading
+import tempfile
 import unittest
 from unittest.mock import Mock
 
@@ -72,6 +73,23 @@ class ServerTests(unittest.TestCase):
         status, body = self.request('POST', '/api/jobs', '{}', headers)
         self.assertEqual(status, 409)
         self.assertIn(b'Wrong SSD serial', body)
+
+    def test_historical_preview_cannot_execute_jobs(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / 'state.json'
+            path.write_text(json.dumps({'station': {'snapshot_at': '2026-10-26T12:50:29Z'},
+                                        'images': [], 'drives': [], 'jobs': []}))
+            self.server.preview_state = str(path)
+            status, body = self.request('GET', '/api/state')
+            data = json.loads(body)
+            self.assertEqual(status, 200)
+            self.assertTrue(data['station']['preview'])
+            self.assertFalse(data['station']['repository_online'])
+            status, _ = self.request('POST', '/api/jobs', '{}',
+                                     {'Content-Type': 'application/json', 'X-XYZBox-Request': '1'})
+            self.assertEqual(status, 403)
+            self.engine.submit.assert_not_called()
+            self.engine.drives.assert_not_called()
 
 
 if __name__ == '__main__':

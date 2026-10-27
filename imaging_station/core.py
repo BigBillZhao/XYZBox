@@ -25,6 +25,11 @@ import uuid
 
 
 FORMAT = "xyzbox-partclone-v1"
+# Validated restore adapters. A new project/profile requires its OS/boot and
+# identity handling to be verified before it is added here.
+RESTORE_PROFILES = {
+    "seavo-sv3-piper-rt": {"project": "yikai", "project_name": "Yikai Box"},
+}
 FINALIZER = "/opt/xyzbox-imager/finalize_target.py"
 FILESYSTEMS = {"ext4": "partclone.ext4", "vfat": "partclone.fat"}
 SLUG = re.compile(r"^[a-zA-Z0-9][a-zA-Z0-9_.-]{0,95}$")
@@ -257,9 +262,15 @@ class Engine:
                 continue
             try:
                 manifest = self._manifest(path.name)
-                images.append({k: manifest.get(k) for k in (
+                item = {k: manifest.get(k) for k in (
                     "id", "label", "profile", "created_at", "status", "minimum_disk_bytes",
-                    "size_bytes", "source", "software", "verified", "customer_ready")})
+                    "size_bytes", "source", "software", "verified", "customer_ready",
+                    "project", "project_name", "version")}
+                profile = RESTORE_PROFILES.get(manifest.get("profile"), {})
+                item['project'] = item['project'] or profile.get('project')
+                item['project_name'] = item['project_name'] or profile.get('project_name')
+                item['profile_supported'] = bool(profile)
+                images.append(item)
             except ImagingError:
                 continue
         return sorted(images, key=lambda i: i.get("created_at", ""), reverse=True)
@@ -551,6 +562,8 @@ class Engine:
             raise ImagingError("Restore target is read-only")
         if drive.get("serial") == manifest.get("source", {}).get("serial"):
             raise ImagingError("Refusing to overwrite this image's source SSD; insert a different target")
+        if manifest.get('profile') not in RESTORE_PROFILES:
+            raise ImagingError('This hardware/OS profile has no validated restore adapter')
 
     def _restore(self, job, expected):
         self._require_repository()

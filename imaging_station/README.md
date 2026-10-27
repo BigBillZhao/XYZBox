@@ -1,7 +1,10 @@
-# Yikai 刷盘工作站 MVP
+# 系统镜像工作站 MVP
+
+定位为多个项目共用的系统制作与部署工具；Yikai Box 是首个已验证的设备配置。
+页面按项目筛选镜像，恢复适配按设备/系统 profile 验证后开放。详见 [产品定位与决定](../docs/12-decisions-20261027.md)。
 
 部署主机：`zenbot-alg@192.168.106.3`，ThinkBook 16 G8 AHP，Ubuntu 24.04。
-本机入口：**http://127.0.0.1:8830/**。桌面「Yikai 刷盘工作台」和应用菜单可打开；图形登录后自动打开。
+本机入口：**http://127.0.0.1:8830/**。桌面「系统镜像工作站」和应用菜单可打开；图形登录后自动打开。
 服务随系统启动，任务由后台服务执行，关闭浏览器不会中止任务。
 
 NAS 使用专用账号的 `//192.168.100.100/home/XYZBoxImages`，镜像不占工作站根分区。
@@ -58,5 +61,6 @@ ssh -N -L 127.0.0.1:8830:127.0.0.1:8830 zenbot-alg@192.168.106.3
 ```
 
 开发检查：`python3 -m unittest imaging_station.test_core imaging_station.test_server`；Linux 上运行 `check_partclone_roundtrip.sh` 和 `check_gpt_restore.sh` 验证普通文件往返，不使用物理盘。
+工作站离线时，可用 `server.py --preview-state SNAPSHOT_JSON` 展示只读历史快照；界面明确标记预览，服务不会初始化磁盘执行器或接受写入请求。
 安装前需已有 NAS 挂载单元和凭据，并安装 python3、partclone、zstd、smartmontools、cifs-utils、fdisk、gdisk、parted、dosfstools、e2fsprogs。
 然后执行 `sudo bash imaging_station/install_station.sh`。安装器不下载软件、不收集凭据。

@@ -32,6 +32,7 @@
 
 证据已取回 [`artifacts/memory-test-20261026/results`](../artifacts/memory-test-20261026/results/summary.json)，包括完整结果、内存校验日志、温度遥测和内核日志。
 结论限定于本次在线分配的 5GiB RAM 与此负载，不等于离线检测了全部物理内存。
+用户据此决定沿用当前内存选型，见 [2026-10-27 决定记录](../docs/12-decisions-20261027.md)。
 
 ## 本机运行与记录
 

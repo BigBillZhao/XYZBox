@@ -32,8 +32,8 @@ if [[ -n "$desktop_user" && "$desktop_user" != root ]]; then
     cat > /var/lib/xyzbox-imager/xyzbox-imager.desktop <<'ENTRY'
 [Desktop Entry]
 Type=Application
-Name=Yikai 刷盘工作台
-Comment=NAS 镜像制作与客户系统刷盘
+Name=系统镜像工作站
+Comment=按项目管理、制作和部署系统镜像
 Exec=/opt/xyzbox-imager/open_ui.sh
 Icon=drive-harddisk
 Terminal=false

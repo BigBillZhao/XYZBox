@@ -164,6 +164,14 @@ class CoreTests(unittest.TestCase):
         with self.assertRaisesRegex(core.ImagingError, "source SSD"):
             self.engine._validate_restore(manifest, self.drive)
 
+    def test_unsupported_project_profile_stops_before_restore(self):
+        manifest = {'status': 'ready', 'verified': True, 'minimum_disk_bytes': 1024,
+                    'sector_size': 512, 'profile': 'other-os-not-yet-adapted'}
+        with self.assertRaisesRegex(core.ImagingError, 'restore adapter'):
+            self.engine._validate_restore(manifest, self.drive)
+        manifest['profile'] = 'seavo-sv3-piper-rt'
+        self.engine._validate_restore(manifest, self.drive)
+
     def test_unsafe_image_paths_and_symlinks_rejected(self):
         for image_id in ("../foo", "/tmp/foo", ".hidden", "a/b"):
             with self.assertRaises(core.ImagingError):
@@ -180,6 +188,7 @@ class CoreTests(unittest.TestCase):
         for filename in ("gpt.bin", "partition-table.json", "part-1.pcl.zst"):
             (directory / filename).write_bytes(b"test-" + filename.encode())
         manifest = {"format": core.FORMAT, "id": "image1", "status": "ready", "verified": True,
+                    "profile": "seavo-sv3-piper-rt",
                     "minimum_disk_bytes": 1024**3, "sector_size": 512,
                     "files": {f: core.sha256(directory / f) for f in ("gpt.bin", "partition-table.json")},
                     "partitions": [{"number": 1, "start": 2048, "sectors": 8192,

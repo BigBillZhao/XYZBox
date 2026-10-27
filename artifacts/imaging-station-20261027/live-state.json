@@ -1,0 +1,165 @@
+{
+  "station": {
+    "hostname": "zenbot-alg-ThinkBook-16-G8-AHP",
+    "repository": "/mnt/xyzbox-nas/XYZBoxImages",
+    "repository_online": true,
+    "busy": false,
+    "snapshot_at": "2026-10-27T03:50:46.218308+00:00"
+  },
+  "drives": [
+    {
+      "device": "/dev/nvme0n1",
+      "model": "UMIS RPJYJ1T24RLS1QWY",
+      "serial": "SS1Q23148Z1CD6340C7N",
+      "size_bytes": 1024209543168,
+      "transport": "nvme",
+      "mountpoints": [
+        "/",
+        "/boot",
+        "/boot/efi",
+        "/etc",
+        "/home",
+        "/root",
+        "/tmp",
+        "/usr",
+        "/var/tmp"
+      ],
+      "eligible": false,
+      "reason": "Host system disk (root/home/boot/EFI/swap ancestor)",
+      "read_only": false,
+      "sector_size": 512
+    }
+  ],
+  "images": [
+    {
+      "id": "20261026T124736Z-cdaaebd4",
+      "label": "信步 Piper RT · 客户系统 20261026-v2",
+      "profile": "seavo-sv3-piper-rt",
+      "created_at": "2026-10-26T12:49:17+00:00",
+      "status": "ready",
+      "minimum_disk_bytes": 256060514304,
+      "size_bytes": 3907322618,
+      "source": {
+        "model": "Fanxiang S500Pro 256GB",
+        "serial": "26030958613001465",
+        "size_bytes": 256060514304
+      },
+      "software": {
+        "ubuntu": "24.04.4",
+        "kernel": "7.0.14-xyzbox-rt",
+        "sdk": "pyAgxArm 1ae40ad",
+        "can_driver": "1.4.2",
+        "fan_monitoring": "it87 + lm-sensors"
+      },
+      "verified": true,
+      "customer_ready": false,
+      "project": "yikai",
+      "project_name": "Yikai Box",
+      "version": "20261026-v2",
+      "profile_supported": true
+    },
+    {
+      "id": "fanxiang-original-20261026",
+      "label": "梵想原样备份 · 整理前",
+      "profile": "seavo-sv3-piper-rt",
+      "created_at": "2026-10-26T12:45:26.252339+00:00",
+      "status": "ready",
+      "minimum_disk_bytes": 256060514304,
+      "size_bytes": 4654665436,
+      "source": {
+        "model": "Fanxiang S500Pro 256GB",
+        "serial": "26030958613001465",
+        "size_bytes": 256060514304
+      },
+      "software": {
+        "ubuntu": "24.04.4",
+        "kernel": "7.0.14-xyzbox-rt",
+        "sdk": "未补齐客户入口"
+      },
+      "verified": true,
+      "customer_ready": false,
+      "project": "yikai",
+      "project_name": "Yikai Box",
+      "version": null,
+      "profile_supported": true
+    }
+  ],
+  "jobs": [
+    {
+      "id": "209f8d6cec0d42849fff1a6efa4ca041",
+      "operation": "restore",
+      "status": "succeeded",
+      "phase": "complete",
+      "progress": 100,
+      "device": "/dev/sda",
+      "serial": "HASI26340100088",
+      "image_id": "20261026T124736Z-cdaaebd4",
+      "started_at": "2026-10-26T13:05:01+00:00",
+      "finished_at": "2026-10-26T13:08:45+00:00",
+      "error": null,
+      "log": [
+        {
+          "at": "2026-10-26T13:08:45+00:00",
+          "message": "Used-block read-back, filesystem checks and target finalization passed"
+        }
+      ]
+    },
+    {
+      "id": "691d011ab9a140918e897c5d529d369c",
+      "operation": "restore",
+      "status": "failed",
+      "phase": "failed",
+      "progress": 90,
+      "device": "/dev/sda",
+      "serial": "HASI26340100088",
+      "image_id": "20261026T124736Z-cdaaebd4",
+      "started_at": "2026-10-26T12:57:05+00:00",
+      "finished_at": "2026-10-26T13:00:45+00:00",
+      "error": "python3 failed (1): Traceback (most recent call last):\n  File \"/opt/xyzbox-imager/finalize_target.py\", line 111, in <module>\n    main()\n  File \"/opt/xyzbox-imager/finalize_target.py\", line 31, in main\n    assert len(parts) == 2 and all(not any(p.get('mountpoints') or []) for p in parts)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+      "log": [
+        {
+          "at": "2026-10-26T13:00:45+00:00",
+          "message": "Failed: python3 failed (1): Traceback (most recent call last):\n  File \"/opt/xyzbox-imager/finalize_target.py\", line 111, in <module>\n    main()\n  File \"/opt/xyzbox-imager/finalize_target.py\", line 31, in main\n    assert len(parts) == 2 and all(not any(p.get('mountpoints') or []) for p in parts)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError"
+        }
+      ]
+    },
+    {
+      "id": "b533571d261d4766815586627da79bda",
+      "operation": "restore",
+      "status": "failed",
+      "phase": "failed",
+      "progress": 20,
+      "device": "/dev/sda",
+      "serial": "HASI26340100088",
+      "image_id": "20261026T124736Z-cdaaebd4",
+      "started_at": "2026-10-26T12:53:19+00:00",
+      "finished_at": "2026-10-26T12:55:03+00:00",
+      "error": "sgdisk failed (3): ",
+      "log": [
+        {
+          "at": "2026-10-26T12:55:03+00:00",
+          "message": "Failed: sgdisk failed (3): "
+        }
+      ]
+    },
+    {
+      "id": "35a7a500c94049f6ac021009a715d4e8",
+      "operation": "capture",
+      "status": "succeeded",
+      "phase": "complete",
+      "progress": 100,
+      "device": "/dev/sda",
+      "serial": "26030958613001465",
+      "image_id": "20261026T124736Z-cdaaebd4",
+      "started_at": "2026-10-26T12:47:36+00:00",
+      "finished_at": "2026-10-26T12:50:29+00:00",
+      "error": null,
+      "log": [
+        {
+          "at": "2026-10-26T12:50:29+00:00",
+          "message": "Image checksums and Partclone CRC verified; original captured unchanged"
+        }
+      ]
+    }
+  ]
+}

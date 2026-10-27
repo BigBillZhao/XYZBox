@@ -37,11 +37,27 @@
   function driveKey(drive) { return `${drive.device}\u0000${drive.serial}`; }
   function selectedDrive() { return (state.data?.drives || []).find(d => driveKey(d) === state.driveKey); }
   function selectedImage() { return (state.data?.images || []).find(i => i.id === state.imageId); }
-  function restorable(image) { return image.status === 'ready' && Boolean(image.verified); }
+  function imageProject(image) {
+    if (image.project_name || image.project) return image.project_name || image.project;
+    const option = [...$('image-profile').options].find(o => o.value === image.profile);
+    return option?.dataset.project || '未分组';
+  }
+  function restorable(image) {
+    const supported = image.profile_supported ?? [...$('image-profile').options].some(o => o.value === image.profile);
+    return image.status === 'ready' && Boolean(image.verified) && supported;
+  }
   function resetConfirmation() { $('confirm-serial').value = ''; showMessage('form-error', ''); showMessage('form-success', ''); }
 
   function renderImages() {
-    const images = state.data?.images || [];
+    const allImages = state.data?.images || [];
+    const filter = $('project-filter');
+    const old = filter.value;
+    const projects = [...new Set(allImages.map(imageProject))].sort();
+    filter.replaceChildren(element('option', '', '全部项目'));
+    filter.options[0].value = '';
+    for (const name of projects) { const option = element('option', '', name); option.value = name; filter.append(option); }
+    filter.value = projects.includes(old) ? old : '';
+    const images = allImages.filter(i => !filter.value || imageProject(i) === filter.value);
     const root = $('images'); root.replaceChildren();
     $('image-count').textContent = images.length;
     if (!images.length) {
@@ -61,8 +77,9 @@
       meta.append(element('span', '', displayTime(image.created_at, true)), element('span', '', `镜像 ${bytes(image.size_bytes)}`));
       card.append(meta);
       const badges = element('div', 'badges');
-      badges.append(badge(ready ? '技术校验通过' : image.status === 'ready' ? '待完整性校验' : statusNames[image.status] || image.status || '状态未知', ready ? 'good' : 'neutral'));
-      badges.append(badge(image.customer_ready ? '客户放行已确认' : '待客户放行确认', image.customer_ready ? 'good' : 'neutral'));
+      badges.append(badge(ready ? '技术校验通过' : image.profile_supported === false ? '设备配置尚未适配' : image.status === 'ready' ? '待完整性校验' : statusNames[image.status] || image.status || '状态未知', ready ? 'good' : 'neutral'));
+      badges.append(badge(imageProject(image)));
+      badges.append(badge(image.customer_ready ? '交付放行已确认' : '待交付放行确认', image.customer_ready ? 'good' : 'neutral'));
       card.append(badges);
       card.append(element('p', 'resource-note', `目标盘至少 ${bytes(image.minimum_disk_bytes)}`));
       const software = image.software || {};
@@ -106,6 +123,7 @@
     const station = state.data?.station;
     const drive = selectedDrive(); const image = selectedImage();
     if (!state.connected) return '未连接工作站，等待恢复连接。';
+    if (station?.preview) return '只读历史预览；连接实际工作站后才能执行。';
     if (!station?.repository_online) return 'NAS 未连接，无法执行任务。';
     if (state.submitting) return '正在提交任务…';
     if (station.busy) return '当前任务完成后可继续操作。';
@@ -186,11 +204,15 @@
   function renderState(data) {
     state.data = data; state.connected = true;
     const station = data.station || {};
+    const preview = Boolean(station.preview);
+    $('preview-banner').hidden = !preview;
+    $('preview-banner').textContent = preview ? `只读历史预览 · 数据截至 ${displayTime(station.snapshot_at, true)} 北京时间。工作站当前未连接，磁盘操作已禁用。` : '';
     $('station-name').textContent = station.hostname || '本地工作站';
-    $('nas-title').textContent = station.repository_online ? 'NAS 镜像仓库在线' : 'NAS 镜像仓库离线';
+    $('nas-title').textContent = preview ? '历史镜像快照' : station.repository_online ? 'NAS 镜像仓库在线' : 'NAS 镜像仓库离线';
     $('repository-path').textContent = station.repository || 'NAS · XYZBoxImages';
     setDot('connection-dot', true); setDot('footer-dot', true); setDot('nas-dot', Boolean(station.repository_online));
-    $('connection-status').textContent = '工作站已连接';
+    $('connection-status').textContent = preview ? '只读预览 · 工作站未连接' : '工作站已连接';
+    if (preview) { setDot('connection-dot', false); setDot('footer-dot', false); }
     $('last-updated').textContent = `更新于 ${displayTime(new Date().toISOString())} · 北京时间`;
     $('busy-banner').hidden = !station.busy;
     showMessage('connection-error', '');
@@ -231,6 +253,12 @@
   $('tab-restore').addEventListener('click', () => switchOperation('restore'));
   $('confirm-serial').addEventListener('input', renderForm);
   $('image-label').addEventListener('input', renderForm);
+  $('project-filter').addEventListener('change', () => {
+    if (state.imageId && $('project-filter').value && imageProject(selectedImage() || {}) !== $('project-filter').value) {
+      state.imageId = null; resetConfirmation();
+    }
+    renderImages(); renderForm();
+  });
   $('operation-form').addEventListener('submit', async event => {
     event.preventDefault();
     const reason = disabledReason(); if (reason) { showMessage('form-error', reason); return; }

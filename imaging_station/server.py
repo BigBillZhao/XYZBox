@@ -50,6 +50,11 @@ class Handler(BaseHTTPRequestHandler):
             return self._respond(200, (STATIC / name).read_bytes(), mime)
         if path == '/api/state':
             try:
+                preview = getattr(self.server, 'preview_state', None)
+                if preview:
+                    data = json.loads(Path(preview).read_text())
+                    data['station'].update(preview=True, repository_online=False, busy=False)
+                    return self._respond(200, data)
                 engine = self.server.engine
                 jobs = engine.jobs()
                 return self._respond(200, {
@@ -63,6 +68,8 @@ class Handler(BaseHTTPRequestHandler):
         return self._respond(404, {'error': 'Not found'})
 
     def do_POST(self):
+        if getattr(self.server, 'preview_state', None):
+            return self._respond(403, {'error': '这是只读历史预览，不能执行磁盘操作。'})
         if not self._local_request():
             return self._respond(403, {'error': '仅允许本机访问。'})
         origin = self.headers.get('Origin')
@@ -92,11 +99,13 @@ def main():
     parser.add_argument('--port', type=int, default=8830)
     parser.add_argument('--repository', default='/mnt/xyzbox-nas/XYZBoxImages')
     parser.add_argument('--state-dir', default='/var/lib/xyzbox-imager')
+    parser.add_argument('--preview-state', help='Read-only historical JSON snapshot; never initializes a disk engine')
     args = parser.parse_args()
     logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)s %(message)s')
-    engine = Engine(args.repository, args.state_dir)
+    engine = None if args.preview_state else Engine(args.repository, args.state_dir)
     server = ThreadingHTTPServer(('127.0.0.1', args.port), Handler)
     server.engine = engine
+    server.preview_state = args.preview_state
     logging.info('XYZBox imaging station at http://127.0.0.1:%s', args.port)
     server.serve_forever()
 
