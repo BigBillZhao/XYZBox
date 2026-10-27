@@ -15,7 +15,7 @@
 - 预计结束：2026-10-27 **07:49:23**，Asia/Shanghai。
 - 配置：5120MiB，4 线程，36000 秒；cgroup `MemorySwapMax=0`，防止把被测页换出到硬盘。
 - 256MiB / 20 秒短测已通过，0 hardware incidents、0 errors；这是启动前验证，不是整夜测试结果。
-- 正式任务由 systemd 管理，已确认 active/running。没有配置测试结束后自动关机。
+- 正式任务由 systemd 管理，启动时确认 active/running，现已正常结束。没有配置测试结束后自动关机。
 - 无显示器时原机的 `plymouth-quit-wait` 使 multi-user.target 未完成，测试服务因此仅依赖 journald，避免等待图形启动；未修改显示/启动目标配置。
 
 ## 2026-10-27 已核验结果

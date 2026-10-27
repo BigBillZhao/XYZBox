@@ -1,0 +1,737 @@
+2026/10/26-21:49:23(CST) Log: Commandline - /usr/bin/stressapptest -s 36000 -M 5120 -m 4 -W --stop_on_errors --printsec 60 -l /var/lib/xyzbox-memory-test/20261026T134923Z/memory.log
+2026/10/26-21:49:23(CST) Stats: SAT revision 1.0.11_autoconf, 64 bit binary
+2026/10/26-21:49:23(CST) Log: reproducible @ reproducible on Mon Apr  1 08:22:50 UTC 2024 from open source release
+2026/10/26-21:49:23(CST) Log: 1 nodes, 8 cpus.
+2026/10/26-21:49:23(CST) Log: Prefer plain malloc memory allocation.
+2026/10/26-21:49:23(CST) Log: Using mmap() allocation at 0x7485bbf37000.
+2026/10/26-21:49:23(CST) Stats: Starting SAT, 5120M, 36000 seconds
+2026/10/26-21:49:24(CST) Log: region number 15 exceeds region count 1
+2026/10/26-21:49:24(CST) Log: Region mask: 0x1
+2026/10/26-21:50:24(CST) Log: Seconds remaining: 35940
+2026/10/26-21:51:24(CST) Log: Seconds remaining: 35880
+2026/10/26-21:52:24(CST) Log: Seconds remaining: 35820
+2026/10/26-21:53:24(CST) Log: Seconds remaining: 35760
+2026/10/26-21:54:24(CST) Log: Seconds remaining: 35700
+2026/10/26-21:55:24(CST) Log: Seconds remaining: 35640
+2026/10/26-21:56:24(CST) Log: Seconds remaining: 35580
+2026/10/26-21:57:24(CST) Log: Seconds remaining: 35520
+2026/10/26-21:58:24(CST) Log: Seconds remaining: 35460
+2026/10/26-21:59:24(CST) Log: Seconds remaining: 35400
+2026/10/26-21:59:24(CST) Log: Pausing worker threads in preparation for power spike (35400 seconds remaining)
+2026/10/26-21:59:39(CST) Log: Resuming worker threads to cause a power spike (35385 seconds remaining)
+2026/10/26-22:00:24(CST) Log: Seconds remaining: 35340
+2026/10/26-22:01:24(CST) Log: Seconds remaining: 35280
+2026/10/26-22:02:24(CST) Log: Seconds remaining: 35220
+2026/10/26-22:03:24(CST) Log: Seconds remaining: 35160
+2026/10/26-22:04:24(CST) Log: Seconds remaining: 35100
+2026/10/26-22:05:24(CST) Log: Seconds remaining: 35040
+2026/10/26-22:06:24(CST) Log: Seconds remaining: 34980
+2026/10/26-22:07:24(CST) Log: Seconds remaining: 34920
+2026/10/26-22:08:24(CST) Log: Seconds remaining: 34860
+2026/10/26-22:09:24(CST) Log: Seconds remaining: 34800
+2026/10/26-22:09:24(CST) Log: Pausing worker threads in preparation for power spike (34800 seconds remaining)
+2026/10/26-22:09:39(CST) Log: Resuming worker threads to cause a power spike (34785 seconds remaining)
+2026/10/26-22:10:24(CST) Log: Seconds remaining: 34740
+2026/10/26-22:11:24(CST) Log: Seconds remaining: 34680
+2026/10/26-22:12:24(CST) Log: Seconds remaining: 34620
+2026/10/26-22:13:24(CST) Log: Seconds remaining: 34560
+2026/10/26-22:14:24(CST) Log: Seconds remaining: 34500
+2026/10/26-22:15:24(CST) Log: Seconds remaining: 34440
+2026/10/26-22:16:24(CST) Log: Seconds remaining: 34380
+2026/10/26-22:17:24(CST) Log: Seconds remaining: 34320
+2026/10/26-22:18:24(CST) Log: Seconds remaining: 34260
+2026/10/26-22:19:24(CST) Log: Seconds remaining: 34200
+2026/10/26-22:19:24(CST) Log: Pausing worker threads in preparation for power spike (34200 seconds remaining)
+2026/10/26-22:19:39(CST) Log: Resuming worker threads to cause a power spike (34185 seconds remaining)
+2026/10/26-22:20:24(CST) Log: Seconds remaining: 34140
+2026/10/26-22:21:24(CST) Log: Seconds remaining: 34080
+2026/10/26-22:22:24(CST) Log: Seconds remaining: 34020
+2026/10/26-22:23:24(CST) Log: Seconds remaining: 33960
+2026/10/26-22:24:24(CST) Log: Seconds remaining: 33900
+2026/10/26-22:25:24(CST) Log: Seconds remaining: 33840
+2026/10/26-22:26:24(CST) Log: Seconds remaining: 33780
+2026/10/26-22:27:24(CST) Log: Seconds remaining: 33720
+2026/10/26-22:28:24(CST) Log: Seconds remaining: 33660
+2026/10/26-22:29:24(CST) Log: Seconds remaining: 33600
+2026/10/26-22:29:24(CST) Log: Pausing worker threads in preparation for power spike (33600 seconds remaining)
+2026/10/26-22:29:39(CST) Log: Resuming worker threads to cause a power spike (33585 seconds remaining)
+2026/10/26-22:30:24(CST) Log: Seconds remaining: 33540
+2026/10/26-22:31:24(CST) Log: Seconds remaining: 33480
+2026/10/26-22:32:24(CST) Log: Seconds remaining: 33420
+2026/10/26-22:33:24(CST) Log: Seconds remaining: 33360
+2026/10/26-22:34:24(CST) Log: Seconds remaining: 33300
+2026/10/26-22:35:24(CST) Log: Seconds remaining: 33240
+2026/10/26-22:36:24(CST) Log: Seconds remaining: 33180
+2026/10/26-22:37:24(CST) Log: Seconds remaining: 33120
+2026/10/26-22:38:24(CST) Log: Seconds remaining: 33060
+2026/10/26-22:39:24(CST) Log: Seconds remaining: 33000
+2026/10/26-22:39:24(CST) Log: Pausing worker threads in preparation for power spike (33000 seconds remaining)
+2026/10/26-22:39:39(CST) Log: Resuming worker threads to cause a power spike (32985 seconds remaining)
+2026/10/26-22:40:24(CST) Log: Seconds remaining: 32940
+2026/10/26-22:41:24(CST) Log: Seconds remaining: 32880
+2026/10/26-22:42:24(CST) Log: Seconds remaining: 32820
+2026/10/26-22:43:24(CST) Log: Seconds remaining: 32760
+2026/10/26-22:44:24(CST) Log: Seconds remaining: 32700
+2026/10/26-22:45:24(CST) Log: Seconds remaining: 32640
+2026/10/26-22:46:24(CST) Log: Seconds remaining: 32580
+2026/10/26-22:47:24(CST) Log: Seconds remaining: 32520
+2026/10/26-22:48:24(CST) Log: Seconds remaining: 32460
+2026/10/26-22:49:24(CST) Log: Seconds remaining: 32400
+2026/10/26-22:49:24(CST) Log: Pausing worker threads in preparation for power spike (32400 seconds remaining)
+2026/10/26-22:49:39(CST) Log: Resuming worker threads to cause a power spike (32385 seconds remaining)
+2026/10/26-22:50:24(CST) Log: Seconds remaining: 32340
+2026/10/26-22:51:24(CST) Log: Seconds remaining: 32280
+2026/10/26-22:52:24(CST) Log: Seconds remaining: 32220
+2026/10/26-22:53:24(CST) Log: Seconds remaining: 32160
+2026/10/26-22:54:24(CST) Log: Seconds remaining: 32100
+2026/10/26-22:55:24(CST) Log: Seconds remaining: 32040
+2026/10/26-22:56:24(CST) Log: Seconds remaining: 31980
+2026/10/26-22:57:24(CST) Log: Seconds remaining: 31920
+2026/10/26-22:58:24(CST) Log: Seconds remaining: 31860
+2026/10/26-22:59:24(CST) Log: Seconds remaining: 31800
+2026/10/26-22:59:24(CST) Log: Pausing worker threads in preparation for power spike (31800 seconds remaining)
+2026/10/26-22:59:39(CST) Log: Resuming worker threads to cause a power spike (31785 seconds remaining)
+2026/10/26-23:00:24(CST) Log: Seconds remaining: 31740
+2026/10/26-23:01:24(CST) Log: Seconds remaining: 31680
+2026/10/26-23:02:24(CST) Log: Seconds remaining: 31620
+2026/10/26-23:03:24(CST) Log: Seconds remaining: 31560
+2026/10/26-23:04:24(CST) Log: Seconds remaining: 31500
+2026/10/26-23:05:24(CST) Log: Seconds remaining: 31440
+2026/10/26-23:06:24(CST) Log: Seconds remaining: 31380
+2026/10/26-23:07:24(CST) Log: Seconds remaining: 31320
+2026/10/26-23:08:24(CST) Log: Seconds remaining: 31260
+2026/10/26-23:09:24(CST) Log: Seconds remaining: 31200
+2026/10/26-23:09:24(CST) Log: Pausing worker threads in preparation for power spike (31200 seconds remaining)
+2026/10/26-23:09:39(CST) Log: Resuming worker threads to cause a power spike (31185 seconds remaining)
+2026/10/26-23:10:24(CST) Log: Seconds remaining: 31140
+2026/10/26-23:11:24(CST) Log: Seconds remaining: 31080
+2026/10/26-23:12:24(CST) Log: Seconds remaining: 31020
+2026/10/26-23:13:24(CST) Log: Seconds remaining: 30960
+2026/10/26-23:14:24(CST) Log: Seconds remaining: 30900
+2026/10/26-23:15:24(CST) Log: Seconds remaining: 30840
+2026/10/26-23:16:24(CST) Log: Seconds remaining: 30780
+2026/10/26-23:17:24(CST) Log: Seconds remaining: 30720
+2026/10/26-23:18:24(CST) Log: Seconds remaining: 30660
+2026/10/26-23:19:24(CST) Log: Seconds remaining: 30600
+2026/10/26-23:19:24(CST) Log: Pausing worker threads in preparation for power spike (30600 seconds remaining)
+2026/10/26-23:19:39(CST) Log: Resuming worker threads to cause a power spike (30585 seconds remaining)
+2026/10/26-23:20:24(CST) Log: Seconds remaining: 30540
+2026/10/26-23:21:24(CST) Log: Seconds remaining: 30480
+2026/10/26-23:22:24(CST) Log: Seconds remaining: 30420
+2026/10/26-23:23:24(CST) Log: Seconds remaining: 30360
+2026/10/26-23:24:24(CST) Log: Seconds remaining: 30300
+2026/10/26-23:25:24(CST) Log: Seconds remaining: 30240
+2026/10/26-23:26:24(CST) Log: Seconds remaining: 30180
+2026/10/26-23:27:24(CST) Log: Seconds remaining: 30120
+2026/10/26-23:28:24(CST) Log: Seconds remaining: 30060
+2026/10/26-23:29:24(CST) Log: Seconds remaining: 30000
+2026/10/26-23:29:24(CST) Log: Pausing worker threads in preparation for power spike (30000 seconds remaining)
+2026/10/26-23:29:39(CST) Log: Resuming worker threads to cause a power spike (29985 seconds remaining)
+2026/10/26-23:30:24(CST) Log: Seconds remaining: 29940
+2026/10/26-23:31:24(CST) Log: Seconds remaining: 29880
+2026/10/26-23:32:24(CST) Log: Seconds remaining: 29820
+2026/10/26-23:33:24(CST) Log: Seconds remaining: 29760
+2026/10/26-23:34:24(CST) Log: Seconds remaining: 29700
+2026/10/26-23:35:24(CST) Log: Seconds remaining: 29640
+2026/10/26-23:36:24(CST) Log: Seconds remaining: 29580
+2026/10/26-23:37:24(CST) Log: Seconds remaining: 29520
+2026/10/26-23:38:24(CST) Log: Seconds remaining: 29460
+2026/10/26-23:39:24(CST) Log: Seconds remaining: 29400
+2026/10/26-23:39:24(CST) Log: Pausing worker threads in preparation for power spike (29400 seconds remaining)
+2026/10/26-23:39:39(CST) Log: Resuming worker threads to cause a power spike (29385 seconds remaining)
+2026/10/26-23:40:24(CST) Log: Seconds remaining: 29340
+2026/10/26-23:41:24(CST) Log: Seconds remaining: 29280
+2026/10/26-23:42:24(CST) Log: Seconds remaining: 29220
+2026/10/26-23:43:24(CST) Log: Seconds remaining: 29160
+2026/10/26-23:44:24(CST) Log: Seconds remaining: 29100
+2026/10/26-23:45:24(CST) Log: Seconds remaining: 29040
+2026/10/26-23:46:24(CST) Log: Seconds remaining: 28980
+2026/10/26-23:47:24(CST) Log: Seconds remaining: 28920
+2026/10/26-23:48:24(CST) Log: Seconds remaining: 28860
+2026/10/26-23:49:24(CST) Log: Seconds remaining: 28800
+2026/10/26-23:49:24(CST) Log: Pausing worker threads in preparation for power spike (28800 seconds remaining)
+2026/10/26-23:49:39(CST) Log: Resuming worker threads to cause a power spike (28785 seconds remaining)
+2026/10/26-23:50:24(CST) Log: Seconds remaining: 28740
+2026/10/26-23:51:24(CST) Log: Seconds remaining: 28680
+2026/10/26-23:52:24(CST) Log: Seconds remaining: 28620
+2026/10/26-23:53:24(CST) Log: Seconds remaining: 28560
+2026/10/26-23:54:24(CST) Log: Seconds remaining: 28500
+2026/10/26-23:55:24(CST) Log: Seconds remaining: 28440
+2026/10/26-23:56:24(CST) Log: Seconds remaining: 28380
+2026/10/26-23:57:24(CST) Log: Seconds remaining: 28320
+2026/10/26-23:58:24(CST) Log: Seconds remaining: 28260
+2026/10/26-23:59:24(CST) Log: Seconds remaining: 28200
+2026/10/26-23:59:24(CST) Log: Pausing worker threads in preparation for power spike (28200 seconds remaining)
+2026/10/26-23:59:39(CST) Log: Resuming worker threads to cause a power spike (28185 seconds remaining)
+2026/10/27-00:00:24(CST) Log: Seconds remaining: 28140
+2026/10/27-00:01:24(CST) Log: Seconds remaining: 28080
+2026/10/27-00:02:24(CST) Log: Seconds remaining: 28020
+2026/10/27-00:03:24(CST) Log: Seconds remaining: 27960
+2026/10/27-00:04:24(CST) Log: Seconds remaining: 27900
+2026/10/27-00:05:24(CST) Log: Seconds remaining: 27840
+2026/10/27-00:06:24(CST) Log: Seconds remaining: 27780
+2026/10/27-00:07:24(CST) Log: Seconds remaining: 27720
+2026/10/27-00:08:24(CST) Log: Seconds remaining: 27660
+2026/10/27-00:09:24(CST) Log: Seconds remaining: 27600
+2026/10/27-00:09:24(CST) Log: Pausing worker threads in preparation for power spike (27600 seconds remaining)
+2026/10/27-00:09:39(CST) Log: Resuming worker threads to cause a power spike (27585 seconds remaining)
+2026/10/27-00:10:24(CST) Log: Seconds remaining: 27540
+2026/10/27-00:11:24(CST) Log: Seconds remaining: 27480
+2026/10/27-00:12:24(CST) Log: Seconds remaining: 27420
+2026/10/27-00:13:24(CST) Log: Seconds remaining: 27360
+2026/10/27-00:14:24(CST) Log: Seconds remaining: 27300
+2026/10/27-00:15:24(CST) Log: Seconds remaining: 27240
+2026/10/27-00:16:24(CST) Log: Seconds remaining: 27180
+2026/10/27-00:17:24(CST) Log: Seconds remaining: 27120
+2026/10/27-00:18:24(CST) Log: Seconds remaining: 27060
+2026/10/27-00:19:24(CST) Log: Seconds remaining: 27000
+2026/10/27-00:19:24(CST) Log: Pausing worker threads in preparation for power spike (27000 seconds remaining)
+2026/10/27-00:19:39(CST) Log: Resuming worker threads to cause a power spike (26985 seconds remaining)
+2026/10/27-00:20:24(CST) Log: Seconds remaining: 26940
+2026/10/27-00:21:24(CST) Log: Seconds remaining: 26880
+2026/10/27-00:22:24(CST) Log: Seconds remaining: 26820
+2026/10/27-00:23:24(CST) Log: Seconds remaining: 26760
+2026/10/27-00:24:24(CST) Log: Seconds remaining: 26700
+2026/10/27-00:25:24(CST) Log: Seconds remaining: 26640
+2026/10/27-00:26:24(CST) Log: Seconds remaining: 26580
+2026/10/27-00:27:24(CST) Log: Seconds remaining: 26520
+2026/10/27-00:28:24(CST) Log: Seconds remaining: 26460
+2026/10/27-00:29:24(CST) Log: Seconds remaining: 26400
+2026/10/27-00:29:24(CST) Log: Pausing worker threads in preparation for power spike (26400 seconds remaining)
+2026/10/27-00:29:39(CST) Log: Resuming worker threads to cause a power spike (26385 seconds remaining)
+2026/10/27-00:30:24(CST) Log: Seconds remaining: 26340
+2026/10/27-00:31:24(CST) Log: Seconds remaining: 26280
+2026/10/27-00:32:24(CST) Log: Seconds remaining: 26220
+2026/10/27-00:33:24(CST) Log: Seconds remaining: 26160
+2026/10/27-00:34:24(CST) Log: Seconds remaining: 26100
+2026/10/27-00:35:24(CST) Log: Seconds remaining: 26040
+2026/10/27-00:36:24(CST) Log: Seconds remaining: 25980
+2026/10/27-00:37:24(CST) Log: Seconds remaining: 25920
+2026/10/27-00:38:24(CST) Log: Seconds remaining: 25860
+2026/10/27-00:39:24(CST) Log: Seconds remaining: 25800
+2026/10/27-00:39:24(CST) Log: Pausing worker threads in preparation for power spike (25800 seconds remaining)
+2026/10/27-00:39:39(CST) Log: Resuming worker threads to cause a power spike (25785 seconds remaining)
+2026/10/27-00:40:24(CST) Log: Seconds remaining: 25740
+2026/10/27-00:41:24(CST) Log: Seconds remaining: 25680
+2026/10/27-00:42:24(CST) Log: Seconds remaining: 25620
+2026/10/27-00:43:24(CST) Log: Seconds remaining: 25560
+2026/10/27-00:44:24(CST) Log: Seconds remaining: 25500
+2026/10/27-00:45:24(CST) Log: Seconds remaining: 25440
+2026/10/27-00:46:24(CST) Log: Seconds remaining: 25380
+2026/10/27-00:47:24(CST) Log: Seconds remaining: 25320
+2026/10/27-00:48:24(CST) Log: Seconds remaining: 25260
+2026/10/27-00:49:24(CST) Log: Seconds remaining: 25200
+2026/10/27-00:49:24(CST) Log: Pausing worker threads in preparation for power spike (25200 seconds remaining)
+2026/10/27-00:49:39(CST) Log: Resuming worker threads to cause a power spike (25185 seconds remaining)
+2026/10/27-00:50:24(CST) Log: Seconds remaining: 25140
+2026/10/27-00:51:24(CST) Log: Seconds remaining: 25080
+2026/10/27-00:52:24(CST) Log: Seconds remaining: 25020
+2026/10/27-00:53:24(CST) Log: Seconds remaining: 24960
+2026/10/27-00:54:24(CST) Log: Seconds remaining: 24900
+2026/10/27-00:55:24(CST) Log: Seconds remaining: 24840
+2026/10/27-00:56:24(CST) Log: Seconds remaining: 24780
+2026/10/27-00:57:24(CST) Log: Seconds remaining: 24720
+2026/10/27-00:58:24(CST) Log: Seconds remaining: 24660
+2026/10/27-00:59:24(CST) Log: Seconds remaining: 24600
+2026/10/27-00:59:24(CST) Log: Pausing worker threads in preparation for power spike (24600 seconds remaining)
+2026/10/27-00:59:39(CST) Log: Resuming worker threads to cause a power spike (24585 seconds remaining)
+2026/10/27-01:00:24(CST) Log: Seconds remaining: 24540
+2026/10/27-01:01:24(CST) Log: Seconds remaining: 24480
+2026/10/27-01:02:24(CST) Log: Seconds remaining: 24420
+2026/10/27-01:03:24(CST) Log: Seconds remaining: 24360
+2026/10/27-01:04:24(CST) Log: Seconds remaining: 24300
+2026/10/27-01:05:24(CST) Log: Seconds remaining: 24240
+2026/10/27-01:06:24(CST) Log: Seconds remaining: 24180
+2026/10/27-01:07:24(CST) Log: Seconds remaining: 24120
+2026/10/27-01:08:24(CST) Log: Seconds remaining: 24060
+2026/10/27-01:09:24(CST) Log: Seconds remaining: 24000
+2026/10/27-01:09:24(CST) Log: Pausing worker threads in preparation for power spike (24000 seconds remaining)
+2026/10/27-01:09:39(CST) Log: Resuming worker threads to cause a power spike (23985 seconds remaining)
+2026/10/27-01:10:24(CST) Log: Seconds remaining: 23940
+2026/10/27-01:11:24(CST) Log: Seconds remaining: 23880
+2026/10/27-01:12:24(CST) Log: Seconds remaining: 23820
+2026/10/27-01:13:24(CST) Log: Seconds remaining: 23760
+2026/10/27-01:14:24(CST) Log: Seconds remaining: 23700
+2026/10/27-01:15:24(CST) Log: Seconds remaining: 23640
+2026/10/27-01:16:24(CST) Log: Seconds remaining: 23580
+2026/10/27-01:17:24(CST) Log: Seconds remaining: 23520
+2026/10/27-01:18:24(CST) Log: Seconds remaining: 23460
+2026/10/27-01:19:24(CST) Log: Seconds remaining: 23400
+2026/10/27-01:19:24(CST) Log: Pausing worker threads in preparation for power spike (23400 seconds remaining)
+2026/10/27-01:19:39(CST) Log: Resuming worker threads to cause a power spike (23385 seconds remaining)
+2026/10/27-01:20:24(CST) Log: Seconds remaining: 23340
+2026/10/27-01:21:24(CST) Log: Seconds remaining: 23280
+2026/10/27-01:22:24(CST) Log: Seconds remaining: 23220
+2026/10/27-01:23:24(CST) Log: Seconds remaining: 23160
+2026/10/27-01:24:24(CST) Log: Seconds remaining: 23100
+2026/10/27-01:25:24(CST) Log: Seconds remaining: 23040
+2026/10/27-01:26:24(CST) Log: Seconds remaining: 22980
+2026/10/27-01:27:24(CST) Log: Seconds remaining: 22920
+2026/10/27-01:28:24(CST) Log: Seconds remaining: 22860
+2026/10/27-01:29:24(CST) Log: Seconds remaining: 22800
+2026/10/27-01:29:24(CST) Log: Pausing worker threads in preparation for power spike (22800 seconds remaining)
+2026/10/27-01:29:39(CST) Log: Resuming worker threads to cause a power spike (22785 seconds remaining)
+2026/10/27-01:30:24(CST) Log: Seconds remaining: 22740
+2026/10/27-01:31:24(CST) Log: Seconds remaining: 22680
+2026/10/27-01:32:24(CST) Log: Seconds remaining: 22620
+2026/10/27-01:33:24(CST) Log: Seconds remaining: 22560
+2026/10/27-01:34:24(CST) Log: Seconds remaining: 22500
+2026/10/27-01:35:24(CST) Log: Seconds remaining: 22440
+2026/10/27-01:36:24(CST) Log: Seconds remaining: 22380
+2026/10/27-01:37:24(CST) Log: Seconds remaining: 22320
+2026/10/27-01:38:24(CST) Log: Seconds remaining: 22260
+2026/10/27-01:39:24(CST) Log: Seconds remaining: 22200
+2026/10/27-01:39:24(CST) Log: Pausing worker threads in preparation for power spike (22200 seconds remaining)
+2026/10/27-01:39:39(CST) Log: Resuming worker threads to cause a power spike (22185 seconds remaining)
+2026/10/27-01:40:24(CST) Log: Seconds remaining: 22140
+2026/10/27-01:41:24(CST) Log: Seconds remaining: 22080
+2026/10/27-01:42:24(CST) Log: Seconds remaining: 22020
+2026/10/27-01:43:24(CST) Log: Seconds remaining: 21960
+2026/10/27-01:44:24(CST) Log: Seconds remaining: 21900
+2026/10/27-01:45:24(CST) Log: Seconds remaining: 21840
+2026/10/27-01:46:24(CST) Log: Seconds remaining: 21780
+2026/10/27-01:47:24(CST) Log: Seconds remaining: 21720
+2026/10/27-01:48:24(CST) Log: Seconds remaining: 21660
+2026/10/27-01:49:24(CST) Log: Seconds remaining: 21600
+2026/10/27-01:49:24(CST) Log: Pausing worker threads in preparation for power spike (21600 seconds remaining)
+2026/10/27-01:49:39(CST) Log: Resuming worker threads to cause a power spike (21585 seconds remaining)
+2026/10/27-01:50:24(CST) Log: Seconds remaining: 21540
+2026/10/27-01:51:24(CST) Log: Seconds remaining: 21480
+2026/10/27-01:52:24(CST) Log: Seconds remaining: 21420
+2026/10/27-01:53:24(CST) Log: Seconds remaining: 21360
+2026/10/27-01:54:24(CST) Log: Seconds remaining: 21300
+2026/10/27-01:55:24(CST) Log: Seconds remaining: 21240
+2026/10/27-01:56:24(CST) Log: Seconds remaining: 21180
+2026/10/27-01:57:24(CST) Log: Seconds remaining: 21120
+2026/10/27-01:58:24(CST) Log: Seconds remaining: 21060
+2026/10/27-01:59:24(CST) Log: Seconds remaining: 21000
+2026/10/27-01:59:24(CST) Log: Pausing worker threads in preparation for power spike (21000 seconds remaining)
+2026/10/27-01:59:39(CST) Log: Resuming worker threads to cause a power spike (20985 seconds remaining)
+2026/10/27-02:00:24(CST) Log: Seconds remaining: 20940
+2026/10/27-02:01:24(CST) Log: Seconds remaining: 20880
+2026/10/27-02:02:24(CST) Log: Seconds remaining: 20820
+2026/10/27-02:03:24(CST) Log: Seconds remaining: 20760
+2026/10/27-02:04:24(CST) Log: Seconds remaining: 20700
+2026/10/27-02:05:24(CST) Log: Seconds remaining: 20640
+2026/10/27-02:06:24(CST) Log: Seconds remaining: 20580
+2026/10/27-02:07:24(CST) Log: Seconds remaining: 20520
+2026/10/27-02:08:24(CST) Log: Seconds remaining: 20460
+2026/10/27-02:09:24(CST) Log: Seconds remaining: 20400
+2026/10/27-02:09:24(CST) Log: Pausing worker threads in preparation for power spike (20400 seconds remaining)
+2026/10/27-02:09:39(CST) Log: Resuming worker threads to cause a power spike (20385 seconds remaining)
+2026/10/27-02:10:24(CST) Log: Seconds remaining: 20340
+2026/10/27-02:11:24(CST) Log: Seconds remaining: 20280
+2026/10/27-02:12:24(CST) Log: Seconds remaining: 20220
+2026/10/27-02:13:24(CST) Log: Seconds remaining: 20160
+2026/10/27-02:14:24(CST) Log: Seconds remaining: 20100
+2026/10/27-02:15:24(CST) Log: Seconds remaining: 20040
+2026/10/27-02:16:24(CST) Log: Seconds remaining: 19980
+2026/10/27-02:17:24(CST) Log: Seconds remaining: 19920
+2026/10/27-02:18:24(CST) Log: Seconds remaining: 19860
+2026/10/27-02:19:24(CST) Log: Seconds remaining: 19800
+2026/10/27-02:19:24(CST) Log: Pausing worker threads in preparation for power spike (19800 seconds remaining)
+2026/10/27-02:19:39(CST) Log: Resuming worker threads to cause a power spike (19785 seconds remaining)
+2026/10/27-02:20:24(CST) Log: Seconds remaining: 19740
+2026/10/27-02:21:24(CST) Log: Seconds remaining: 19680
+2026/10/27-02:22:24(CST) Log: Seconds remaining: 19620
+2026/10/27-02:23:24(CST) Log: Seconds remaining: 19560
+2026/10/27-02:24:24(CST) Log: Seconds remaining: 19500
+2026/10/27-02:25:24(CST) Log: Seconds remaining: 19440
+2026/10/27-02:26:24(CST) Log: Seconds remaining: 19380
+2026/10/27-02:27:24(CST) Log: Seconds remaining: 19320
+2026/10/27-02:28:24(CST) Log: Seconds remaining: 19260
+2026/10/27-02:29:24(CST) Log: Seconds remaining: 19200
+2026/10/27-02:29:24(CST) Log: Pausing worker threads in preparation for power spike (19200 seconds remaining)
+2026/10/27-02:29:39(CST) Log: Resuming worker threads to cause a power spike (19185 seconds remaining)
+2026/10/27-02:30:24(CST) Log: Seconds remaining: 19140
+2026/10/27-02:31:24(CST) Log: Seconds remaining: 19080
+2026/10/27-02:32:24(CST) Log: Seconds remaining: 19020
+2026/10/27-02:33:24(CST) Log: Seconds remaining: 18960
+2026/10/27-02:34:24(CST) Log: Seconds remaining: 18900
+2026/10/27-02:35:24(CST) Log: Seconds remaining: 18840
+2026/10/27-02:36:24(CST) Log: Seconds remaining: 18780
+2026/10/27-02:37:24(CST) Log: Seconds remaining: 18720
+2026/10/27-02:38:24(CST) Log: Seconds remaining: 18660
+2026/10/27-02:39:24(CST) Log: Seconds remaining: 18600
+2026/10/27-02:39:24(CST) Log: Pausing worker threads in preparation for power spike (18600 seconds remaining)
+2026/10/27-02:39:39(CST) Log: Resuming worker threads to cause a power spike (18585 seconds remaining)
+2026/10/27-02:40:24(CST) Log: Seconds remaining: 18540
+2026/10/27-02:41:24(CST) Log: Seconds remaining: 18480
+2026/10/27-02:42:24(CST) Log: Seconds remaining: 18420
+2026/10/27-02:43:24(CST) Log: Seconds remaining: 18360
+2026/10/27-02:44:24(CST) Log: Seconds remaining: 18300
+2026/10/27-02:45:24(CST) Log: Seconds remaining: 18240
+2026/10/27-02:46:24(CST) Log: Seconds remaining: 18180
+2026/10/27-02:47:24(CST) Log: Seconds remaining: 18120
+2026/10/27-02:48:24(CST) Log: Seconds remaining: 18060
+2026/10/27-02:49:24(CST) Log: Seconds remaining: 18000
+2026/10/27-02:49:24(CST) Log: Pausing worker threads in preparation for power spike (18000 seconds remaining)
+2026/10/27-02:49:39(CST) Log: Resuming worker threads to cause a power spike (17985 seconds remaining)
+2026/10/27-02:50:24(CST) Log: Seconds remaining: 17940
+2026/10/27-02:51:24(CST) Log: Seconds remaining: 17880
+2026/10/27-02:52:24(CST) Log: Seconds remaining: 17820
+2026/10/27-02:53:24(CST) Log: Seconds remaining: 17760
+2026/10/27-02:54:24(CST) Log: Seconds remaining: 17700
+2026/10/27-02:55:24(CST) Log: Seconds remaining: 17640
+2026/10/27-02:56:24(CST) Log: Seconds remaining: 17580
+2026/10/27-02:57:24(CST) Log: Seconds remaining: 17520
+2026/10/27-02:58:24(CST) Log: Seconds remaining: 17460
+2026/10/27-02:59:24(CST) Log: Seconds remaining: 17400
+2026/10/27-02:59:24(CST) Log: Pausing worker threads in preparation for power spike (17400 seconds remaining)
+2026/10/27-02:59:39(CST) Log: Resuming worker threads to cause a power spike (17385 seconds remaining)
+2026/10/27-03:00:24(CST) Log: Seconds remaining: 17340
+2026/10/27-03:01:24(CST) Log: Seconds remaining: 17280
+2026/10/27-03:02:24(CST) Log: Seconds remaining: 17220
+2026/10/27-03:03:24(CST) Log: Seconds remaining: 17160
+2026/10/27-03:04:24(CST) Log: Seconds remaining: 17100
+2026/10/27-03:05:24(CST) Log: Seconds remaining: 17040
+2026/10/27-03:06:24(CST) Log: Seconds remaining: 16980
+2026/10/27-03:07:24(CST) Log: Seconds remaining: 16920
+2026/10/27-03:08:24(CST) Log: Seconds remaining: 16860
+2026/10/27-03:09:24(CST) Log: Seconds remaining: 16800
+2026/10/27-03:09:24(CST) Log: Pausing worker threads in preparation for power spike (16800 seconds remaining)
+2026/10/27-03:09:39(CST) Log: Resuming worker threads to cause a power spike (16785 seconds remaining)
+2026/10/27-03:10:24(CST) Log: Seconds remaining: 16740
+2026/10/27-03:11:24(CST) Log: Seconds remaining: 16680
+2026/10/27-03:12:24(CST) Log: Seconds remaining: 16620
+2026/10/27-03:13:24(CST) Log: Seconds remaining: 16560
+2026/10/27-03:14:24(CST) Log: Seconds remaining: 16500
+2026/10/27-03:15:24(CST) Log: Seconds remaining: 16440
+2026/10/27-03:16:24(CST) Log: Seconds remaining: 16380
+2026/10/27-03:17:24(CST) Log: Seconds remaining: 16320
+2026/10/27-03:18:24(CST) Log: Seconds remaining: 16260
+2026/10/27-03:19:24(CST) Log: Seconds remaining: 16200
+2026/10/27-03:19:24(CST) Log: Pausing worker threads in preparation for power spike (16200 seconds remaining)
+2026/10/27-03:19:39(CST) Log: Resuming worker threads to cause a power spike (16185 seconds remaining)
+2026/10/27-03:20:24(CST) Log: Seconds remaining: 16140
+2026/10/27-03:21:24(CST) Log: Seconds remaining: 16080
+2026/10/27-03:22:24(CST) Log: Seconds remaining: 16020
+2026/10/27-03:23:24(CST) Log: Seconds remaining: 15960
+2026/10/27-03:24:24(CST) Log: Seconds remaining: 15900
+2026/10/27-03:25:24(CST) Log: Seconds remaining: 15840
+2026/10/27-03:26:24(CST) Log: Seconds remaining: 15780
+2026/10/27-03:27:24(CST) Log: Seconds remaining: 15720
+2026/10/27-03:28:24(CST) Log: Seconds remaining: 15660
+2026/10/27-03:29:24(CST) Log: Seconds remaining: 15600
+2026/10/27-03:29:24(CST) Log: Pausing worker threads in preparation for power spike (15600 seconds remaining)
+2026/10/27-03:29:39(CST) Log: Resuming worker threads to cause a power spike (15585 seconds remaining)
+2026/10/27-03:30:24(CST) Log: Seconds remaining: 15540
+2026/10/27-03:31:24(CST) Log: Seconds remaining: 15480
+2026/10/27-03:32:24(CST) Log: Seconds remaining: 15420
+2026/10/27-03:33:24(CST) Log: Seconds remaining: 15360
+2026/10/27-03:34:24(CST) Log: Seconds remaining: 15300
+2026/10/27-03:35:24(CST) Log: Seconds remaining: 15240
+2026/10/27-03:36:24(CST) Log: Seconds remaining: 15180
+2026/10/27-03:37:24(CST) Log: Seconds remaining: 15120
+2026/10/27-03:38:25(CST) Log: Seconds remaining: 15059
+2026/10/27-03:39:24(CST) Log: Seconds remaining: 15000
+2026/10/27-03:39:24(CST) Log: Pausing worker threads in preparation for power spike (15000 seconds remaining)
+2026/10/27-03:39:39(CST) Log: Resuming worker threads to cause a power spike (14985 seconds remaining)
+2026/10/27-03:40:24(CST) Log: Seconds remaining: 14940
+2026/10/27-03:41:24(CST) Log: Seconds remaining: 14880
+2026/10/27-03:42:24(CST) Log: Seconds remaining: 14820
+2026/10/27-03:43:24(CST) Log: Seconds remaining: 14760
+2026/10/27-03:44:24(CST) Log: Seconds remaining: 14700
+2026/10/27-03:45:24(CST) Log: Seconds remaining: 14640
+2026/10/27-03:46:24(CST) Log: Seconds remaining: 14580
+2026/10/27-03:47:24(CST) Log: Seconds remaining: 14520
+2026/10/27-03:48:24(CST) Log: Seconds remaining: 14460
+2026/10/27-03:49:24(CST) Log: Seconds remaining: 14400
+2026/10/27-03:49:24(CST) Log: Pausing worker threads in preparation for power spike (14400 seconds remaining)
+2026/10/27-03:49:39(CST) Log: Resuming worker threads to cause a power spike (14385 seconds remaining)
+2026/10/27-03:50:24(CST) Log: Seconds remaining: 14340
+2026/10/27-03:51:24(CST) Log: Seconds remaining: 14280
+2026/10/27-03:52:24(CST) Log: Seconds remaining: 14220
+2026/10/27-03:53:24(CST) Log: Seconds remaining: 14160
+2026/10/27-03:54:24(CST) Log: Seconds remaining: 14100
+2026/10/27-03:55:24(CST) Log: Seconds remaining: 14040
+2026/10/27-03:56:24(CST) Log: Seconds remaining: 13980
+2026/10/27-03:57:24(CST) Log: Seconds remaining: 13920
+2026/10/27-03:58:24(CST) Log: Seconds remaining: 13860
+2026/10/27-03:59:24(CST) Log: Seconds remaining: 13800
+2026/10/27-03:59:24(CST) Log: Pausing worker threads in preparation for power spike (13800 seconds remaining)
+2026/10/27-03:59:39(CST) Log: Resuming worker threads to cause a power spike (13785 seconds remaining)
+2026/10/27-04:00:24(CST) Log: Seconds remaining: 13740
+2026/10/27-04:01:24(CST) Log: Seconds remaining: 13680
+2026/10/27-04:02:24(CST) Log: Seconds remaining: 13620
+2026/10/27-04:03:24(CST) Log: Seconds remaining: 13560
+2026/10/27-04:04:24(CST) Log: Seconds remaining: 13500
+2026/10/27-04:05:24(CST) Log: Seconds remaining: 13440
+2026/10/27-04:06:24(CST) Log: Seconds remaining: 13380
+2026/10/27-04:07:24(CST) Log: Seconds remaining: 13320
+2026/10/27-04:08:24(CST) Log: Seconds remaining: 13260
+2026/10/27-04:09:24(CST) Log: Seconds remaining: 13200
+2026/10/27-04:09:24(CST) Log: Pausing worker threads in preparation for power spike (13200 seconds remaining)
+2026/10/27-04:09:39(CST) Log: Resuming worker threads to cause a power spike (13185 seconds remaining)
+2026/10/27-04:10:24(CST) Log: Seconds remaining: 13140
+2026/10/27-04:11:24(CST) Log: Seconds remaining: 13080
+2026/10/27-04:12:24(CST) Log: Seconds remaining: 13020
+2026/10/27-04:13:24(CST) Log: Seconds remaining: 12960
+2026/10/27-04:14:24(CST) Log: Seconds remaining: 12900
+2026/10/27-04:15:24(CST) Log: Seconds remaining: 12840
+2026/10/27-04:16:24(CST) Log: Seconds remaining: 12780
+2026/10/27-04:17:24(CST) Log: Seconds remaining: 12720
+2026/10/27-04:18:24(CST) Log: Seconds remaining: 12660
+2026/10/27-04:19:24(CST) Log: Seconds remaining: 12600
+2026/10/27-04:19:24(CST) Log: Pausing worker threads in preparation for power spike (12600 seconds remaining)
+2026/10/27-04:19:39(CST) Log: Resuming worker threads to cause a power spike (12585 seconds remaining)
+2026/10/27-04:20:24(CST) Log: Seconds remaining: 12540
+2026/10/27-04:21:24(CST) Log: Seconds remaining: 12480
+2026/10/27-04:22:24(CST) Log: Seconds remaining: 12420
+2026/10/27-04:23:24(CST) Log: Seconds remaining: 12360
+2026/10/27-04:24:24(CST) Log: Seconds remaining: 12300
+2026/10/27-04:25:24(CST) Log: Seconds remaining: 12240
+2026/10/27-04:26:24(CST) Log: Seconds remaining: 12180
+2026/10/27-04:27:24(CST) Log: Seconds remaining: 12120
+2026/10/27-04:28:24(CST) Log: Seconds remaining: 12060
+2026/10/27-04:29:24(CST) Log: Seconds remaining: 12000
+2026/10/27-04:29:24(CST) Log: Pausing worker threads in preparation for power spike (12000 seconds remaining)
+2026/10/27-04:29:39(CST) Log: Resuming worker threads to cause a power spike (11985 seconds remaining)
+2026/10/27-04:30:24(CST) Log: Seconds remaining: 11940
+2026/10/27-04:31:24(CST) Log: Seconds remaining: 11880
+2026/10/27-04:32:24(CST) Log: Seconds remaining: 11820
+2026/10/27-04:33:24(CST) Log: Seconds remaining: 11760
+2026/10/27-04:34:24(CST) Log: Seconds remaining: 11700
+2026/10/27-04:35:24(CST) Log: Seconds remaining: 11640
+2026/10/27-04:36:24(CST) Log: Seconds remaining: 11580
+2026/10/27-04:37:24(CST) Log: Seconds remaining: 11520
+2026/10/27-04:38:24(CST) Log: Seconds remaining: 11460
+2026/10/27-04:39:24(CST) Log: Seconds remaining: 11400
+2026/10/27-04:39:24(CST) Log: Pausing worker threads in preparation for power spike (11400 seconds remaining)
+2026/10/27-04:39:39(CST) Log: Resuming worker threads to cause a power spike (11385 seconds remaining)
+2026/10/27-04:40:24(CST) Log: Seconds remaining: 11340
+2026/10/27-04:41:24(CST) Log: Seconds remaining: 11280
+2026/10/27-04:42:24(CST) Log: Seconds remaining: 11220
+2026/10/27-04:43:24(CST) Log: Seconds remaining: 11160
+2026/10/27-04:44:24(CST) Log: Seconds remaining: 11100
+2026/10/27-04:45:24(CST) Log: Seconds remaining: 11040
+2026/10/27-04:46:24(CST) Log: Seconds remaining: 10980
+2026/10/27-04:47:24(CST) Log: Seconds remaining: 10920
+2026/10/27-04:48:24(CST) Log: Seconds remaining: 10860
+2026/10/27-04:49:24(CST) Log: Seconds remaining: 10800
+2026/10/27-04:49:24(CST) Log: Pausing worker threads in preparation for power spike (10800 seconds remaining)
+2026/10/27-04:49:39(CST) Log: Resuming worker threads to cause a power spike (10785 seconds remaining)
+2026/10/27-04:50:24(CST) Log: Seconds remaining: 10740
+2026/10/27-04:51:24(CST) Log: Seconds remaining: 10680
+2026/10/27-04:52:24(CST) Log: Seconds remaining: 10620
+2026/10/27-04:53:24(CST) Log: Seconds remaining: 10560
+2026/10/27-04:54:24(CST) Log: Seconds remaining: 10500
+2026/10/27-04:55:24(CST) Log: Seconds remaining: 10440
+2026/10/27-04:56:24(CST) Log: Seconds remaining: 10380
+2026/10/27-04:57:24(CST) Log: Seconds remaining: 10320
+2026/10/27-04:58:24(CST) Log: Seconds remaining: 10260
+2026/10/27-04:59:24(CST) Log: Seconds remaining: 10200
+2026/10/27-04:59:24(CST) Log: Pausing worker threads in preparation for power spike (10200 seconds remaining)
+2026/10/27-04:59:39(CST) Log: Resuming worker threads to cause a power spike (10185 seconds remaining)
+2026/10/27-05:00:24(CST) Log: Seconds remaining: 10140
+2026/10/27-05:01:24(CST) Log: Seconds remaining: 10080
+2026/10/27-05:02:24(CST) Log: Seconds remaining: 10020
+2026/10/27-05:03:24(CST) Log: Seconds remaining: 9960
+2026/10/27-05:04:24(CST) Log: Seconds remaining: 9900
+2026/10/27-05:05:24(CST) Log: Seconds remaining: 9840
+2026/10/27-05:06:24(CST) Log: Seconds remaining: 9780
+2026/10/27-05:07:24(CST) Log: Seconds remaining: 9720
+2026/10/27-05:08:24(CST) Log: Seconds remaining: 9660
+2026/10/27-05:09:24(CST) Log: Seconds remaining: 9600
+2026/10/27-05:09:24(CST) Log: Pausing worker threads in preparation for power spike (9600 seconds remaining)
+2026/10/27-05:09:39(CST) Log: Resuming worker threads to cause a power spike (9585 seconds remaining)
+2026/10/27-05:10:24(CST) Log: Seconds remaining: 9540
+2026/10/27-05:11:24(CST) Log: Seconds remaining: 9480
+2026/10/27-05:12:24(CST) Log: Seconds remaining: 9420
+2026/10/27-05:13:24(CST) Log: Seconds remaining: 9360
+2026/10/27-05:14:24(CST) Log: Seconds remaining: 9300
+2026/10/27-05:15:24(CST) Log: Seconds remaining: 9240
+2026/10/27-05:16:24(CST) Log: Seconds remaining: 9180
+2026/10/27-05:17:24(CST) Log: Seconds remaining: 9120
+2026/10/27-05:18:24(CST) Log: Seconds remaining: 9060
+2026/10/27-05:19:24(CST) Log: Seconds remaining: 9000
+2026/10/27-05:19:24(CST) Log: Pausing worker threads in preparation for power spike (9000 seconds remaining)
+2026/10/27-05:19:39(CST) Log: Resuming worker threads to cause a power spike (8985 seconds remaining)
+2026/10/27-05:20:24(CST) Log: Seconds remaining: 8940
+2026/10/27-05:21:24(CST) Log: Seconds remaining: 8880
+2026/10/27-05:22:24(CST) Log: Seconds remaining: 8820
+2026/10/27-05:23:24(CST) Log: Seconds remaining: 8760
+2026/10/27-05:24:24(CST) Log: Seconds remaining: 8700
+2026/10/27-05:25:24(CST) Log: Seconds remaining: 8640
+2026/10/27-05:26:24(CST) Log: Seconds remaining: 8580
+2026/10/27-05:27:24(CST) Log: Seconds remaining: 8520
+2026/10/27-05:28:24(CST) Log: Seconds remaining: 8460
+2026/10/27-05:29:24(CST) Log: Seconds remaining: 8400
+2026/10/27-05:29:24(CST) Log: Pausing worker threads in preparation for power spike (8400 seconds remaining)
+2026/10/27-05:29:39(CST) Log: Resuming worker threads to cause a power spike (8385 seconds remaining)
+2026/10/27-05:30:24(CST) Log: Seconds remaining: 8340
+2026/10/27-05:31:24(CST) Log: Seconds remaining: 8280
+2026/10/27-05:32:24(CST) Log: Seconds remaining: 8220
+2026/10/27-05:33:24(CST) Log: Seconds remaining: 8160
+2026/10/27-05:34:24(CST) Log: Seconds remaining: 8100
+2026/10/27-05:35:24(CST) Log: Seconds remaining: 8040
+2026/10/27-05:36:24(CST) Log: Seconds remaining: 7980
+2026/10/27-05:37:24(CST) Log: Seconds remaining: 7920
+2026/10/27-05:38:24(CST) Log: Seconds remaining: 7860
+2026/10/27-05:39:24(CST) Log: Seconds remaining: 7800
+2026/10/27-05:39:24(CST) Log: Pausing worker threads in preparation for power spike (7800 seconds remaining)
+2026/10/27-05:39:39(CST) Log: Resuming worker threads to cause a power spike (7785 seconds remaining)
+2026/10/27-05:40:24(CST) Log: Seconds remaining: 7740
+2026/10/27-05:41:24(CST) Log: Seconds remaining: 7680
+2026/10/27-05:42:24(CST) Log: Seconds remaining: 7620
+2026/10/27-05:43:24(CST) Log: Seconds remaining: 7560
+2026/10/27-05:44:24(CST) Log: Seconds remaining: 7500
+2026/10/27-05:45:24(CST) Log: Seconds remaining: 7440
+2026/10/27-05:46:24(CST) Log: Seconds remaining: 7380
+2026/10/27-05:47:24(CST) Log: Seconds remaining: 7320
+2026/10/27-05:48:24(CST) Log: Seconds remaining: 7260
+2026/10/27-05:49:24(CST) Log: Seconds remaining: 7200
+2026/10/27-05:49:24(CST) Log: Pausing worker threads in preparation for power spike (7200 seconds remaining)
+2026/10/27-05:49:39(CST) Log: Resuming worker threads to cause a power spike (7185 seconds remaining)
+2026/10/27-05:50:24(CST) Log: Seconds remaining: 7140
+2026/10/27-05:51:24(CST) Log: Seconds remaining: 7080
+2026/10/27-05:52:24(CST) Log: Seconds remaining: 7020
+2026/10/27-05:53:24(CST) Log: Seconds remaining: 6960
+2026/10/27-05:54:24(CST) Log: Seconds remaining: 6900
+2026/10/27-05:55:24(CST) Log: Seconds remaining: 6840
+2026/10/27-05:56:24(CST) Log: Seconds remaining: 6780
+2026/10/27-05:57:24(CST) Log: Seconds remaining: 6720
+2026/10/27-05:58:24(CST) Log: Seconds remaining: 6660
+2026/10/27-05:59:24(CST) Log: Seconds remaining: 6600
+2026/10/27-05:59:24(CST) Log: Pausing worker threads in preparation for power spike (6600 seconds remaining)
+2026/10/27-05:59:39(CST) Log: Resuming worker threads to cause a power spike (6585 seconds remaining)
+2026/10/27-06:00:24(CST) Log: Seconds remaining: 6540
+2026/10/27-06:01:24(CST) Log: Seconds remaining: 6480
+2026/10/27-06:02:24(CST) Log: Seconds remaining: 6420
+2026/10/27-06:03:24(CST) Log: Seconds remaining: 6360
+2026/10/27-06:04:24(CST) Log: Seconds remaining: 6300
+2026/10/27-06:05:24(CST) Log: Seconds remaining: 6240
+2026/10/27-06:06:24(CST) Log: Seconds remaining: 6180
+2026/10/27-06:07:24(CST) Log: Seconds remaining: 6120
+2026/10/27-06:08:24(CST) Log: Seconds remaining: 6060
+2026/10/27-06:09:24(CST) Log: Seconds remaining: 6000
+2026/10/27-06:09:24(CST) Log: Pausing worker threads in preparation for power spike (6000 seconds remaining)
+2026/10/27-06:09:39(CST) Log: Resuming worker threads to cause a power spike (5985 seconds remaining)
+2026/10/27-06:10:24(CST) Log: Seconds remaining: 5940
+2026/10/27-06:11:24(CST) Log: Seconds remaining: 5880
+2026/10/27-06:12:24(CST) Log: Seconds remaining: 5820
+2026/10/27-06:13:24(CST) Log: Seconds remaining: 5760
+2026/10/27-06:14:24(CST) Log: Seconds remaining: 5700
+2026/10/27-06:15:24(CST) Log: Seconds remaining: 5640
+2026/10/27-06:16:24(CST) Log: Seconds remaining: 5580
+2026/10/27-06:17:24(CST) Log: Seconds remaining: 5520
+2026/10/27-06:18:24(CST) Log: Seconds remaining: 5460
+2026/10/27-06:19:24(CST) Log: Seconds remaining: 5400
+2026/10/27-06:19:24(CST) Log: Pausing worker threads in preparation for power spike (5400 seconds remaining)
+2026/10/27-06:19:39(CST) Log: Resuming worker threads to cause a power spike (5385 seconds remaining)
+2026/10/27-06:20:24(CST) Log: Seconds remaining: 5340
+2026/10/27-06:21:24(CST) Log: Seconds remaining: 5280
+2026/10/27-06:22:24(CST) Log: Seconds remaining: 5220
+2026/10/27-06:23:24(CST) Log: Seconds remaining: 5160
+2026/10/27-06:24:24(CST) Log: Seconds remaining: 5100
+2026/10/27-06:25:24(CST) Log: Seconds remaining: 5040
+2026/10/27-06:26:24(CST) Log: Seconds remaining: 4980
+2026/10/27-06:27:24(CST) Log: Seconds remaining: 4920
+2026/10/27-06:28:24(CST) Log: Seconds remaining: 4860
+2026/10/27-06:29:24(CST) Log: Seconds remaining: 4800
+2026/10/27-06:29:24(CST) Log: Pausing worker threads in preparation for power spike (4800 seconds remaining)
+2026/10/27-06:29:39(CST) Log: Resuming worker threads to cause a power spike (4785 seconds remaining)
+2026/10/27-06:30:24(CST) Log: Seconds remaining: 4740
+2026/10/27-06:31:24(CST) Log: Seconds remaining: 4680
+2026/10/27-06:32:24(CST) Log: Seconds remaining: 4620
+2026/10/27-06:33:24(CST) Log: Seconds remaining: 4560
+2026/10/27-06:34:24(CST) Log: Seconds remaining: 4500
+2026/10/27-06:35:24(CST) Log: Seconds remaining: 4440
+2026/10/27-06:36:24(CST) Log: Seconds remaining: 4380
+2026/10/27-06:37:24(CST) Log: Seconds remaining: 4320
+2026/10/27-06:38:24(CST) Log: Seconds remaining: 4260
+2026/10/27-06:39:24(CST) Log: Seconds remaining: 4200
+2026/10/27-06:39:24(CST) Log: Pausing worker threads in preparation for power spike (4200 seconds remaining)
+2026/10/27-06:39:39(CST) Log: Resuming worker threads to cause a power spike (4185 seconds remaining)
+2026/10/27-06:40:24(CST) Log: Seconds remaining: 4140
+2026/10/27-06:41:24(CST) Log: Seconds remaining: 4080
+2026/10/27-06:42:24(CST) Log: Seconds remaining: 4020
+2026/10/27-06:43:24(CST) Log: Seconds remaining: 3960
+2026/10/27-06:44:24(CST) Log: Seconds remaining: 3900
+2026/10/27-06:45:24(CST) Log: Seconds remaining: 3840
+2026/10/27-06:46:24(CST) Log: Seconds remaining: 3780
+2026/10/27-06:47:24(CST) Log: Seconds remaining: 3720
+2026/10/27-06:48:24(CST) Log: Seconds remaining: 3660
+2026/10/27-06:49:24(CST) Log: Seconds remaining: 3600
+2026/10/27-06:49:24(CST) Log: Pausing worker threads in preparation for power spike (3600 seconds remaining)
+2026/10/27-06:49:39(CST) Log: Resuming worker threads to cause a power spike (3585 seconds remaining)
+2026/10/27-06:50:24(CST) Log: Seconds remaining: 3540
+2026/10/27-06:51:24(CST) Log: Seconds remaining: 3480
+2026/10/27-06:52:24(CST) Log: Seconds remaining: 3420
+2026/10/27-06:53:24(CST) Log: Seconds remaining: 3360
+2026/10/27-06:54:24(CST) Log: Seconds remaining: 3300
+2026/10/27-06:55:24(CST) Log: Seconds remaining: 3240
+2026/10/27-06:56:24(CST) Log: Seconds remaining: 3180
+2026/10/27-06:57:24(CST) Log: Seconds remaining: 3120
+2026/10/27-06:58:24(CST) Log: Seconds remaining: 3060
+2026/10/27-06:59:24(CST) Log: Seconds remaining: 3000
+2026/10/27-06:59:24(CST) Log: Pausing worker threads in preparation for power spike (3000 seconds remaining)
+2026/10/27-06:59:39(CST) Log: Resuming worker threads to cause a power spike (2985 seconds remaining)
+2026/10/27-07:00:24(CST) Log: Seconds remaining: 2940
+2026/10/27-07:01:24(CST) Log: Seconds remaining: 2880
+2026/10/27-07:02:24(CST) Log: Seconds remaining: 2820
+2026/10/27-07:03:24(CST) Log: Seconds remaining: 2760
+2026/10/27-07:04:24(CST) Log: Seconds remaining: 2700
+2026/10/27-07:05:24(CST) Log: Seconds remaining: 2640
+2026/10/27-07:06:24(CST) Log: Seconds remaining: 2580
+2026/10/27-07:07:24(CST) Log: Seconds remaining: 2520
+2026/10/27-07:08:24(CST) Log: Seconds remaining: 2460
+2026/10/27-07:09:24(CST) Log: Seconds remaining: 2400
+2026/10/27-07:09:24(CST) Log: Pausing worker threads in preparation for power spike (2400 seconds remaining)
+2026/10/27-07:09:39(CST) Log: Resuming worker threads to cause a power spike (2385 seconds remaining)
+2026/10/27-07:10:24(CST) Log: Seconds remaining: 2340
+2026/10/27-07:11:24(CST) Log: Seconds remaining: 2280
+2026/10/27-07:12:24(CST) Log: Seconds remaining: 2220
+2026/10/27-07:13:24(CST) Log: Seconds remaining: 2160
+2026/10/27-07:14:24(CST) Log: Seconds remaining: 2100
+2026/10/27-07:15:24(CST) Log: Seconds remaining: 2040
+2026/10/27-07:16:24(CST) Log: Seconds remaining: 1980
+2026/10/27-07:17:24(CST) Log: Seconds remaining: 1920
+2026/10/27-07:18:24(CST) Log: Seconds remaining: 1860
+2026/10/27-07:19:24(CST) Log: Seconds remaining: 1800
+2026/10/27-07:19:24(CST) Log: Pausing worker threads in preparation for power spike (1800 seconds remaining)
+2026/10/27-07:19:39(CST) Log: Resuming worker threads to cause a power spike (1785 seconds remaining)
+2026/10/27-07:20:24(CST) Log: Seconds remaining: 1740
+2026/10/27-07:21:24(CST) Log: Seconds remaining: 1680
+2026/10/27-07:22:24(CST) Log: Seconds remaining: 1620
+2026/10/27-07:23:24(CST) Log: Seconds remaining: 1560
+2026/10/27-07:24:24(CST) Log: Seconds remaining: 1500
+2026/10/27-07:25:24(CST) Log: Seconds remaining: 1440
+2026/10/27-07:26:24(CST) Log: Seconds remaining: 1380
+2026/10/27-07:27:24(CST) Log: Seconds remaining: 1320
+2026/10/27-07:28:24(CST) Log: Seconds remaining: 1260
+2026/10/27-07:29:24(CST) Log: Seconds remaining: 1200
+2026/10/27-07:29:24(CST) Log: Pausing worker threads in preparation for power spike (1200 seconds remaining)
+2026/10/27-07:29:39(CST) Log: Resuming worker threads to cause a power spike (1185 seconds remaining)
+2026/10/27-07:30:24(CST) Log: Seconds remaining: 1140
+2026/10/27-07:31:24(CST) Log: Seconds remaining: 1080
+2026/10/27-07:32:24(CST) Log: Seconds remaining: 1020
+2026/10/27-07:33:24(CST) Log: Seconds remaining: 960
+2026/10/27-07:34:24(CST) Log: Seconds remaining: 900
+2026/10/27-07:35:24(CST) Log: Seconds remaining: 840
+2026/10/27-07:36:24(CST) Log: Seconds remaining: 780
+2026/10/27-07:37:24(CST) Log: Seconds remaining: 720
+2026/10/27-07:38:24(CST) Log: Seconds remaining: 660
+2026/10/27-07:39:24(CST) Log: Seconds remaining: 600
+2026/10/27-07:39:24(CST) Log: Pausing worker threads in preparation for power spike (600 seconds remaining)
+2026/10/27-07:39:39(CST) Log: Resuming worker threads to cause a power spike (585 seconds remaining)
+2026/10/27-07:40:24(CST) Log: Seconds remaining: 540
+2026/10/27-07:41:24(CST) Log: Seconds remaining: 480
+2026/10/27-07:42:24(CST) Log: Seconds remaining: 420
+2026/10/27-07:43:24(CST) Log: Seconds remaining: 360
+2026/10/27-07:44:24(CST) Log: Seconds remaining: 300
+2026/10/27-07:45:24(CST) Log: Seconds remaining: 240
+2026/10/27-07:46:24(CST) Log: Seconds remaining: 180
+2026/10/27-07:47:24(CST) Log: Seconds remaining: 120
+2026/10/27-07:48:24(CST) Log: Seconds remaining: 60
+2026/10/27-07:49:25(CST) Stats: Found 0 hardware incidents
+2026/10/27-07:49:25(CST) Stats: Completed: 602116416.00M in 36000.57s 16725.19MB/s, with 0 hardware incidents, 0 errors
+2026/10/27-07:49:25(CST) Stats: Memory Copy: 602116416.00M at 16725.46MB/s
+2026/10/27-07:49:25(CST) Stats: File Copy: 0.00M at 0.00MB/s
+2026/10/27-07:49:25(CST) Stats: Net Copy: 0.00M at 0.00MB/s
+2026/10/27-07:49:25(CST) Stats: Data Check: 0.00M at 0.00MB/s
+2026/10/27-07:49:25(CST) Stats: Invert Data: 0.00M at 0.00MB/s
+2026/10/27-07:49:25(CST) Stats: Disk: 0.00M at 0.00MB/s
+2026/10/27-07:49:25(CST) 
+2026/10/27-07:49:25(CST) Status: PASS - please verify no corrected errors
+2026/10/27-07:49:25(CST) 

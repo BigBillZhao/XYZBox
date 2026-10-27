@@ -1,0 +1,30 @@
+2026-10-26T13:52:07+00:00 yikai-f98ac0a5 kernel: perf: interrupt took too long (2523 > 2500), lowering kernel.perf_event_max_sample_rate to 79000
+2026-10-26T13:53:14+00:00 yikai-f98ac0a5 kernel: perf: interrupt took too long (3179 > 3153), lowering kernel.perf_event_max_sample_rate to 62000
+2026-10-26T13:54:28+00:00 yikai-f98ac0a5 kernel: perf: interrupt took too long (3988 > 3973), lowering kernel.perf_event_max_sample_rate to 50000
+2026-10-26T13:56:21+00:00 yikai-f98ac0a5 kernel: perf: interrupt took too long (5011 > 4985), lowering kernel.perf_event_max_sample_rate to 39000
+2026-10-26T13:58:52+00:00 yikai-f98ac0a5 kernel: perf: interrupt took too long (6301 > 6263), lowering kernel.perf_event_max_sample_rate to 31000
+2026-10-26T14:03:37+00:00 yikai-f98ac0a5 kernel: perf: interrupt took too long (7911 > 7876), lowering kernel.perf_event_max_sample_rate to 25000
+2026-10-26T14:11:13+00:00 yikai-f98ac0a5 kernel: perf: interrupt took too long (9906 > 9888), lowering kernel.perf_event_max_sample_rate to 20000
+2026-10-26T14:24:50+00:00 yikai-f98ac0a5 kernel: perf: interrupt took too long (12397 > 12382), lowering kernel.perf_event_max_sample_rate to 16000
+2026-10-26T19:04:55+00:00 yikai-f98ac0a5 kernel: set_capacity_and_notify: 1 callbacks suppressed
+2026-10-26T19:04:55+00:00 yikai-f98ac0a5 kernel: loop10: detected capacity change from 0 to 136784
+2026-10-26T19:05:04+00:00 yikai-f98ac0a5 kernel: loop11: detected capacity change from 0 to 26016
+2026-10-26T19:05:21+00:00 yikai-f98ac0a5 kernel: loop12: detected capacity change from 0 to 823256
+2026-10-26T19:05:22+00:00 yikai-f98ac0a5 kernel: kauditd_printk_skb: 155 callbacks suppressed
+2026-10-26T19:05:22+00:00 yikai-f98ac0a5 kernel: audit: type=1400 audit(1793041522.736:166): apparmor="STATUS" operation="profile_load" profile="unconfined" name="snap-update-ns.mesa-2404" pid=5848 comm="apparmor_parser"
+2026-10-26T19:05:22+00:00 yikai-f98ac0a5 kernel: audit: type=1400 audit(1793041522.968:167): apparmor="STATUS" operation="profile_load" profile="unconfined" name="snap.mesa-2404.component-monitor" pid=5849 comm="apparmor_parser"
+2026-10-26T19:05:22+00:00 yikai-f98ac0a5 kernel: audit: type=1400 audit(1793041522.996:168): apparmor="STATUS" operation="profile_load" profile="unconfined" name="snap.mesa-2404.hook.post-refresh" pid=5853 comm="apparmor_parser"
+2026-10-26T19:05:23+00:00 yikai-f98ac0a5 kernel: audit: type=1400 audit(1793041523.019:169): apparmor="STATUS" operation="profile_load" profile="unconfined" name="snap.mesa-2404.hook.connect-plug-kernel-gpu-2404" pid=5850 comm="apparmor_parser"
+2026-10-26T19:05:23+00:00 yikai-f98ac0a5 kernel: audit: type=1400 audit(1793041523.098:170): apparmor="STATUS" operation="profile_load" profile="unconfined" name="snap.mesa-2404.hook.install" pid=5852 comm="apparmor_parser"
+2026-10-26T19:05:23+00:00 yikai-f98ac0a5 kernel: audit: type=1400 audit(1793041523.152:171): apparmor="STATUS" operation="profile_load" profile="unconfined" name="snap.mesa-2404.hook.disconnect-plug-kernel-gpu-2404" pid=5851 comm="apparmor_parser"
+2026-10-26T19:05:38+00:00 yikai-f98ac0a5 kernel: loop13: detected capacity change from 0 to 1261624
+2026-10-26T19:06:06+00:00 yikai-f98ac0a5 kernel: audit: type=1400 audit(1793041566.786:172): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="/snap/snapd/25935/usr/lib/snapd/snap-confine" pid=6180 comm="apparmor_parser"
+2026-10-26T19:06:06+00:00 yikai-f98ac0a5 kernel: audit: type=1400 audit(1793041566.787:173): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="/snap/snapd/25935/usr/lib/snapd/snap-confine//mount-namespace-capture-helper" pid=6180 comm="apparmor_parser"
+2026-10-26T19:06:07+00:00 yikai-f98ac0a5 kernel: audit: type=1400 audit(1793041567.159:174): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap.mesa-2404.component-monitor" pid=6187 comm="apparmor_parser"
+2026-10-26T19:06:07+00:00 yikai-f98ac0a5 kernel: audit: type=1400 audit(1793041567.367:175): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap.firmware-updater.hook.configure" pid=6186 comm="apparmor_parser"
+2026-10-26T19:06:07+00:00 yikai-f98ac0a5 kernel: audit: type=1400 audit(1793041567.523:176): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap.mesa-2404.hook.connect-plug-kernel-gpu-2404" pid=6189 comm="apparmor_parser"
+2026-10-26T19:06:07+00:00 yikai-f98ac0a5 kernel: audit: type=1400 audit(1793041567.649:177): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap.mesa-2404.hook.disconnect-plug-kernel-gpu-2404" pid=6190 comm="apparmor_parser"
+2026-10-26T19:06:07+00:00 yikai-f98ac0a5 kernel: audit: type=1400 audit(1793041567.684:178): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap.mesa-2404.hook.install" pid=6191 comm="apparmor_parser"
+2026-10-26T19:06:08+00:00 yikai-f98ac0a5 kernel: audit: type=1400 audit(1793041568.022:179): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap.mesa-2404.hook.post-refresh" pid=6192 comm="apparmor_parser"
+2026-10-26T19:06:08+00:00 yikai-f98ac0a5 kernel: audit: type=1400 audit(1793041568.068:180): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap.firmware-updater.firmware-updater" pid=6184 comm="apparmor_parser"
+2026-10-26T19:06:08+00:00 yikai-f98ac0a5 kernel: audit: type=1400 audit(1793041568.733:181): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap.firmware-updater.firmware-notifier" pid=6183 comm="apparmor_parser"
