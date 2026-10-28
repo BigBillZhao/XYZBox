@@ -1,0 +1,14 @@
+{
+  "scope": "pre-interview split handoff document hashes; evidence snapshot at 2026-10-28; source implementation unchanged",
+  "implementation_revision": "4bbf6b7cc733bf110d4d07bd705098f1fc21e72e",
+  "harness": "codex",
+  "native_session": "01a1678d-3bfb-75b0-964e-4b2dc0a3a6a9",
+  "host": "Yuntians-MacBook-Pro.local",
+  "documents": {
+    "docs/HANDOFF-DELIVERY-IMAGING.md": "bb3aa8c18fb4d60276847556e1b1a481584e25baf0f8e5a3d253d2281d8f4589",
+    "docs/HANDOFF-PIPER-FACTORY.md": "4c18388219b3d32a94ba099aa9cb4ef5ce588f542cf93cc5b6702fdf8bfda99b",
+    "docs/HANDOFF-RT-CUSTOMER.md": "d027ff2096fc407b1af60969da5fcb5b29db2ec6acc6402d8b6dc711c2c458b0",
+    "docs/HANDOFF-IMAGE-STATION.md": "14fdf3326786c3a2f0abf886479bc15d1c86ecdb2bcd70b2f12821537b3057c4",
+    "docs/HANDOFF-HARDWARE-VALIDATION.md": "c3217896c29145f7ff40bb82d3991cbfaec4eebcec814a5820798abe478d2296"
+  }
+}

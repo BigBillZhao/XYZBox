@@ -8,6 +8,8 @@
 
 2026-10-23 惠普盘 Piper 交付机使用[客户快速说明](customer/PIPER-QUICKSTART.zh-CN.md)与[发货 checkpoint](docs/checkpoints/2026-10-23-shipping.md)。客户目录为 `~/yikai-box`，接线为左 CAN1/can0、右 CAN2/can1；下方旧 Nero 机器的左右映射不适用于这台 Piper box。
 
+Agent 接手入口：[交付链路与系统镜像工作站详细交接](docs/HANDOFF-DELIVERY-IMAGING.md)（2026-10-28）。涵盖 Piper 动作与依赖、RT/客户 SDK、两块惠普盘的不同验收、NAS 刷盘站、内存长测及后续工作包。
+
 ## 已验证的硬件与软件
 
 | 项目 | 2026-10-16 现场结果 |

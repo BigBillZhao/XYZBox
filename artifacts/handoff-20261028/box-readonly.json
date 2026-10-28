@@ -1,0 +1,59 @@
+{
+  "observed_at": "2026-10-28T07:01:45.069371+00:00",
+  "hostname": "yikai-f98ac0a5",
+  "kernel": {
+    "rc": 0,
+    "stdout": "7.0.14-xyzbox-rt",
+    "stderr": ""
+  },
+  "realtime": "1",
+  "disks": {
+    "rc": 0,
+    "stderr": "",
+    "data": [
+      {
+        "name": "nvme0n1",
+        "type": "disk",
+        "model": "HP SSD EX900 Plus M.2 256GB",
+        "serial": "HASI26340100088",
+        "size": 256060514304
+      }
+    ]
+  },
+  "can": {
+    "rc": 0,
+    "stdout": "[]",
+    "stderr": ""
+  },
+  "usb": {
+    "rc": 0,
+    "stdout": "Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub\nBus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub\nBus 003 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub\nBus 004 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub",
+    "stderr": ""
+  },
+  "provisioning": {
+    "hostname": "yikai-f98ac0a5",
+    "machine_id": "f98ac0a53bcf456bbf310953eb2bb838",
+    "image_id": "20261026T124736Z-cdaaebd4",
+    "job_id": "209f8d6cec0d42849fff1a6efa4ca041",
+    "prepared_at": "2026-10-26T13:08:45.226986+00:00",
+    "boot_tested": true,
+    "filesystem_uuid": "51ba246a-8bf5-4c81-a029-d172efd96918",
+    "boot_verified_at": "2026-10-26T13:27:50.281708+00:00",
+    "can_hardware_tested": false,
+    "can_note": "No USB peripheral/CAN device enumerated during initial cold boot check"
+  },
+  "memory_summary": {
+    "run_id": "20261026T134923Z",
+    "status": "passed",
+    "finished_at": "2026-10-26T23:49:25+00:00",
+    "elapsed_seconds": 36002,
+    "exit_code": 0,
+    "stressapptest_pass": true,
+    "kernel_alerts": []
+  },
+  "memory_service": {
+    "rc": 0,
+    "stdout": "ExecMainStatus=0\nActiveState=inactive",
+    "stderr": ""
+  }
+}
